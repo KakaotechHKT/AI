@@ -87,7 +87,7 @@ CONTEXT:
 	""")])
 		
     # json을 텍스트로 변환해 벡터 DB에 적재
-	def ingest_json(self):
+	def ingest_json(self, name):
 		all_chunks = []
 		for i in range(len(self.dataset)):
 			data = self.dataset[i]
@@ -102,7 +102,7 @@ CONTEXT:
 			all_chunks.append(document)
 		self.vector_store = Chroma.from_documents(documents=all_chunks, 
 											embedding=self.embedding, 
-											persist_directory="./chroma_db")   
+											persist_directory="./{name}")   
 	
     # 프롬프트 템플릿에 키워드가 담기지 않는 것을 방지하기 위해 초깃값 'N/A'를 넣어둠
 	def default_keyword(self):
@@ -138,8 +138,8 @@ CONTEXT:
 	# 유사도 검색
 	# NOTE: 일단은 기준을 매우 낮게 해둠. 
     # NOTE: 벡터DB 검색 성능 올리면 score_threshold를 0~1 사이 실수값 적절히 조정
-	def load(self):
-		vector_store = Chroma(persist_directory="./chroma_db", 
+	def load(self, name):
+		vector_store = Chroma(persist_directory="./{name}", 
 			embedding_function=self.embedding)
 		self.retriever = vector_store.as_retriever(
 			search_type="similarity_score_threshold",
@@ -149,7 +149,7 @@ CONTEXT:
 			},
 		)
 		
-	def ask(self, query: str):
+	def direct_ask(self, query: str):
 		if not self.retriever:
 			self.load()
 		search = self.retriever.invoke(query)
@@ -172,7 +172,7 @@ CONTEXT:
 if len(sys.argv) < 2:
 	chatbot = ChatBot()
 	test_query = "인도 음식이 먹고 싶어요! 주변에 카레 같은 인도 음식 파는 곳이 있나요?"
-	chatbot.ask(test_query)
+	chatbot.direct_ask(test_query)
 elif sys.argv[1] == "--build":
 	chatbot = ChatBot()
-	chatbot.ingest_json()
+	chatbot.ingest_json("chroma_db")
