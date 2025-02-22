@@ -1,5 +1,7 @@
 from langchain_chroma import Chroma
-from langchain_community.chat_models import ChatOpenAI
+# from langchain_community.chat_models import ChatOpenAI 
+# NOTE: 더이상 지원되지 않는다고 해서 아래 대체되는 코드 넣어뒀습니다.
+from langchain_openai import ChatOpenAI
 from langchain_community.embeddings import GPT4AllEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains.combine_documents import create_stuff_documents_chain
@@ -91,13 +93,13 @@ CONTEXT:
 		all_chunks = []
 		for i in range(len(self.dataset)):
 			data = self.dataset[i]
-			text = ", ".join(data["keywords"])
+			text = ", ".join(data["keywords"]) 
 			menus = data["menu"]
 			menu_text = " "
 			for j in range(len(data["menu"])):
-				menu_text += ", "
+				menu_text += ", " 
 				menu_text += menus[j]["name"]
-			text += menu_text
+			text += menu_text # keyword + 메뉴 이름
 			document = Document(page_content=text, metadata={"id": data["id"]})
 			all_chunks.append(document)
 		self.vector_store = Chroma.from_documents(documents=all_chunks, 
@@ -107,9 +109,9 @@ CONTEXT:
     # 프롬프트 템플릿에 키워드가 담기지 않는 것을 방지하기 위해 초깃값 'N/A'를 넣어둠
 	def default_keyword(self):
 		restaurant_data = {}
-		for i in range(3):
+		for i in range(3): #3개 식당
 			restaurant_data[f"name{i+1}"] = "N/A"
-			for j in range(3):
+			for j in range(3): #3개 메뉴
 				restaurant_data[f"mainMenu{i+1}{j+1}"] = "N/A"
 				restaurant_data[f"price{i+1}{j+1}"] = "N/A"
 		return restaurant_data
@@ -148,10 +150,11 @@ CONTEXT:
 				"score_threshold": 0.01,
 			},
 		)
-		
+
+	# 전체 문장 기반
 	def direct_ask(self, query: str):
 		if not self.retriever:
-			self.load()
+			self.load("chroma_db")
 		search = self.retriever.invoke(query)
 		# NOTE: 벡터 DB 검색 결과 확인 용도
 		print("벡터DB 결과 check: ", search)
@@ -168,8 +171,57 @@ CONTEXT:
 		print(response)
 		return response
 
-	def default_ask(self, ):
+
+##joy
+
+	# 키워드 기반
+	def default_ask(self, query:str):
+		if not self.retriever:
+			self.load("chroma_db")
+		keywords=self.extract_keywords(query)
+		print("추출된 키워드: ", keywords)
+
+		# NOTE: 확인용 json 질의
+		search_results=self.keyword_search(keywords)
+		print("키워드 기반 검색 결과: ", search_results)
+
+		#검색된 식당 ID 가져오기
+		matched_ids = [rec["id"] for rec in search_results]
+		print("키워드 검색 결과 ID check: ", matched_ids)
+
+		restaurant_info = self.get_restaurant_info(matched_ids)
+		formatted_prompt = self.test_prompt.format(**restaurant_info)
+
+		response = self.model.invoke(formatted_prompt)
+		print(response)
+		return response
+	
+	# default_ask 키워드 추출 함수
+	def extract_keywords(self, query: str):
+		keywords=[]
+		for keyword_list in self.dataset:
+			for kw in keyword_list["keywords"]:
+				if kw in query:
+					keywords.append(kw)
+		return list(set(keywords))
+	
+	# default_ask 키워드 기반 json에서 식당 검색
+	def keyword_search(self,keywords):
+		matched_restaurants=[]
+		for data in self.dataset:
+			if any(kw in data["keywords"] for kw in keywords):
+				matched_restaurants.append(data)
+
+		#검색결과 없을 경우 기본 추천
+		if not matched_restaurants:
+			print("키워드 검색 결과 없음. 기본 추천 제공")
+			return self.dataset[:3] #데이터셋 상위 3개
 		
+		return matched_restaurants[:3]
+
+
+##joy
+
 
 
 if len(sys.argv) < 2:
@@ -178,4 +230,4 @@ if len(sys.argv) < 2:
 	chatbot.direct_ask(test_query)
 elif sys.argv[1] == "--build":
 	chatbot = ChatBot()
-	chatbot.ingest_json("chroma_db")
+	chatbot.ingest_json()
