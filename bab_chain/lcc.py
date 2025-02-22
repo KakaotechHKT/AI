@@ -168,6 +168,9 @@ CONTEXT:
 		print(response)
 		return response
 
+	def default_ask(self, ):
+		
+
 
 if len(sys.argv) < 2:
 	chatbot = ChatBot()
