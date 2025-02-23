@@ -30,65 +30,16 @@ class ChatBot:
 		
 		with open("../store_data.json", 'r', encoding='utf-8') as file:
 			self.dataset = json.load(file)
-		# 재크롤링 후, 아래 템플릿으로 변경 예정
-		self.prompt = ChatPromptTemplate.from_messages(
-		[
-			("system", 
-"""
-당신은 식당 추천 챗봇입니다.
-아래의 REQUEST에 따라 식당을 한글로 추천해주세요.
 
-REQUEST:
-1. 유저가 선호하는 '키워드'의 식당들을 데이터베이스에서 찾아 '식당 정보'에 작성했습니다.
-2. 해당 식당들을 유저에게 추천해주세요. 제시된 식당들은 모두 추천해주세요. 식당들은 추천 순으로 제시했으니 답변 시에도 이 순서를 지켜주세요.
-3. 추천할때에는 '키워드'와 '식당 정보'를 모두 고려해주세요.
-4. 각각의 식당들을 추천할 때는 먼저 식당의 '이름'을 두괄식으로 제공해주세요. 그리고 추천 이유를 제공해주세요.
-4. 답변이 너무 길면 유저가 피로감을 느낄 수 있습니다. CONTEXT 중에 필수적이지 않은 내용은 포함하지 말아주세요.
- 
-CONTEXT:
-키워드: {keyword1}, {keyword2}, {keyword3}
-식당 정보:
-식당1
-이름: {name1}, 대분류: {ctg1}, 소분류: {ctg2}, {isDiet}, {isCheap}, 
-{mainMenu1}은 {price1}원이고, {mainMenu2}은 {price2}원이고, {mainMenu3}은 {price3}원
-식당2
-이름: {name2}, 대분류: {ctg1}, 소분류: {ctg2}, {isDiet}, {isCheap}, 
-{mainMenu1}은 {price1}원이고, {mainMenu2}은 {price2}원이고, {mainMenu3}은 {price3}원
-식당3
-이름: {name3}, 대분류: {ctg1}, 소분류: {ctg2}, {isDiet}, {isCheap}, 
-{mainMenu1}은 {price1}원이고, {mainMenu2}은 {price2}원이고, {mainMenu3}은 {price3}원
- 
+		self.default_prompt = self.load_prompt("templates/default_prompt.txt")
+		self.keyword_prompt = self.load_prompt("templates/keyword_prompt.txt")
+		self.direct_prompt = self.load_prompt("templates/direct_prompt.txt")
 
-"""),
-			("human", "{input}"),
-		]
-	)
-		# 현재 임시 템플릿
-		self.test_prompt = ChatPromptTemplate.from_messages([("system", 
-	"""
-        당신은 식당 추천 챗봇입니다.
-        아래의 REQUEST에 따라 식당을 한글로 추천해주세요.
-
-        REQUEST:
-        1. 유저가 선호하는 '키워드'의 식당들을 데이터베이스에서 찾아 '식당 정보'에 작성했습니다.
-        2. 해당 식당들을 유저에게 추천해주세요. 제시된 식당들은 모두 추천해주세요. 식당들은 추천 순으로 제시했으니 답변 시에도 이 순서를 지켜주세요.
-        3. 추천할때에는 '이름'과 '메뉴'를 고려해주세요.
-        4. 각각의 식당들을 추천할 때는 먼저 식당의 '이름'을 두괄식으로 제공해주세요. 그리고 추천 이유를 제공해주세요.
-        4. 답변이 너무 길면 유저가 피로감을 느낄 수 있습니다. CONTEXT 중에 필수적이지 않은 내용은 포함하지 말아주세요.
-        
-        CONTEXT:
-        식당 정보:
-        식당1
-        이름: {name1},
-        {mainMenu11}은 {price11}원이고, {mainMenu12}은 {price12}원이고, {mainMenu13}은 {price13}원
-        식당2
-        이름: {name2},
-        {mainMenu21}은 {price21}원이고, {mainMenu22}은 {price22}원이고, {mainMenu23}은 {price23}원
-        식당3
-        이름: {name3},
-        {mainMenu31}은 {price31}원이고, {mainMenu32}은 {price32}원이고, {mainMenu33}은 {price33}원
-	""")])
-		
+	def load_prompt(self, file_path):
+		""" 템플릿 파일을 불러오는 함수 """
+		with open(file_path, "r", encoding="utf-8") as file:
+			return ChatPromptTemplate.from_template(file.read())
+				
     # json을 텍스트로 변환해 벡터 DB에 적재
 	def ingest_json(self, name):
 		all_chunks = []
@@ -112,6 +63,10 @@ CONTEXT:
 		restaurant_data = {}
 		for i in range(3): #3개 식당
 			restaurant_data[f"name{i+1}"] = "N/A"
+			restaurant_data[f"ctg{i+1}1"] = "N/A"
+			restaurant_data[f"ctg{i+1}2"] = "N/A"
+			restaurant_data[f"isDiet{i+1}"] = False
+			restaurant_data[f"isCheap{i+1}"] = False
 			for j in range(3): #3개 메뉴
 				restaurant_data[f"mainMenu{i+1}{j+1}"] = "N/A"
 				restaurant_data[f"price{i+1}{j+1}"] = "N/A"
@@ -128,6 +83,10 @@ CONTEXT:
 			menu_names = [menu["name"] for menu in r["menu"]]
 			menu_prices = [menu["price"] for menu in r["menu"]]
 			restaurant_data[f"name{i+1}"] = r["name"]
+			restaurant_data[f"ctg{i+1}1"] = r["ctg1"]
+			restaurant_data[f"ctg{i+1}2"] = r["ctg2"]
+			restaurant_data[f"isDiet{i+1}"] = r["isDiet"]
+			restaurant_data[f"isCheap{i+1}"] = r["isCheap"]
 			# 메뉴 상위 3개 이용
 			for j in range(3):
 				if j >= len(menu_names):
@@ -136,6 +95,22 @@ CONTEXT:
 				else:
 					restaurant_data[f"mainMenu{i+1}{j+1}"] = r["menu"][j]["name"]
 					restaurant_data[f"price{i+1}{j+1}"] = r["menu"][j]["price"]
+		return restaurant_data
+	def get_restaurant_info_direct(self, query, matched_ids):
+		restaurant_data = self.get_restaurant_info(matched_ids)
+		restaurant_data["input"] = query
+		return restaurant_data
+	def get_restaurant_info_default(self, keywords, matched_ids):
+		restaurant_data = self.get_restaurant_info(matched_ids)
+		for i, kw in enumerate(keywords):
+			restaurant_data[f"keyword{i+1}"] = kw
+		return restaurant_data
+	def get_restaurant_info_keyword(self, keywords, chosenKeywords, matched_ids):
+		restaurant_data = self.get_restaurant_info(matched_ids)
+		for i, kw in enumerate(keywords):
+			restaurant_data[f"keyword{i+1}"] = kw
+		for i, kw in enumerate(chosenKeywords):
+			restaurant_data[f"chosenKeyword{i+1}"] = kw
 		return restaurant_data
 			
 	# 유사도 검색
@@ -152,8 +127,13 @@ CONTEXT:
 			},
 		)
 
+	# default_ask 키워드 추출 함수
+	def extract_keywords(self, keywords: List[str]):
+		keywords_str=", ".join(kw for kw in keywords)
+		return keywords_str
+
 	# 전체 문장 기반
-	def direct_ask(self, query: str):
+	def direct_ask(self, keywords: List[str], query: str):
 		if not self.retriever:
 			self.load("chroma_db")
 		search = self.retriever.invoke(query)
@@ -163,8 +143,8 @@ CONTEXT:
 		matched_ids = [rec.metadata["id"] for rec in search]
 		# NOTE: 벡터 DB 검색 결과 ID만 퀵체크
 		print("벡터DB 결과 ID check: ", matched_ids)
-		restaurant_info = self.get_restaurant_info(matched_ids)
-		formatted_prompt = self.test_prompt.format(
+		restaurant_info = self.get_restaurant_info_direct(query, matched_ids)
+		formatted_prompt = self.direct_prompt.format(
 			**restaurant_info
 			)
 		
@@ -172,46 +152,63 @@ CONTEXT:
 		print(response)
 		return response
 
-
-##joy
-	# default_ask 키워드 추출 함수
-	def extract_keywords(self, keywords: List[str]):
-		keywords_str=", ".join(kw for kw in keywords)
-		return keywords_str
-
-	# 키워드 기반
+	# 초기 선호 기반
 	def default_ask(self, keywords: List[str]):
 		if not self.retriever:
 			self.load("chroma_db")
-		keywords=self.extract_keywords(keywords)
-		search = self.retriever.invoke(keywords)
+		text_keywords=self.extract_keywords(keywords)
+		search = self.retriever.invoke(text_keywords)
 		# NOTE: 벡터 DB 검색 결과 확인 용도
 		print("벡터DB 결과 check: ", search)
 
 		matched_ids = [rec.metadata["id"] for rec in search]
 		# NOTE: 벡터 DB 검색 결과 ID만 퀵체크
 		print("벡터DB 결과 ID check: ", matched_ids)
-		restaurant_info = self.get_restaurant_info(matched_ids)
-		formatted_prompt = self.test_prompt.format(
+		restaurant_info = self.get_restaurant_info_default(keywords, matched_ids)
+		formatted_prompt = self.default_prompt.format(
 			**restaurant_info
 			)
 		
 		response = self.model.invoke(formatted_prompt)
 		print(response)
 		return response
+	
+	# 키워드 기반
+	def keyword_ask(self, keywords: List[str], chosenKeywords: List[str]):
+		if not self.retriever:
+			self.load("chroma_db")
+		text_keywords=self.extract_keywords(keywords)
+		search = self.retriever.invoke(text_keywords)
+		print("벡터DB 결과 check: ", search)
 
+		matched_ids = [rec.metadata["id"] for rec in search]
+		# NOTE: 벡터 DB 검색 결과 ID만 퀵체크
+		print("벡터DB 결과 ID check: ", matched_ids)
+		restaurant_info = self.get_restaurant_info_keyword(keywords, chosenKeywords, matched_ids)
+		formatted_prompt = self.keyword_prompt.format(
+			**restaurant_info
+			)
+		response = self.model.invoke(formatted_prompt)
+		print(response)
+		return response
 
+# 챗봇 이용하는 경우
 if sys.argv[1] == '-direct':
-	print("1")
 	chatbot = ChatBot()
-	print("2")
-	test_query = "인도 음식이 먹고 싶어요! 주변에 카레 같은 인도 음식 파는 곳이 있나요?"
-	chatbot.direct_ask(test_query)
-	print("3")
-if sys.argv[1] == '-default':
+	default_keyword = ["한식", "칼국수", "가성비"]
+	query = "인도 음식이 먹고 싶어요! 주변에 카레 같은 인도 음식 파는 곳이 있나요?"
+	chatbot.direct_ask(default_keyword, query)
+# 초기 키워드 기반 추천
+elif sys.argv[1] == '-default':
 	chatbot = ChatBot()
-	test_keyword = ["한식", "칼국수", "가성비"]
-	chatbot.default_ask(test_keyword)
-elif sys.argv[1] == "--build":
+	default_keyword = ["한식", "칼국수", "가성비"]
+	chatbot.default_ask(default_keyword)
+# 키워드 선택 기반 추천
+elif sys.argv[1] == '-keyword':
+	chatbot = ChatBot()
+	default_keyword = ["한식", "칼국수", "가성비"]
+	chosen_keyword = ["양식", "파스타", "분위기"]
+	chatbot.keyword_ask(default_keyword, chosen_keyword)
+elif sys.argv[1] == "-build":
 	chatbot = ChatBot()
 	chatbot.ingest_json()
