@@ -19,9 +19,10 @@ def direct_ask(text: str = Query()):
     return {"content" : response.content}
 
 # 유저 선호 키워드 바탕 답변
-@app.get("/default")
-def default_ask(text: str = Query()):
-    response = model.default_ask(text)
+@app.post("/default")
+def default_ask(request: KeywordRequest):
+    keywords = request.keywords
+    response = model.default_ask(keywords)
     return {"content" : response.content}
 
 # 벡터 DB 적재 (name에는 벡터 디비 이름 설정)

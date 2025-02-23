@@ -8,6 +8,7 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain_core.documents import Document
 from dotenv import load_dotenv
+from typing import List
 import sys, os, json
  
 class ChatBot:
@@ -18,7 +19,7 @@ class ChatBot:
 	dataset = None
  
 	def __init__(self):
-		load_dotenv(dotenv_path="../.env")
+		load_dotenv(dotenv_path=".env")
 		self.model = ChatOpenAI(
 			model_name="gpt-4",    # "gpt-3.5-turbo"  ""
 			temperature=0.5,
@@ -173,61 +174,44 @@ CONTEXT:
 
 
 ##joy
+	# default_ask 키워드 추출 함수
+	def extract_keywords(self, keywords: List[str]):
+		keywords_str=", ".join(kw for kw in keywords)
+		return keywords_str
 
 	# 키워드 기반
-	def default_ask(self, query:str):
+	def default_ask(self, keywords: List[str]):
 		if not self.retriever:
 			self.load("chroma_db")
-		keywords=self.extract_keywords(query)
-		print("추출된 키워드: ", keywords)
+		keywords=self.extract_keywords(keywords)
+		search = self.retriever.invoke(keywords)
+		# NOTE: 벡터 DB 검색 결과 확인 용도
+		print("벡터DB 결과 check: ", search)
 
-		# NOTE: 확인용 json 질의
-		search_results=self.keyword_search(keywords)
-		print("키워드 기반 검색 결과: ", search_results)
-
-		#검색된 식당 ID 가져오기
-		matched_ids = [rec["id"] for rec in search_results]
-		print("키워드 검색 결과 ID check: ", matched_ids)
-
+		matched_ids = [rec.metadata["id"] for rec in search]
+		# NOTE: 벡터 DB 검색 결과 ID만 퀵체크
+		print("벡터DB 결과 ID check: ", matched_ids)
 		restaurant_info = self.get_restaurant_info(matched_ids)
-		formatted_prompt = self.test_prompt.format(**restaurant_info)
-
+		formatted_prompt = self.test_prompt.format(
+			**restaurant_info
+			)
+		
 		response = self.model.invoke(formatted_prompt)
 		print(response)
 		return response
-	
-	# default_ask 키워드 추출 함수
-	def extract_keywords(self, query: str):
-		keywords=[]
-		for keyword_list in self.dataset:
-			for kw in keyword_list["keywords"]:
-				if kw in query:
-					keywords.append(kw)
-		return list(set(keywords))
-	
-	# default_ask 키워드 기반 json에서 식당 검색
-	def keyword_search(self,keywords):
-		matched_restaurants=[]
-		for data in self.dataset:
-			if any(kw in data["keywords"] for kw in keywords):
-				matched_restaurants.append(data)
-
-		#검색결과 없을 경우 기본 추천
-		if not matched_restaurants:
-			print("키워드 검색 결과 없음. 기본 추천 제공")
-			return self.dataset[:3] #데이터셋 상위 3개
-		
-		return matched_restaurants[:3]
 
 
-##joy
-
-
-
-if len(sys.argv) < 2:
+if sys.argv[1] == '-direct':
+	print("1")
 	chatbot = ChatBot()
+	print("2")
 	test_query = "인도 음식이 먹고 싶어요! 주변에 카레 같은 인도 음식 파는 곳이 있나요?"
 	chatbot.direct_ask(test_query)
+	print("3")
+if sys.argv[1] == '-default':
+	chatbot = ChatBot()
+	test_keyword = ["한식", "칼국수", "가성비"]
+	chatbot.default_ask(test_keyword)
 elif sys.argv[1] == "--build":
 	chatbot = ChatBot()
 	chatbot.ingest_json()
