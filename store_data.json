@@ -554,9 +554,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%86%8C%ED%98%B8%EC%96%BC%ED%81%AC%EB%8B%88%EC%83%A4%EB%B8%8C%EC%B9%BC%EA%B5%AD%EC%88%98%26%EB%B0%94%EC%A7%80%EB%9D%BD%EC%B9%BC%EA%B5%AD%EC%88%98%EB%B3%B8%EC%A0%90%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020702,
+        "longitude": 127.1104411,
+        "kakao_link": "https://map.naver.com/p/entry/place/569481406?c=13.45,0,0,0,dh"
     },
     {
         "id": 15,
@@ -676,7 +676,7 @@
     },
     {
         "id": 18,
-        "name": "불고기 온소반 점심저녁회식명가",
+        "name": "불고기온소반 판교본점",
         "thumbnail": "./pictures/p18.jpg",
         "menu": [
             {
@@ -708,9 +708,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EB%B6%88%EA%B3%A0%EA%B8%B0%20%EC%98%A8%EC%86%8C%EB%B0%98%20%EC%A0%90%EC%8B%AC%EC%A0%80%EB%85%81%ED%9A%8C%EC%8B%9D%EB%AA%85%EA%B0%80%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020702,
+        "longitude": 127.1104411,
+        "kakao_link": "https://map.kakao.com/?nil_profile=title&nil_src=local"
     },
     {
         "id": 19,
@@ -861,9 +861,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EA%B3%A0%EC%A0%90%EC%9E%90%EC%B9%BC%EA%B5%AD%EC%88%98%EB%A7%8C%EB%91%90%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4012839,
+        "longitude": 127.1086461,
+        "kakao_link": "https://map.naver.com/p/entry/place/1180205646?c=15.00,0,0,0,dh"
     },
     {
         "id": 23,
@@ -981,9 +981,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%89%90%ED%94%84%EC%9D%98%EC%82%BC%EA%B2%B9%EC%82%B4%20%ED%8C%90%EA%B5%90%EC%A0%90"
+        "latitude": 37.4020682,
+        "longitude": 127.1066709,
+        "kakao_link": "https://map.naver.com/p/search/%EC%89%90%ED%94%84%EC%9D%98%EC%82%BC%EA%B2%B9%EC%82%B4%20%ED%8C%90%EA%B5%90%EC%A0%90/place/1741269927?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 28,
@@ -1136,8 +1136,8 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
+        "latitude": 37.4020682,
+        "longitude": 127.1066709,
         "kakao_link": "https://map.kakao.com/?q=%EC%A4%91%EA%B2%BD%EB%B3%84%EA%B3%A1%EB%A7%88%EB%9D%BC%ED%83%95%EC%83%81%EA%B6%88%20%ED%8C%90%EA%B5%90"
     },
     {
@@ -1531,9 +1531,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=BURRIT%20POP%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020682,
+        "longitude": 127.1066709,
+        "kakao_link": "https://map.naver.com/p/search/BURRIT%20POP/place/1556907784?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 44,
@@ -1569,9 +1569,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%95%84%EB%AA%AC%EB%93%9C%EB%B4%89%EB%B4%89%EC%98%A4%ED%8A%B8%EB%B0%80%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020664,
+        "longitude": 127.1086468,
+        "kakao_link": "https://map.naver.com/p/search/%EC%95%84%EB%AA%AC%EB%93%9C%EB%B4%89%EB%B4%89%EC%98%A4%ED%8A%B8%EB%B0%80/place/1218177119?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 46,
@@ -2021,8 +2021,8 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
+        "latitude": 37.4027741,
+        "longitude": 127.1068214,
         "kakao_link": "https://map.kakao.com/?q=%EC%9D%B4%EC%B9%98%EB%85%B8%EC%95%BC%20%ED%8C%90%EA%B5%90"
     },
     {
@@ -2060,8 +2060,8 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
+        "latitude": 37.4006942,
+        "longitude": 127.1069886,
         "kakao_link": "https://map.kakao.com/?q=%EC%9C%A8%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
@@ -2112,7 +2112,7 @@
     },
     {
         "id": 63,
-        "name": "예술작품을 빚다 비즐돈까스 가성비 아침점심저녁",
+        "name": "예술작품을 빚다 비즐",
         "thumbnail": "./pictures/p63.jpg",
         "menu": [
             {
@@ -2145,9 +2145,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%98%88%EC%88%A0%EC%9E%91%ED%92%88%EC%9D%84%20%EB%B9%9A%EB%8B%A4%20%EB%B9%84%EC%A6%90%EB%8F%88%EA%B9%8C%EC%8A%A4%20%EA%B0%80%EC%84%B1%EB%B9%84%20%EC%95%84%EC%B9%A8%EC%A0%90%EC%8B%AC%EC%A0%80%EB%85%81%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4012839,
+        "longitude": 127.1086461,
+        "kakao_link": "https://map.kakao.com/?q=예술작품을%20빚다%20비즐돈까스%20가성비%20아침점심저녁%20판교"
     },
     {
         "id": 64,
@@ -2295,7 +2295,7 @@
     },
     {
         "id": 68,
-        "name": "고다이 주방 점심저녁정식",
+        "name": "고다이 주방 판교본점",
         "thumbnail": "./pictures/p68.jpg",
         "menu": [
             {
@@ -2330,9 +2330,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EA%B3%A0%EB%8B%A4%EC%9D%B4%20%EC%A3%BC%EB%B0%A9%20%EC%A0%90%EC%8B%AC%EC%A0%80%EB%85%81%EC%A0%95%EC%8B%9D%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020702,
+        "longitude": 127.1104411,
+        "kakao_link": "https://map.kakao.com/?q=고다이%20주방%20점심저녁정식%20판교"
     },
     {
         "id": 69,
@@ -2423,9 +2423,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%EB%AA%A8%EC%B8%A0%EB%82%98%EB%B2%A0%20%ED%8C%90%EA%B5%90%EC%A0%90"
+        "latitude": 37.4006942,
+        "longitude": 127.1069886,
+        "kakao_link": "https://map.naver.com/p/search/%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%EB%AA%A8%EC%B8%A0%EB%82%98%EB%B2%A0%20%ED%8C%90%EA%B5%90%EC%A0%90/place/1855925753?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 72,
@@ -2804,9 +2804,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EB%94%94%EC%97%A3%ED%85%8C%EC%9D%B4%EB%B8%94%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020702,
+        "longitude": 127.1104411,
+        "kakao_link": "https://map.naver.com/p/search/%EB%94%94%EC%97%A3%ED%85%8C%EC%9D%B4%EB%B8%94/place/1511864306?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 82,
@@ -2883,9 +2883,9 @@
         ],
         "diet": false,
         "cheap": true,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%95%A0%EB%B9%84%EB%A1%9C%EB%93%9C%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98%20%ED%8C%90%EA%B5%90%EC%A0%90"
+        "latitude": 37.4006942,
+        "longitude": 127.1069886,
+        "kakao_link": "https://map.naver.com/p/search/%EC%95%A0%EB%B9%84%EB%A1%9C%EB%93%9C%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98%20%ED%8C%90%EA%B5%90%EC%A0%90/place/37213637?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 84,
@@ -2900,9 +2900,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EB%B9%A8%EA%B0%84%20%EC%A7%B1%EB%8F%8C%20%EB%96%A1%EB%B3%B6%EC%9D%B4%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020702,
+        "longitude": 127.1104411,
+        "kakao_link": "https://map.naver.com/p/search/%EB%B9%A8%EA%B0%84%20%EC%A7%B1%EB%8F%8C%20%EB%96%A1%EB%B3%B6%EC%9D%B4/place/1435982972?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 85,
@@ -3090,9 +3090,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%B2%AD%EC%B6%98%EB%A9%B4%EA%B0%80%20%ED%8C%90%EA%B5%90%EC%A0%90"
+        "latitude": 37.4012839,
+        "longitude": 127.1086461,
+        "kakao_link": "https://map.naver.com/p/search/%EC%B2%AD%EC%B6%98%EB%A9%B4%EA%B0%80%20%ED%8C%90%EA%B5%90%EC%A0%90/place/1485651320?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 90,
@@ -3135,7 +3135,7 @@
     },
     {
         "id": 91,
-        "name": "안동국시소호정 T-VALLEY점",
+        "name": "소호정 판교테크노벨리점",
         "thumbnail": "./pictures/p91.jpg",
         "menu": [
             {
@@ -3167,9 +3167,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%95%88%EB%8F%99%EA%B5%AD%EC%8B%9C%EC%86%8C%ED%98%B8%EC%A0%95%20T-VALLEY%EC%A0%90%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.394592,
+        "longitude": 127.111827,
+        "kakao_link": "https://map.kakao.com/?q=안동국시소호정%20T-VALLEY점%20판교"
     },
     {
         "id": 92,
@@ -3213,7 +3213,7 @@
     },
     {
         "id": 93,
-        "name": "기달임 돼지곰탕 본점",
+        "name": "기달임 돼지곰탕 판교",
         "thumbnail": "./pictures/p93.jpg",
         "menu": [
             {
@@ -3241,9 +3241,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EA%B8%B0%EB%8B%AC%EC%9E%84%20%EB%8F%BC%EC%A7%80%EA%B3%B0%ED%83%95%20%EB%B3%B8%EC%A0%90%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020702,
+        "longitude": 127.1104411,
+        "kakao_link": "https://map.kakao.com/?q=기달임%20돼지곰탕%20판교"
     },
     {
         "id": 94,
@@ -3511,7 +3511,7 @@
     },
     {
         "id": 101,
-        "name": "서울전통육개장 판교하이펙스점",
+        "name": "서울전통육개장 판교점",
         "thumbnail": "./pictures/p101.jpg",
         "menu": [
             {
@@ -3544,9 +3544,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%84%9C%EC%9A%B8%EC%A0%84%ED%86%B5%EC%9C%A1%EA%B0%9C%EC%9E%A5%20%ED%8C%90%EA%B5%90%ED%95%98%EC%9D%B4%ED%8E%99%EC%8A%A4%EC%A0%90"
+        "latitude": 37.4020702,
+        "longitude": 127.1104411,
+        "kakao_link": "https://map.kakao.com/?q=서울전통육개장%20판교점"
     },
     {
         "id": 102,
@@ -3800,9 +3800,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=369%EB%B6%80%EB%8C%80%EC%B0%8C%EA%B0%9C%EC%95%A4%EC%83%9D%EC%82%BC%EA%B2%B9%EC%82%B4%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.401288,
+        "longitude": 127.1104439,
+        "kakao_link": "https://map.naver.com/p/search/369%EB%B6%80%EB%8C%80%EC%B0%8C%EA%B0%9C%EC%95%A4%EC%83%9D%EC%82%BC%EA%B2%B9%EC%82%B4/place/31355541?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 110,
@@ -4491,9 +4491,9 @@
         ],
         "diet": true,
         "cheap": true,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%ED%94%84%EB%A0%88%EC%8B%9C%ED%81%AC%EB%A0%88%EB%94%A7%20%ED%8C%90%EA%B5%90%EC%97%90%EC%9D%B4%EC%B9%98%EC%8A%A4%ED%80%98%EC%96%B4%EC%A0%90"
+        "latitude": 37.4020664,
+        "longitude": 127.1086468,
+        "kakao_link": "https://map.naver.com/p/search/%ED%94%84%EB%A0%88%EC%8B%9C%ED%81%AC%EB%A0%88%EB%94%A7%20%ED%8C%90%EA%B5%90%EC%97%90%EC%9D%B4%EC%B9%98%EC%8A%A4%ED%80%98%EC%96%B4%EC%A0%90/place/1010465396?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp"
     },
     {
         "id": 128,
@@ -4697,8 +4697,8 @@
         ],
         "diet": true,
         "cheap": true,
-        "latitude": null,
-        "longitude": null,
+        "latitude": 37.4012839,
+        "longitude": 127.1086461,
         "kakao_link": "https://map.kakao.com/?q=%ED%94%84%EB%A0%88%ED%8D%BC%EC%8A%A4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%20%ED%91%B8%EB%93%9C%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
@@ -4735,8 +4735,8 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
+        "latitude": 37.395284,
+        "longitude": 127.111477,
         "kakao_link": "https://map.kakao.com/?q=%EA%B9%8C%EC%82%AC%EB%85%BC%EB%82%98%20%ED%8C%90%EA%B5%90"
     },
     {
@@ -5460,9 +5460,9 @@
         ],
         "diet": false,
         "cheap": true,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%ED%8C%8C%EC%8A%A4%ED%83%80%20%EB%9D%BC%EC%9D%B4%EB%8D%94%EC%8A%A4%20%ED%8C%90%EA%B5%90%EC%A0%90"
+        "latitude": 37.4006942,
+        "longitude": 127.1069886,
+        "kakao_link": "https://map.naver.com/p/search/%ED%8C%8C%EC%8A%A4%ED%83%80%20%EB%9D%BC%EC%9D%B4%EB%8D%94%EC%8A%A4%20%ED%8C%90%EA%B5%90%EC%A0%90/place/1742310259?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 155,
@@ -5744,8 +5744,8 @@
         ],
         "diet": false,
         "cheap": true,
-        "latitude": null,
-        "longitude": null,
+        "latitude": 37.394592,
+        "longitude": 127.111827,
         "kakao_link": "https://map.kakao.com/?q=%EC%98%B5%EC%85%98%EC%8A%A4%ED%8E%98%EC%85%9C%ED%8B%B0%EC%BB%A4%ED%94%BC%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
     },
     {
@@ -5800,9 +5800,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EB%94%94%EB%8B%AD%20%ED%8C%90%EA%B5%90"
+        "latitude": 37.4020682,
+        "longitude": 127.1066709,
+        "kakao_link": "https://map.naver.com/p/search/%EB%94%94%EB%8B%AD/place/1451683662?c=15.00,0,0,0,dh&isCorrectAnswer=true"
     },
     {
         "id": 166,
@@ -5860,9 +5860,9 @@
         ],
         "diet": false,
         "cheap": false,
-        "latitude": null,
-        "longitude": null,
-        "kakao_link": "https://map.kakao.com/?q=%EC%A7%9D%ED%83%9C%EC%95%A4%EB%85%B8%EA%B0%80%EB%A6%AC%20%EC%84%B1%EB%82%A8%ED%8C%90%EA%B5%90%EC%A0%90"
+        "latitude": 37.4020682,
+        "longitude": 127.1066709,
+        "kakao_link": "https://map.naver.com/p/entry/place/1910842879?c=15.00,0,0,0,dh"
     },
     {
         "id": 168,
