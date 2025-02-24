@@ -1,1097 +1,42 @@
 [
     {
         "id": 0,
-        "name": "진부엉이꼬마김밥",
-        "thumbnail": "pictures/p0.jpg",
+        "name": "봉피양 판교점",
+        "thumbnail": "./pictures/p0.jpg",
         "menu": [
             {
-                "name": "찐꼬마김밥 6줄",
-                "price": "4500"
+                "name": "평양냉면",
+                "price": "16000"
             },
             {
-                "name": "매콤어묵꼬마김밥 6줄",
-                "price": "5000"
+                "name": "돼지목심본갈비(270g)",
+                "price": "36000"
             },
             {
-                "name": "스페셜 1 6줄",
-                "price": "6500"
+                "name": "벽제설렁탕",
+                "price": "19000"
             },
             {
-                "name": "스페셜 2 6줄",
-                "price": "9700"
+                "name": "한우생갈비(200g)",
+                "price": "140000"
             }
         ],
-        "keywords": [
-            "분식",
-            "김밥"
-        ]
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4021235864699,
+        "longitude": 127.109228804893,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B4%89%ED%94%BC%EC%96%91%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
         "id": 1,
-        "name": "청년다방 판교테크노밸리점",
-        "thumbnail": "pictures/p1.jpg",
-        "menu": [
-            {
-                "name": "틈새매운어묵떡볶이",
-                "price": "16500"
-            },
-            {
-                "name": "불향차돌떡볶이",
-                "price": "17500"
-            },
-            {
-                "name": "통큰오짱떡볶이",
-                "price": "19000"
-            },
-            {
-                "name": "마라로제떡볶이",
-                "price": "19000"
-            },
-            {
-                "name": "떡튀순떡볶이",
-                "price": "17500"
-            }
-        ],
-        "keywords": [
-            "분식"
-        ]
-    },
-    {
-        "id": 2,
-        "name": "기름짜는김밥집",
-        "thumbnail": "pictures/p2.jpg",
-        "menu": [
-            {
-                "name": "오뎅",
-                "price": "3500"
-            },
-            {
-                "name": "김치볶음밥",
-                "price": "5500"
-            },
-            {
-                "name": "참치덮밥",
-                "price": "6000"
-            },
-            {
-                "name": "고구마돈까스",
-                "price": "7500"
-            },
-            {
-                "name": "들기름김밥",
-                "price": "3000"
-            }
-        ],
-        "keywords": [
-            "분식",
-            "김밥"
-        ]
-    },
-    {
-        "id": 3,
-        "name": "헬키푸키 판교점",
-        "thumbnail": "pictures/p3.jpg",
-        "menu": [
-            {
-                "name": "키토김밥",
-                "price": "6800"
-            },
-            {
-                "name": "크래미 키토김밥",
-                "price": "7800"
-            },
-            {
-                "name": "치즈 키토김밥",
-                "price": "7800"
-            },
-            {
-                "name": "참치 키토김밥",
-                "price": "7800"
-            },
-            {
-                "name": "베이컨 키토김밥",
-                "price": "7800"
-            }
-        ],
-        "keywords": [
-            "분식",
-            "김밥"
-        ]
-    },
-    {
-        "id": 4,
-        "name": "상아김밥 판교점",
-        "thumbnail": "pictures/p4.jpg",
-        "menu": [
-            {
-                "name": "상아김밥",
-                "price": "4500"
-            },
-            {
-                "name": "참치와사비키토",
-                "price": "7500"
-            },
-            {
-                "name": "상아떡볶이",
-                "price": "6500"
-            },
-            {
-                "name": "특제참치주먹밥",
-                "price": "7000"
-            },
-            {
-                "name": "야채김밥",
-                "price": "4500"
-            }
-        ],
-        "keywords": [
-            "분식",
-            "김밥"
-        ]
-    },
-    {
-        "id": 5,
-        "name": "소풍",
-        "thumbnail": "pictures/p5.jpg",
-        "menu": [
-            {
-                "name": "김밥",
-                "price": "3000"
-            },
-            {
-                "name": "떡볶이",
-                "price": "3500"
-            },
-            {
-                "name": "순대",
-                "price": "3500"
-            },
-            {
-                "name": "튀김범벅",
-                "price": "3500"
-            },
-            {
-                "name": "어묵1인분(3개)",
-                "price": "2000"
-            }
-        ],
-        "keywords": [
-            "분식"
-        ]
-    },
-    {
-        "id": 6,
-        "name": "빨간 짱돌 떡볶이",
-        "thumbnail": null,
-        "menu": [],
-        "keywords": [
-            "분식"
-        ]
-    },
-    {
-        "id": 7,
-        "name": "GS25 판교본점",
-        "thumbnail": "pictures/p7.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 8,
-        "name": "CU 판교U스페이스1호점",
-        "thumbnail": "pictures/p8.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 9,
-        "name": "CU 판교엠타워센터점",
-        "thumbnail": "pictures/p9.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 10,
-        "name": "세븐일레븐 판교점",
-        "thumbnail": "pictures/p10.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 11,
-        "name": "GS25 판교스페이스점",
-        "thumbnail": "pictures/p11.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 12,
-        "name": "CU 판교스페이스점",
-        "thumbnail": "pictures/p12.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 13,
-        "name": "이마트24 SMART카카오VX판교점",
-        "thumbnail": "pictures/p13.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 14,
-        "name": "GS25 판교H스퀘어점",
-        "thumbnail": "pictures/p14.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 15,
-        "name": "CU 판교H스퀘어2호점",
-        "thumbnail": "pictures/p15.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 16,
-        "name": "CU 판교HIPEX점",
-        "thumbnail": "pictures/p16.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 17,
-        "name": "GS25 판교삼환점",
-        "thumbnail": "pictures/p17.jpg",
-        "menu": [],
-        "keywords": [
-            "편의점"
-        ]
-    },
-    {
-        "id": 18,
-        "name": "제비면가 판교본점",
-        "thumbnail": "pictures/p18.jpg",
-        "menu": [
-            {
-                "name": "수제비",
-                "price": "7000"
-            },
-            {
-                "name": "칼국수",
-                "price": "7000"
-            },
-            {
-                "name": "매생이굴국밥",
-                "price": "8000"
-            },
-            {
-                "name": "통영굴 수제비",
-                "price": "8000"
-            },
-            {
-                "name": "통영굴 칼국수",
-                "price": "8000"
-            }
-        ],
-        "keywords": [
-            "김밥"
-        ]
-    },
-    {
-        "id": 19,
-        "name": "샐러디 판교테크노밸리점",
-        "thumbnail": "pictures/p19.jpg",
-        "menu": [
-            {
-                "name": "탄단지 샐러디",
-                "price": "8600"
-            },
-            {
-                "name": "로스트닭다리살 샐러디",
-                "price": "9900"
-            },
-            {
-                "name": "우삼겹메밀면 누들볼",
-                "price": "9300"
-            },
-            {
-                "name": "칠리베이컨 포케볼",
-                "price": "8600"
-            },
-            {
-                "name": "에그베이컨 샌드",
-                "price": "7400"
-            }
-        ],
-        "keywords": [
-            "샌드위치",
-            "다이어트"
-        ]
-    },
-    {
-        "id": 20,
-        "name": "구우트",
-        "thumbnail": "pictures/p20.jpg",
-        "menu": [
-            {
-                "name": "Raclette",
-                "price": "99000"
-            },
-            {
-                "name": "Sweet Pumpkin Sujebi",
-                "price": "19000"
-            },
-            {
-                "name": "Not Cola It's Rucola",
-                "price": "17000"
-            },
-            {
-                "name": "rrata rrata Burrata",
-                "price": "27000"
-            },
-            {
-                "name": "Oh! Lasagna",
-                "price": "21000"
-            }
-        ],
-        "keywords": [
-            "샌드위치"
-        ]
-    },
-    {
-        "id": 21,
-        "name": "프레시크레딧 판교에이치스퀘어점",
-        "thumbnail": "pictures/p21.jpg",
-        "menu": [
-            {
-                "name": "햄에그 샌드위치",
-                "price": "7500"
-            }
-        ],
-        "keywords": [
-            "샌드위치",
-            "다이어트"
-        ]
-    },
-    {
-        "id": 22,
-        "name": "마리앤마사판교점",
-        "thumbnail": "pictures/p22.jpg",
-        "menu": [
-            {
-                "name": "아메리카노",
-                "price": "3000"
-            },
-            {
-                "name": "아이스 아메리카노",
-                "price": "3500"
-            },
-            {
-                "name": "잉글리쉬머핀",
-                "price": "4500"
-            },
-            {
-                "name": "브리오쉬에그",
-                "price": "4800"
-            },
-            {
-                "name": "길거리 토스트",
-                "price": "4900"
-            }
-        ],
-        "keywords": [
-            "샌드위치"
-        ]
-    },
-    {
-        "id": 23,
-        "name": "써브웨이 판교테크노밸리점",
-        "thumbnail": "pictures/p23.jpg",
-        "menu": [
-            {
-                "name": "이탈리안 비엠티 15cm",
-                "price": "6900"
-            }
-        ],
-        "keywords": [
-            "샌드위치"
-        ]
-    },
-    {
-        "id": 24,
-        "name": "멜버",
-        "thumbnail": "pictures/p24.jpg",
-        "menu": [
-            {
-                "name": "불닭마요 샌드위치",
-                "price": "7500"
-            },
-            {
-                "name": "에그마요 샌드위치",
-                "price": "6500"
-            },
-            {
-                "name": "크랜베리 샌드위치",
-                "price": "7500"
-            },
-            {
-                "name": "감자샐러드 샌드위치",
-                "price": "7500"
-            },
-            {
-                "name": "단호박 샌드위치",
-                "price": "7500"
-            }
-        ],
-        "keywords": [
-            "샌드위치"
-        ]
-    },
-    {
-        "id": 25,
-        "name": "로뚜뚜",
-        "thumbnail": "pictures/p25.jpg",
-        "menu": [],
-        "keywords": [
-            "샌드위치"
-        ]
-    },
-    {
-        "id": 26,
-        "name": "스타벅스 판교HIPEX점",
-        "thumbnail": "pictures/p26.jpg",
-        "menu": [
-            {
-                "name": "아메리카노(Tall)",
-                "price": "4100"
-            }
-        ],
-        "keywords": [
-            "샌드위치"
-        ]
-    },
-    {
-        "id": 27,
-        "name": "픽유어온샐러드",
-        "thumbnail": "pictures/p27.jpg",
-        "menu": [
-            {
-                "name": "페퍼카우(우삼겹) 샐러드",
-                "price": "10000"
-            },
-            {
-                "name": "방탄커피",
-                "price": "5000"
-            },
-            {
-                "name": "그릴드치킨 샐러드",
-                "price": "10000"
-            },
-            {
-                "name": "치킨시저 샐러드",
-                "price": "10000"
-            },
-            {
-                "name": "아보카도 샐러드",
-                "price": "10000"
-            }
-        ],
-        "keywords": [
-            "샌드위치"
-        ]
-    },
-    {
-        "id": 28,
-        "name": "테이블스푼컵스프",
-        "thumbnail": "pictures/p28.jpg",
-        "menu": [
-            {
-                "name": "찹스테이크세트",
-                "price": "16000"
-            },
-            {
-                "name": "빠네스프(PANE SOUP)",
-                "price": "9000"
-            },
-            {
-                "name": "초당옥수수 스프",
-                "price": "5000"
-            },
-            {
-                "name": "단호박크림스프",
-                "price": "5000"
-            },
-            {
-                "name": "당근스프",
-                "price": "5500"
-            }
-        ],
-        "keywords": [
-            "샌드위치"
-        ]
-    },
-    {
-        "id": 29,
-        "name": "라무진 판교점",
-        "thumbnail": "pictures/p29.jpg",
-        "menu": [
-            {
-                "name": "징기스칸 양갈비",
-                "price": "32000"
-            },
-            {
-                "name": "징기스칸 프렌치렉",
-                "price": "34000"
-            },
-            {
-                "name": "마늘밥",
-                "price": "3000"
-            },
-            {
-                "name": "오뎅탕",
-                "price": "17000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 30,
-        "name": "됐소 판교점",
-        "thumbnail": "pictures/p30.jpg",
-        "menu": [
-            {
-                "name": "꽃등심(150g)",
-                "price": "37000"
-            },
-            {
-                "name": "삼겹살(150g)",
-                "price": "16000"
-            },
-            {
-                "name": "투뿔등심(150g)",
-                "price": "43000"
-            },
-            {
-                "name": "안심(150g)",
-                "price": "40000"
-            },
-            {
-                "name": "치마살(150g)",
-                "price": "43000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 31,
-        "name": "수작",
-        "thumbnail": "pictures/p31.jpg",
-        "menu": [
-            {
-                "name": "한돈꽃삼겹 관자 삼합",
-                "price": "25000"
-            },
-            {
-                "name": "아롱사태 수육무침 굴림만두샤브 세트",
-                "price": "25000"
-            },
-            {
-                "name": "수제 굴림만두 소고기 샤브샤브",
-                "price": "16000"
-            },
-            {
-                "name": "소고기 샤브샤브",
-                "price": "14000"
-            },
-            {
-                "name": "메밀 비빔냉면",
-                "price": "14000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 32,
-        "name": "황제갈비",
-        "thumbnail": "pictures/p32.jpg",
-        "menu": [
-            {
-                "name": "생갈비 300g + 생토시 300g",
-                "price": "52000"
-            },
-            {
-                "name": "생갈비 600g + 생토시 600g",
-                "price": "96000"
-            },
-            {
-                "name": "1인분",
-                "price": "16000"
-            },
-            {
-                "name": "생갈비 600g + 생갈비 600g",
-                "price": "96000"
-            },
-            {
-                "name": "생토시 600g + 생토시 600g",
-                "price": "96000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 33,
-        "name": "봉피양 판교점",
-        "thumbnail": "pictures/p33.jpg",
-        "menu": [
-            {
-                "name": "평양냉면",
-                "price": "16000"
-            },
-            {
-                "name": "돼지목심본갈비(270g)",
-                "price": "36000"
-            },
-            {
-                "name": "벽제설렁탕",
-                "price": "19000"
-            },
-            {
-                "name": "한우생갈비(200g)",
-                "price": "140000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 34,
-        "name": "행복한집숯불갈비",
-        "thumbnail": "pictures/p34.jpg",
-        "menu": [
-            {
-                "name": "한우 생 갈비살(400g)",
-                "price": "60000"
-            },
-            {
-                "name": "한돈 수제 돼지갈비 (250g)",
-                "price": "14000"
-            },
-            {
-                "name": "목살갈비 양념구이 (250g)",
-                "price": "15000"
-            },
-            {
-                "name": "삼겹살 (200g)",
-                "price": "13000"
-            },
-            {
-                "name": "왕 갈비탕",
-                "price": "9000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 35,
-        "name": "즐삼 생고기",
-        "thumbnail": "pictures/p35.jpg",
-        "menu": [
-            {
-                "name": "통돼지김치찌개",
-                "price": "9000"
-            },
-            {
-                "name": "무한 돼지",
-                "price": "17900"
-            },
-            {
-                "name": "무한 소",
-                "price": "25900"
-            },
-            {
-                "name": "무한소곱창",
-                "price": "27900"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 36,
-        "name": "조재벌식당",
-        "thumbnail": "pictures/p36.jpg",
-        "menu": [
-            {
-                "name": "부대찌개",
-                "price": "11000"
-            },
-            {
-                "name": "한우국밥",
-                "price": "11000"
-            },
-            {
-                "name": "김치찌개",
-                "price": "10000"
-            },
-            {
-                "name": "두루치기",
-                "price": "11000"
-            },
-            {
-                "name": "삼겹살",
-                "price": "17000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 37,
-        "name": "이야기둘",
-        "thumbnail": "pictures/p37.jpg",
-        "menu": [
-            {
-                "name": "꽃등심구이(100g) - 당일주문가능",
-                "price": "39000"
-            },
-            {
-                "name": "이야기 한상 세트 - 예약주문만 가능",
-                "price": "94000"
-            },
-            {
-                "name": "한우 등골 사시미 한판",
-                "price": "25000"
-            },
-            {
-                "name": "점심특선 야끼니쿠 반상(1인 정식)",
-                "price": "15000"
-            },
-            {
-                "name": "점심특선 샤브샤브 반상(1인 정식)",
-                "price": "19000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 38,
-        "name": "토속상황삼계탕",
-        "thumbnail": "pictures/p38.jpg",
-        "menu": [
-            {
-                "name": "상황삼계탕",
-                "price": "16000"
-            },
-            {
-                "name": "한방삼계탕",
-                "price": "18000"
-            },
-            {
-                "name": "들깨삼계탕",
-                "price": "18000"
-            },
-            {
-                "name": "뚝닭이",
-                "price": "9000"
-            },
-            {
-                "name": "낙지볶음비빔밥",
-                "price": "11000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 39,
-        "name": "고향옥얼큰순대국 삼평점",
-        "thumbnail": "pictures/p39.jpg",
-        "menu": [
-            {
-                "name": "얼큰순대국",
-                "price": "12000"
-            },
-            {
-                "name": "순순대국",
-                "price": "11000"
-            },
-            {
-                "name": "뼈해장국",
-                "price": "11000"
-            },
-            {
-                "name": "얼큰내장국밥",
-                "price": "12000"
-            },
-            {
-                "name": "얼큰수육국밥",
-                "price": "12000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 40,
-        "name": "춘업순댓국 본점",
-        "thumbnail": "pictures/p40.jpg",
-        "menu": [
-            {
-                "name": "술국",
-                "price": "22000"
-            },
-            {
-                "name": "순대곱창전골-중",
-                "price": "30000"
-            },
-            {
-                "name": "모듬순대",
-                "price": "35000"
-            },
-            {
-                "name": "보통순댓국",
-                "price": "11000"
-            },
-            {
-                "name": "얼큰순댓국",
-                "price": "12000"
-            }
-        ],
-        "keywords": [
-            "고기"
-        ]
-    },
-    {
-        "id": 41,
-        "name": "슬로우캘리 판교점",
-        "thumbnail": "pictures/p41.jpg",
-        "menu": [
-            {
-                "name": "스파이시 참치 포케",
-                "price": "11500"
-            },
-            {
-                "name": "클래식 연어 포케",
-                "price": "12500"
-            },
-            {
-                "name": "블랙페퍼 치킨 보울",
-                "price": "11500"
-            },
-            {
-                "name": "부채살 스테이크 보울",
-                "price": "13500"
-            },
-            {
-                "name": "닭가슴살 에그 포케",
-                "price": "11500"
-            }
-        ],
-        "keywords": [
-            "다이어트"
-        ]
-    },
-    {
-        "id": 42,
-        "name": "투고샐러드 판교유스페이스점",
-        "thumbnail": "pictures/p42.jpg",
-        "menu": [
-            {
-                "name": "치폴레 포크 그랩샐러드",
-                "price": "6500"
-            },
-            {
-                "name": "바질 치킨 그랩샐러드",
-                "price": "6500"
-            },
-            {
-                "name": "갈릭 치킨 그랩샐러드",
-                "price": "6500"
-            },
-            {
-                "name": "목살스테이크샐러드",
-                "price": "8900"
-            },
-            {
-                "name": "닭가슴살스테이크샐러드",
-                "price": "8900"
-            }
-        ],
-        "keywords": [
-            "다이어트"
-        ]
-    },
-    {
-        "id": 43,
-        "name": "프레퍼스 다이어트 푸드 판교점",
-        "thumbnail": "pictures/p43.jpg",
-        "menu": [
-            {
-                "name": "치킨 플레이트",
-                "price": "7900"
-            }
-        ],
-        "keywords": [
-            "다이어트"
-        ]
-    },
-    {
-        "id": 44,
-        "name": "샐러드박스 판교H스퀘어점",
-        "thumbnail": "pictures/p44.jpg",
-        "menu": [
-            {
-                "name": "오븐닭다리살샐러드",
-                "price": "10000"
-            },
-            {
-                "name": "매콤오븐닭다리살샐러드",
-                "price": "10000"
-            },
-            {
-                "name": "부채살스테이크샐러드",
-                "price": "12000"
-            },
-            {
-                "name": "비건스테이크샐러드",
-                "price": "9000"
-            },
-            {
-                "name": "양념소불고기샐러드",
-                "price": "10000"
-            }
-        ],
-        "keywords": [
-            "다이어트"
-        ]
-    },
-    {
-        "id": 45,
-        "name": "뻘낙지한마당",
-        "thumbnail": "pictures/p0.jpg",
-        "menu": [
-            {
-                "name": "낙지비빔밥",
-                "price": "11000"
-            },
-            {
-                "name": "산낙지비빔밥",
-                "price": "20000"
-            },
-            {
-                "name": "무안뻘산낙지",
-                "price": "55000"
-            },
-            {
-                "name": "문어숙회",
-                "price": ""
-            },
-            {
-                "name": "벌교 참 꼬막",
-                "price": "25000"
-            }
-        ],
-        "keywords": [
-            "한식"
-        ]
-    },
-    {
-        "id": 46,
-        "name": "봉피양 판교점",
-        "thumbnail": "pictures/p1.jpg",
-        "menu": [
-            {
-                "name": "평양냉면",
-                "price": "16000"
-            },
-            {
-                "name": "돼지목심본갈비(270g)",
-                "price": "36000"
-            },
-            {
-                "name": "벽제설렁탕",
-                "price": "19000"
-            },
-            {
-                "name": "한우생갈비(200g)",
-                "price": "140000"
-            }
-        ],
-        "keywords": [
-            "한식"
-        ]
-    },
-    {
-        "id": 47,
-        "name": "됐소 판교점",
-        "thumbnail": "pictures/p2.jpg",
-        "menu": [
-            {
-                "name": "꽃등심(150g)",
-                "price": "37000"
-            },
-            {
-                "name": "삼겹살(150g)",
-                "price": "16000"
-            },
-            {
-                "name": "투뿔등심(150g)",
-                "price": "43000"
-            },
-            {
-                "name": "안심(150g)",
-                "price": "40000"
-            },
-            {
-                "name": "치마살(150g)",
-                "price": "43000"
-            }
-        ],
-        "keywords": [
-            "한식"
-        ]
-    },
-    {
-        "id": 48,
         "name": "원조감자탕일미집 판교점",
-        "thumbnail": "pictures/p3.jpg",
+        "thumbnail": "./pictures/p1.jpg",
         "menu": [
             {
                 "name": "감자탕백반",
@@ -1114,14 +59,62 @@
                 "price": "3000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "한식"
-        ]
+        ],
+        "ctg2": [
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40209444163266,
+        "longitude": 127.10858950934346,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9B%90%EC%A1%B0%EA%B0%90%EC%9E%90%ED%83%95%EC%9D%BC%EB%AF%B8%EC%A7%91%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 49,
+        "id": 2,
+        "name": "됐소 판교점",
+        "thumbnail": "./pictures/p2.jpg",
+        "menu": [
+            {
+                "name": "꽃등심(150g)",
+                "price": "37000"
+            },
+            {
+                "name": "삼겹살(150g)",
+                "price": "16000"
+            },
+            {
+                "name": "투뿔등심(150g)",
+                "price": "43000"
+            },
+            {
+                "name": "안심(150g)",
+                "price": "40000"
+            },
+            {
+                "name": "치마살(150g)",
+                "price": "43000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "비빔밥",
+            "찌개",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020768699504,
+        "longitude": 127.106110401713,
+        "kakao_link": "https://map.kakao.com/?q=%EB%90%90%EC%86%8C%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 3,
         "name": "황제갈비",
-        "thumbnail": "pictures/p4.jpg",
+        "thumbnail": "./pictures/p3.jpg",
         "menu": [
             {
                 "name": "생갈비 300g + 생토시 300g",
@@ -1144,14 +137,23 @@
                 "price": "96000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "한식"
-        ]
+        ],
+        "ctg2": [
+            "찌개",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.48434757800361,
+        "longitude": 126.93329104950666,
+        "kakao_link": "https://map.kakao.com/?q=%ED%99%A9%EC%A0%9C%EA%B0%88%EB%B9%84%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 50,
+        "id": 4,
         "name": "해도락",
-        "thumbnail": "pictures/p5.jpg",
+        "thumbnail": "./pictures/p4.jpg",
         "menu": [
             {
                 "name": "사시미 정식A",
@@ -1174,14 +176,61 @@
                 "price": "89000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "한식"
-        ]
+        ],
+        "ctg2": [
+            "칼국수",
+            "비빔밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40210662158287,
+        "longitude": 127.10808015719785,
+        "kakao_link": "https://map.kakao.com/?q=%ED%95%B4%EB%8F%84%EB%9D%BD%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 51,
+        "id": 5,
+        "name": "뻘낙지한마당",
+        "thumbnail": "./pictures/p5.jpg",
+        "menu": [
+            {
+                "name": "낙지비빔밥",
+                "price": "11000"
+            },
+            {
+                "name": "산낙지비빔밥",
+                "price": "20000"
+            },
+            {
+                "name": "무안뻘산낙지",
+                "price": "55000"
+            },
+            {
+                "name": "문어숙회",
+                "price": ""
+            },
+            {
+                "name": "벌교 참 꼬막",
+                "price": "25000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "비빔밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.3405186341582,
+        "longitude": 127.109279455993,
+        "kakao_link": "https://map.kakao.com/?q=%EB%BB%98%EB%82%99%EC%A7%80%ED%95%9C%EB%A7%88%EB%8B%B9%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 6,
         "name": "수작",
-        "thumbnail": "pictures/p6.jpg",
+        "thumbnail": "./pictures/p6.jpg",
         "menu": [
             {
                 "name": "한돈꽃삼겹 관자 삼합",
@@ -1204,14 +253,23 @@
                 "price": "14000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "한식"
-        ]
+        ],
+        "ctg2": [
+            "칼국수",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.54433805499722,
+        "longitude": 126.97051140000875,
+        "kakao_link": "https://map.kakao.com/?q=%EC%88%98%EC%9E%91%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 52,
+        "id": 7,
         "name": "닭갈비야",
-        "thumbnail": "pictures/p7.jpg",
+        "thumbnail": "./pictures/p7.jpg",
         "menu": [
             {
                 "name": "치즈닭갈비",
@@ -1222,14 +280,22 @@
                 "price": "14000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "한식"
-        ]
+        ],
+        "ctg2": [
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4019332755926,
+        "longitude": 127.107475668379,
+        "kakao_link": "https://map.kakao.com/?q=%EB%8B%AD%EA%B0%88%EB%B9%84%EC%95%BC%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 53,
+        "id": 8,
         "name": "현대옥 판교점",
-        "thumbnail": "pictures/p8.jpg",
+        "thumbnail": "./pictures/p8.jpg",
         "menu": [
             {
                 "name": "얼큰 돼지국밥",
@@ -1252,14 +318,22 @@
                 "price": "8000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "한식"
-        ]
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.401902113897044,
+        "longitude": 127.10706338563806,
+        "kakao_link": "https://map.kakao.com/?q=%ED%98%84%EB%8C%80%EC%98%A5%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 54,
+        "id": 9,
         "name": "토속상황삼계탕",
-        "thumbnail": "pictures/p9.jpg",
+        "thumbnail": "./pictures/p9.jpg",
         "menu": [
             {
                 "name": "상황삼계탕",
@@ -1282,14 +356,680 @@
                 "price": "11000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "한식"
-        ]
+        ],
+        "ctg2": [
+            "비빔밥",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.338123886713596,
+        "longitude": 127.10200190647627,
+        "kakao_link": "https://map.kakao.com/?q=%ED%86%A0%EC%86%8D%EC%83%81%ED%99%A9%EC%82%BC%EA%B3%84%ED%83%95%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 55,
+        "id": 10,
+        "name": "원조부안집 판교직영점",
+        "thumbnail": "./pictures/p10.jpg",
+        "menu": [
+            {
+                "name": "육즙목살",
+                "price": "15000"
+            },
+            {
+                "name": "쫀득살",
+                "price": "15000"
+            },
+            {
+                "name": "숙성삼겹",
+                "price": "15000"
+            },
+            {
+                "name": "쫄깃껍데기",
+                "price": "9000"
+            },
+            {
+                "name": "살얼음 물쫄면",
+                "price": "6000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "찌개",
+            "고기",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4005176314543,
+        "longitude": 127.106635632548,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9B%90%EC%A1%B0%EB%B6%80%EC%95%88%EC%A7%91%20%ED%8C%90%EA%B5%90%EC%A7%81%EC%98%81%EC%A0%90"
+    },
+    {
+        "id": 11,
+        "name": "강릉엄지네꼬막집 판교점",
+        "thumbnail": "./pictures/p11.jpg",
+        "menu": [
+            {
+                "name": "강릉 엄지네 꼬막 비빔밥",
+                "price": "37000"
+            },
+            {
+                "name": "강릉 엄지네 꼬막 무침",
+                "price": "35000"
+            },
+            {
+                "name": "강오순(오징어순대)",
+                "price": "24000"
+            },
+            {
+                "name": "꼬막전",
+                "price": "18000"
+            },
+            {
+                "name": "꼬막 이슬 만두",
+                "price": "7000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "찌개",
+            "고기",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4004679224652,
+        "longitude": 127.106804971859,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B0%95%EB%A6%89%EC%97%84%EC%A7%80%EB%84%A4%EA%BC%AC%EB%A7%89%EC%A7%91%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 12,
+        "name": "밥볶다",
+        "thumbnail": "./pictures/p12.jpg",
+        "menu": [
+            {
+                "name": "고추장불백",
+                "price": "10000"
+            },
+            {
+                "name": "간장불백",
+                "price": "10000"
+            },
+            {
+                "name": "맵콩우삼겹",
+                "price": "11000"
+            },
+            {
+                "name": "뚝배기제육",
+                "price": "10000"
+            },
+            {
+                "name": "옛날삼겹살(저녁메뉴)",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020972332622,
+        "longitude": 127.110439507808,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B0%A5%EB%B3%B6%EB%8B%A4%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 13,
+        "name": "만리어 장어 판교유스페이스점",
+        "thumbnail": "./pictures/p13.jpg",
+        "menu": [
+            {
+                "name": "디너 장어오마카세 9코스",
+                "price": "58000"
+            },
+            {
+                "name": "런치 장어오마카세(우나쥬 장어덮밥)",
+                "price": "38000"
+            },
+            {
+                "name": "25년 새해이벤트 장어(한마리)제공",
+                "price": ""
+            },
+            {
+                "name": "민물장어구이 한마리",
+                "price": "48000"
+            },
+            {
+                "name": "장어추가[한마리]",
+                "price": "43000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "찌개",
+            "고기",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40046071226674,
+        "longitude": 127.10680722042285,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A7%8C%EB%A6%AC%EC%96%B4%20%EC%9E%A5%EC%96%B4%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
+    },
+    {
+        "id": 14,
+        "name": "소호얼크니샤브칼국수&바지락칼국수본점",
+        "thumbnail": "./pictures/p14.jpg",
+        "menu": [
+            {
+                "name": "얼크니샤브칼국수(빨갛게)",
+                "price": "10000"
+            },
+            {
+                "name": "맑은샤브칼국수(하얗게)",
+                "price": "10000"
+            },
+            {
+                "name": "바지락칼국수(듬뿍)",
+                "price": "10000"
+            },
+            {
+                "name": "줄서는집 들기름막국수",
+                "price": "10000"
+            },
+            {
+                "name": "속초코다리 막국수",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%86%8C%ED%98%B8%EC%96%BC%ED%81%AC%EB%8B%88%EC%83%A4%EB%B8%8C%EC%B9%BC%EA%B5%AD%EC%88%98%26%EB%B0%94%EC%A7%80%EB%9D%BD%EC%B9%BC%EA%B5%AD%EC%88%98%EB%B3%B8%EC%A0%90%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 15,
+        "name": "삼산회관 판교유스페이스점",
+        "thumbnail": "./pictures/p15.jpg",
+        "menu": [
+            {
+                "name": "(NEW) 아롱사태 수육전골",
+                "price": "29000"
+            },
+            {
+                "name": "(NEW) 아롱사태 수육무침",
+                "price": "28000"
+            },
+            {
+                "name": "찌개한상 세트(혼자)",
+                "price": "13500"
+            },
+            {
+                "name": "돼지김치구이 세트(소)",
+                "price": "35000"
+            },
+            {
+                "name": "김치닭갈비 세트(소)",
+                "price": "35000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "카츠"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4004607122667,
+        "longitude": 127.106807220423,
+        "kakao_link": "https://map.kakao.com/?q=%EC%82%BC%EC%82%B0%ED%9A%8C%EA%B4%80%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
+    },
+    {
+        "id": 16,
+        "name": "명품보쌈",
+        "thumbnail": "./pictures/p16.jpg",
+        "menu": [
+            {
+                "name": "보쌈정식",
+                "price": "10000"
+            },
+            {
+                "name": "김치찌게",
+                "price": "10000"
+            },
+            {
+                "name": "소고기 미역국밥",
+                "price": "12000"
+            },
+            {
+                "name": "소고기 국밥",
+                "price": "12000"
+            },
+            {
+                "name": "명품국수",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥",
+            "찌개",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 34.9639361286698,
+        "longitude": 127.579256851085,
+        "kakao_link": "https://map.kakao.com/?q=%EB%AA%85%ED%92%88%EB%B3%B4%EC%8C%88%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 17,
+        "name": "신제주해장국 판교점",
+        "thumbnail": "./pictures/p17.jpg",
+        "menu": [
+            {
+                "name": "선지해장국",
+                "price": "11000"
+            },
+            {
+                "name": "특해장국",
+                "price": "14000"
+            },
+            {
+                "name": "소고기해장국",
+                "price": "11000"
+            },
+            {
+                "name": "설렁탕",
+                "price": "11000"
+            },
+            {
+                "name": "곱창전골",
+                "price": "35000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "찌개",
+            "고기",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4021026129941,
+        "longitude": 127.110467751273,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8B%A0%EC%A0%9C%EC%A3%BC%ED%95%B4%EC%9E%A5%EA%B5%AD%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 18,
+        "name": "불고기 온소반 점심저녁회식명가",
+        "thumbnail": "./pictures/p18.jpg",
+        "menu": [
+            {
+                "name": "마늘 소갈비살 불고기",
+                "price": "17000"
+            },
+            {
+                "name": "고추장 섞어 불고기",
+                "price": "12000"
+            },
+            {
+                "name": "고추장 돼지 불고기",
+                "price": "12000"
+            },
+            {
+                "name": "버섯 불고기 뚝배기",
+                "price": "10000"
+            },
+            {
+                "name": "전통 소고기 청국장",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "비빔밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B6%88%EA%B3%A0%EA%B8%B0%20%EC%98%A8%EC%86%8C%EB%B0%98%20%EC%A0%90%EC%8B%AC%EC%A0%80%EB%85%81%ED%9A%8C%EC%8B%9D%EB%AA%85%EA%B0%80%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 19,
+        "name": "원조 닭한마리 칼국수",
+        "thumbnail": "./pictures/p19.jpg",
+        "menu": [
+            {
+                "name": "닭한마리칼국수(2인분/얼큰한맛)",
+                "price": "28000"
+            },
+            {
+                "name": "닭한마리칼국수(2인분/담백한맛)",
+                "price": "28000"
+            },
+            {
+                "name": "한방삼계탕",
+                "price": "16000"
+            },
+            {
+                "name": "한방반계탕",
+                "price": "10000"
+            },
+            {
+                "name": "냉콩국수",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40207020689937,
+        "longitude": 127.1104349504553,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9B%90%EC%A1%B0%20%EB%8B%AD%ED%95%9C%EB%A7%88%EB%A6%AC%20%EC%B9%BC%EA%B5%AD%EC%88%98%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 20,
+        "name": "미쁜 선순대",
+        "thumbnail": "./pictures/p20.jpg",
+        "menu": [
+            {
+                "name": "순대국",
+                "price": "11000"
+            },
+            {
+                "name": "인삼순대국",
+                "price": "12000"
+            },
+            {
+                "name": "뼈해장국",
+                "price": "11000"
+            },
+            {
+                "name": "콩나물국밥",
+                "price": "9000"
+            },
+            {
+                "name": "찹쌀순대",
+                "price": "9000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4022410074273,
+        "longitude": 127.110855347165,
+        "kakao_link": "https://map.kakao.com/?q=%EB%AF%B8%EC%81%9C%20%EC%84%A0%EC%88%9C%EB%8C%80%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 21,
+        "name": "듬박이찌개 판교점",
+        "thumbnail": "./pictures/p21.jpg",
+        "menu": [
+            {
+                "name": "진짜 ''김치찌개''",
+                "price": "10000"
+            },
+            {
+                "name": "중독 ''김치짜박이''",
+                "price": "10000"
+            },
+            {
+                "name": "매운 ''돼지김치찜''",
+                "price": "26000"
+            },
+            {
+                "name": "보들 ''계란말이''",
+                "price": "8000"
+            },
+            {
+                "name": "볶음 ''그~잡채''",
+                "price": "8000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "찌개"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012699485866,
+        "longitude": 127.108653825425,
+        "kakao_link": "https://map.kakao.com/?q=%EB%93%AC%EB%B0%95%EC%9D%B4%EC%B0%8C%EA%B0%9C%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 22,
+        "name": "고점자칼국수만두",
+        "thumbnail": "./pictures/p22.jpg",
+        "menu": [
+            {
+                "name": "바지락칼국수",
+                "price": "7000"
+            },
+            {
+                "name": "바지락수제비",
+                "price": "7000"
+            },
+            {
+                "name": "들깨수제비",
+                "price": "7000"
+            },
+            {
+                "name": "만두국",
+                "price": "7000"
+            },
+            {
+                "name": "버섯만두전골 중",
+                "price": "28000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "찌개",
+            "고기",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B3%A0%EC%A0%90%EC%9E%90%EC%B9%BC%EA%B5%AD%EC%88%98%EB%A7%8C%EB%91%90%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 23,
+        "name": "한식식당",
+        "thumbnail": "./pictures/p23.jpg",
+        "menu": [
+            {
+                "name": "한정식",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 36.81961568970015,
+        "longitude": 127.415260993254,
+        "kakao_link": "https://map.kakao.com/?q=%ED%95%9C%EC%8B%9D%EC%8B%9D%EB%8B%B9%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 24,
+        "name": "만찬",
+        "thumbnail": "./pictures/p24.jpg",
+        "menu": [
+            {
+                "name": "한식뷔페",
+                "price": "7900"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "찌개",
+            "고기",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 35.198207787469,
+        "longitude": 129.224231490552,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A7%8C%EC%B0%AC%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 25,
+        "name": "백만불",
+        "thumbnail": null,
+        "menu": [
+            {
+                "name": "백만불차돌로스",
+                "price": "13000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.6219666918625,
+        "longitude": 126.818956313944,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B0%B1%EB%A7%8C%EB%B6%88%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 26,
+        "name": "화포식당 판교점",
+        "thumbnail": "./pictures/p26.jpg",
+        "menu": [
+            {
+                "name": "명품 한우 꽃등심",
+                "price": "45000"
+            },
+            {
+                "name": "숙성 통 삼겹살",
+                "price": "17000"
+            },
+            {
+                "name": "구워먹는 임실치즈",
+                "price": "10000"
+            },
+            {
+                "name": "화포술밥(된장술밥)",
+                "price": "8000"
+            },
+            {
+                "name": "명품 한우 차돌",
+                "price": "27000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "찌개",
+            "고기",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.400364320491995,
+        "longitude": 127.10678788387627,
+        "kakao_link": "https://map.kakao.com/?q=%ED%99%94%ED%8F%AC%EC%8B%9D%EB%8B%B9%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 27,
+        "name": "쉐프의삼겹살 판교점",
+        "thumbnail": "./pictures/p27.jpg",
+        "menu": [],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "찌개",
+            "고기",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%89%90%ED%94%84%EC%9D%98%EC%82%BC%EA%B2%B9%EC%82%B4%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 28,
         "name": "팔복 판교",
-        "thumbnail": "pictures/p10.jpg",
+        "thumbnail": "./pictures/p28.jpg",
         "menu": [
             {
                 "name": "팔복 초마",
@@ -1312,14 +1052,23 @@
                 "price": "49000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "짜장면",
+            "동파육"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4027051479954,
+        "longitude": 127.106814923697,
+        "kakao_link": "https://map.kakao.com/?q=%ED%8C%94%EB%B3%B5%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 56,
+        "id": 29,
         "name": "라운지목화 동판교관",
-        "thumbnail": "pictures/p11.jpg",
+        "thumbnail": "./pictures/p29.jpg",
         "menu": [
             {
                 "name": "아보카도크림새우",
@@ -1342,14 +1091,22 @@
                 "price": "20000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "마라탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020768699419,
+        "longitude": 127.106110401713,
+        "kakao_link": "https://map.kakao.com/?q=%EB%9D%BC%EC%9A%B4%EC%A7%80%EB%AA%A9%ED%99%94%20%EB%8F%99%ED%8C%90%EA%B5%90%EA%B4%80"
     },
     {
-        "id": 57,
+        "id": 30,
         "name": "차엔",
-        "thumbnail": "pictures/p12.jpg",
+        "thumbnail": "./pictures/p30.jpg",
         "menu": [
             {
                 "name": "와인탕수육",
@@ -1372,14 +1129,23 @@
                 "price": "8000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "짜장면",
+            "동파육"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020375383196,
+        "longitude": 127.108740769759,
+        "kakao_link": "https://map.kakao.com/?q=%EC%B0%A8%EC%97%94%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 58,
+        "id": 31,
         "name": "중경별곡마라탕상궈",
-        "thumbnail": "pictures/p13.jpg",
+        "thumbnail": "./pictures/p31.jpg",
         "menu": [
             {
                 "name": "마라샹궈 100g 3500원(20000원 부터)",
@@ -1402,23 +1168,42 @@
                 "price": "30000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "짜장면",
+            "마라탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A4%91%EA%B2%BD%EB%B3%84%EA%B3%A1%EB%A7%88%EB%9D%BC%ED%83%95%EC%83%81%EA%B6%88%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 59,
+        "id": 32,
         "name": "홍짜장",
-        "thumbnail": "pictures/p14.jpg",
+        "thumbnail": "./pictures/p32.jpg",
         "menu": [],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "짜장면",
+            "마라탕",
+            "동파육"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.5502250056203,
+        "longitude": 126.9735736015,
+        "kakao_link": "https://map.kakao.com/?q=%ED%99%8D%EC%A7%9C%EC%9E%A5%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 60,
+        "id": 33,
         "name": "베이징스토리 중국집",
-        "thumbnail": "pictures/p15.jpg",
+        "thumbnail": "./pictures/p33.jpg",
         "menu": [
             {
                 "name": "자장면",
@@ -1441,14 +1226,23 @@
                 "price": "27000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "짜장면",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40112008943939,
+        "longitude": 127.110906778147,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B2%A0%EC%9D%B4%EC%A7%95%EC%8A%A4%ED%86%A0%EB%A6%AC%20%EC%A4%91%EA%B5%AD%EC%A7%91%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 61,
+        "id": 34,
         "name": "리치앤",
-        "thumbnail": "pictures/p16.jpg",
+        "thumbnail": "./pictures/p34.jpg",
         "menu": [
             {
                 "name": "차돌짬뽕",
@@ -1471,14 +1265,22 @@
                 "price": "10000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "짜장면"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012843732024,
+        "longitude": 127.108644810967,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A6%AC%EC%B9%98%EC%95%A4%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 62,
+        "id": 35,
         "name": "보배반점 판교점",
-        "thumbnail": "pictures/p17.jpg",
+        "thumbnail": "./pictures/p35.jpg",
         "menu": [
             {
                 "name": "[불맛작살] 소고기짬뽕",
@@ -1501,14 +1303,24 @@
                 "price": "9500"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "비빔밥",
+            "짜장면",
+            "마라탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4021026129941,
+        "longitude": 127.110467751273,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B3%B4%EB%B0%B0%EB%B0%98%EC%A0%90%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 63,
+        "id": 36,
         "name": "제프리웍",
-        "thumbnail": "pictures/p18.jpg",
+        "thumbnail": "./pictures/p36.jpg",
         "menu": [
             {
                 "name": "Combo",
@@ -1519,15 +1331,61 @@
                 "price": "19000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식",
+            "아시아 음식"
+        ],
+        "ctg2": [
             "퓨전 음식"
-        ]
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.50194711989607,
+        "longitude": 127.02403669210815,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A0%9C%ED%94%84%EB%A6%AC%EC%9B%8D%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 64,
+        "id": 37,
+        "name": "오한수 우육면가 판교점",
+        "thumbnail": "./pictures/p37.jpg",
+        "menu": [
+            {
+                "name": "홍콩식 우육탕면",
+                "price": "9800"
+            },
+            {
+                "name": "군만두(4P)",
+                "price": "7500"
+            },
+            {
+                "name": "청경채 도가니 양지탕면",
+                "price": "12000"
+            },
+            {
+                "name": "매운양곱창탕면",
+                "price": "14000"
+            },
+            {
+                "name": "홍콩완탕면",
+                "price": "11500"
+            }
+        ],
+        "ctg1": [
+            "중식"
+        ],
+        "ctg2": [
+            "짜장면"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.401334780474784,
+        "longitude": 127.10869909548163,
+        "kakao_link": "https://map.kakao.com/?q=%EC%98%A4%ED%95%9C%EC%88%98%20%EC%9A%B0%EC%9C%A1%EB%A9%B4%EA%B0%80%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 38,
         "name": "락앤웍",
-        "thumbnail": "pictures/p19.jpg",
+        "thumbnail": "./pictures/p38.jpg",
         "menu": [
             {
                 "name": "탕수육 (중)",
@@ -1550,14 +1408,22 @@
                 "price": "10000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "중식"
-        ]
+        ],
+        "ctg2": [
+            "짜장면"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.52779358865295,
+        "longitude": 126.87164547734493,
+        "kakao_link": "https://map.kakao.com/?q=%EB%9D%BD%EC%95%A4%EC%9B%8D%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 65,
+        "id": 39,
         "name": "빈티지1988",
-        "thumbnail": "pictures/p20.jpg",
+        "thumbnail": "./pictures/p39.jpg",
         "menu": [
             {
                 "name": "본 인 립아이",
@@ -1580,14 +1446,25 @@
                 "price": "22000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "샐러드",
+            "스테이크",
+            "피자"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4014597360053,
+        "longitude": 127.10802840454299,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B9%88%ED%8B%B0%EC%A7%801988%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 66,
+        "id": 40,
         "name": "구우트",
-        "thumbnail": "pictures/p21.jpg",
+        "thumbnail": "./pictures/p40.jpg",
         "menu": [
             {
                 "name": "Raclette",
@@ -1610,14 +1487,24 @@
                 "price": "21000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "스테이크",
+            "샌드위치"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40207686995042,
+        "longitude": 127.10611040171321,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B5%AC%EC%9A%B0%ED%8A%B8%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 67,
+        "id": 41,
         "name": "브루클린 피자",
-        "thumbnail": "pictures/p22.jpg",
+        "thumbnail": "./pictures/p41.jpg",
         "menu": [
             {
                 "name": "할라피뇨피자(Medium/Large)",
@@ -1640,78 +1527,145 @@
                 "price": "14800~21800"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "피자"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.5316059731702,
+        "longitude": 126.994580722131,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B8%8C%EB%A3%A8%ED%81%B4%EB%A6%B0%20%ED%94%BC%EC%9E%90%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 68,
+        "id": 42,
         "name": "써브웨이 판교테크노밸리점",
-        "thumbnail": "pictures/p23.jpg",
+        "thumbnail": "./pictures/p42.jpg",
         "menu": [
             {
                 "name": "이탈리안 비엠티 15cm",
                 "price": "6900"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "샌드위치"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.40191574672427,
+        "longitude": 127.1069335217297,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8D%A8%EB%B8%8C%EC%9B%A8%EC%9D%B4%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
     },
     {
-        "id": 69,
+        "id": 43,
         "name": "BURRIT POP",
-        "thumbnail": "pictures/p24.jpg",
+        "thumbnail": "./pictures/p43.jpg",
         "menu": [],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "샐러드",
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=BURRIT%20POP%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 70,
+        "id": 44,
         "name": "루즈 바",
-        "thumbnail": "pictures/p25.jpg",
+        "thumbnail": "./pictures/p44.jpg",
         "menu": [],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "샐러드",
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.5490396910117,
+        "longitude": 126.916409399425,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A3%A8%EC%A6%88%20%EB%B0%94%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 71,
+        "id": 45,
         "name": "아몬드봉봉오트밀",
-        "thumbnail": "pictures/p26.jpg",
+        "thumbnail": "./pictures/p45.jpg",
         "menu": [
             {
                 "name": "아몬드스테이크",
                 "price": "30000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "샐러드",
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%95%84%EB%AA%AC%EB%93%9C%EB%B4%89%EB%B4%89%EC%98%A4%ED%8A%B8%EB%B0%80%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 72,
-        "name": "짝",
-        "thumbnail": null,
-        "menu": [],
-        "keywords": [
-            "양식"
-        ]
-    },
-    {
-        "id": 73,
+        "id": 46,
         "name": "판교블루스",
         "thumbnail": null,
         "menu": [],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "샐러드",
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.3691376053148,
+        "longitude": 127.114441771558,
+        "kakao_link": "https://map.kakao.com/?q=%ED%8C%90%EA%B5%90%EB%B8%94%EB%A3%A8%EC%8A%A4"
     },
     {
-        "id": 74,
+        "id": 47,
+        "name": "짝",
+        "thumbnail": null,
+        "menu": [],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "파스타",
+            "샐러드",
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 34.99618812489812,
+        "longitude": 127.89913327396566,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A7%9D%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 48,
         "name": "헤비스테이크 판교테크노밸리점",
-        "thumbnail": "pictures/p29.jpg",
+        "thumbnail": "./pictures/p48.jpg",
         "menu": [
             {
                 "name": "비프 스테이크",
@@ -1734,14 +1688,23 @@
                 "price": "19900"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012699485866,
+        "longitude": 127.108653825425,
+        "kakao_link": "https://map.kakao.com/?q=%ED%97%A4%EB%B9%84%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
     },
     {
-        "id": 75,
+        "id": 49,
         "name": "맥도날드 판교테크노밸리점",
-        "thumbnail": "pictures/p30.jpg",
+        "thumbnail": "./pictures/p49.jpg",
         "menu": [
             {
                 "name": "빅맥® 세트",
@@ -1764,15 +1727,23 @@
                 "price": ""
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식",
             "패스트푸드"
-        ]
+        ],
+        "ctg2": [
+            "햄버거"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4013492258553,
+        "longitude": 127.108667492824,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A7%A5%EB%8F%84%EB%82%A0%EB%93%9C%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
     },
     {
-        "id": 76,
+        "id": 50,
         "name": "테이블스푼컵스프",
-        "thumbnail": "pictures/p31.jpg",
+        "thumbnail": "./pictures/p50.jpg",
         "menu": [
             {
                 "name": "찹스테이크세트",
@@ -1795,58 +1766,68 @@
                 "price": "5500"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "샌드위치"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.4012852731842,
+        "longitude": 127.108645941677,
+        "kakao_link": "https://map.kakao.com/?q=%ED%85%8C%EC%9D%B4%EB%B8%94%EC%8A%A4%ED%91%BC%EC%BB%B5%EC%8A%A4%ED%94%84%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 77,
+        "id": 51,
         "name": "베어스타코 판교점",
-        "thumbnail": "pictures/p32.jpg",
+        "thumbnail": "./pictures/p51.jpg",
         "menu": [
             {
                 "name": "비프타코",
                 "price": "10500"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "파스타",
+            "샐러드",
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4013347804748,
+        "longitude": 127.108699095482,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B2%A0%EC%96%B4%EC%8A%A4%ED%83%80%EC%BD%94%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 78,
-        "name": "Pho커리",
-        "thumbnail": "pictures/p33.jpg",
+        "id": 52,
+        "name": "GTS버거 판교점",
+        "thumbnail": "./pictures/p52.jpg",
         "menu": [
             {
-                "name": "야채커리",
-                "price": "5000"
-            },
-            {
-                "name": "새우커리",
-                "price": "7000"
-            },
-            {
-                "name": "양지쌀국수",
-                "price": "7000"
-            },
-            {
-                "name": "안심쌀국수",
-                "price": "8000"
-            },
-            {
-                "name": "오무라이스",
-                "price": "6000"
+                "name": "Gts 버거",
+                "price": ""
             }
         ],
-        "keywords": [
+        "ctg1": [
             "양식"
-        ]
+        ],
+        "ctg2": [
+            "햄버거"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4013347804663,
+        "longitude": 127.108699095481,
+        "kakao_link": "https://map.kakao.com/?q=GTS%EB%B2%84%EA%B1%B0%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 79,
+        "id": 53,
         "name": "일류 판교",
-        "thumbnail": "pictures/p34.jpg",
+        "thumbnail": "./pictures/p53.jpg",
         "menu": [
             {
                 "name": "스페셜 사시미",
@@ -1869,32 +1850,29 @@
                 "price": "10900"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
-    },
-    {
-        "id": 80,
-        "name": "우나기강 판교점",
-        "thumbnail": "pictures/p35.jpg",
-        "menu": [
-            {
-                "name": "우나쥬",
-                "price": "46000"
-            },
-            {
-                "name": "히쯔마부시",
-                "price": "39500"
-            }
         ],
-        "keywords": [
-            "일식"
-        ]
+        "ctg2": [
+            "스테이크",
+            "라멘",
+            "소바",
+            "초밥",
+            "규동",
+            "오코노미야끼",
+            "타코야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40206059887912,
+        "longitude": 127.10616910872538,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9D%BC%EB%A5%98%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 81,
+        "id": 54,
         "name": "일상화식",
-        "thumbnail": "pictures/p36.jpg",
+        "thumbnail": "./pictures/p54.jpg",
         "menu": [
             {
                 "name": "모듬회덮밥",
@@ -1917,14 +1895,50 @@
                 "price": "22000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "라멘",
+            "규동",
+            "떡볶이"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020682557045,
+        "longitude": 127.106671712464,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9D%BC%EC%83%81%ED%99%94%EC%8B%9D%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 82,
+        "id": 55,
+        "name": "우나기강 판교점",
+        "thumbnail": "./pictures/p55.jpg",
+        "menu": [
+            {
+                "name": "우나쥬",
+                "price": "46000"
+            },
+            {
+                "name": "히쯔마부시",
+                "price": "39500"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4027051479954,
+        "longitude": 127.106814923697,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9A%B0%EB%82%98%EA%B8%B0%EA%B0%95%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 56,
         "name": "천야",
-        "thumbnail": "pictures/p37.jpg",
+        "thumbnail": "./pictures/p56.jpg",
         "menu": [
             {
                 "name": "모듬사시미",
@@ -1943,14 +1957,30 @@
                 "price": "21000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "라멘",
+            "소바",
+            "초밥",
+            "카츠",
+            "텐동",
+            "규동",
+            "오코노미야끼",
+            "타코야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020173615264,
+        "longitude": 127.107155032748,
+        "kakao_link": "https://map.kakao.com/?q=%EC%B2%9C%EC%95%BC%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 83,
+        "id": 57,
         "name": "면학",
-        "thumbnail": "pictures/p38.jpg",
+        "thumbnail": "./pictures/p57.jpg",
         "menu": [
             {
                 "name": "백면",
@@ -1973,14 +2003,23 @@
                 "price": "16000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "라멘",
+            "오코노미야끼"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.402064659768875,
+        "longitude": 127.10666267198783,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A9%B4%ED%95%99%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 84,
+        "id": 58,
         "name": "포크포크",
-        "thumbnail": "pictures/p39.jpg",
+        "thumbnail": "./pictures/p58.jpg",
         "menu": [
             {
                 "name": "샐러드돈가스",
@@ -2003,14 +2042,30 @@
                 "price": "10000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "라멘",
+            "소바",
+            "초밥",
+            "카츠",
+            "텐동",
+            "규동",
+            "오코노미야끼",
+            "타코야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4556256576366,
+        "longitude": 127.127512263863,
+        "kakao_link": "https://map.kakao.com/?q=%ED%8F%AC%ED%81%AC%ED%8F%AC%ED%81%AC%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 85,
+        "id": 59,
         "name": "이치노야",
-        "thumbnail": "pictures/p40.jpg",
+        "thumbnail": "./pictures/p59.jpg",
         "menu": [
             {
                 "name": "Lunch 모듬초밥12pcs",
@@ -2033,14 +2088,22 @@
                 "price": "40000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9D%B4%EC%B9%98%EB%85%B8%EC%95%BC%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 86,
+        "id": 60,
         "name": "율 판교점",
-        "thumbnail": "pictures/p41.jpg",
+        "thumbnail": "./pictures/p60.jpg",
         "menu": [
             {
                 "name": "연어뱃살동",
@@ -2063,14 +2126,78 @@
                 "price": "11000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "스테이크",
+            "규동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9C%A8%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 87,
+        "id": 61,
+        "name": "하루",
+        "thumbnail": "./pictures/p61.jpg",
+        "menu": [
+            {
+                "name": "새우 붕장어 텐자루 소바",
+                "price": "26500"
+            },
+            {
+                "name": "점심 코스",
+                "price": "58000"
+            },
+            {
+                "name": "디너 오마카세",
+                "price": "90000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "소바"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.496786435759205,
+        "longitude": 126.74585575576114,
+        "kakao_link": "https://map.kakao.com/?q=%ED%95%98%EB%A3%A8%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 62,
+        "name": "육회만",
+        "thumbnail": null,
+        "menu": [],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "라멘",
+            "소바",
+            "초밥",
+            "카츠",
+            "텐동",
+            "규동",
+            "오코노미야끼",
+            "타코야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4571882718705,
+        "longitude": 126.685632335641,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9C%A1%ED%9A%8C%EB%A7%8C%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 63,
         "name": "예술작품을 빚다 비즐돈까스 가성비 아침점심저녁",
-        "thumbnail": "pictures/p42.jpg",
+        "thumbnail": "./pictures/p63.jpg",
         "menu": [
             {
                 "name": "\"세상에 딱 2곳\" 등심카츠",
@@ -2093,36 +2220,23 @@
                 "price": "13900"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
-    },
-    {
-        "id": 88,
-        "name": "하루",
-        "thumbnail": "pictures/p43.jpg",
-        "menu": [
-            {
-                "name": "새우 붕장어 텐자루 소바",
-                "price": "26500"
-            },
-            {
-                "name": "점심 코스",
-                "price": "58000"
-            },
-            {
-                "name": "디너 오마카세",
-                "price": "90000"
-            }
         ],
-        "keywords": [
-            "일식"
-        ]
+        "ctg2": [
+            "소바",
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%98%88%EC%88%A0%EC%9E%91%ED%92%88%EC%9D%84%20%EB%B9%9A%EB%8B%A4%20%EB%B9%84%EC%A6%90%EB%8F%88%EA%B9%8C%EC%8A%A4%20%EA%B0%80%EC%84%B1%EB%B9%84%20%EC%95%84%EC%B9%A8%EC%A0%90%EC%8B%AC%EC%A0%80%EB%85%81%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 89,
+        "id": 64,
         "name": "규카츠정 판교점",
-        "thumbnail": "pictures/p44.jpg",
+        "thumbnail": "./pictures/p64.jpg",
         "menu": [
             {
                 "name": "규카츠 타마고텐동 정식",
@@ -2145,14 +2259,30 @@
                 "price": "12000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "라멘",
+            "소바",
+            "초밥",
+            "카츠",
+            "텐동",
+            "규동",
+            "오코노미야끼",
+            "타코야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.401324013913076,
+        "longitude": 127.10864938584024,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B7%9C%EC%B9%B4%EC%B8%A0%EC%A0%95%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 90,
+        "id": 65,
         "name": "서호돈가스",
-        "thumbnail": "pictures/p45.jpg",
+        "thumbnail": "./pictures/p65.jpg",
         "menu": [
             {
                 "name": "히레가스",
@@ -2175,14 +2305,174 @@
                 "price": "11000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "샐러드",
+            "소바",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.404016618492754,
+        "longitude": 127.10008073598179,
+        "kakao_link": "https://map.kakao.com/?q=%EC%84%9C%ED%98%B8%EB%8F%88%EA%B0%80%EC%8A%A4%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 91,
+        "id": 66,
+        "name": "스시코호시",
+        "thumbnail": "./pictures/p66.jpg",
+        "menu": [
+            {
+                "name": "런치",
+                "price": "60000"
+            },
+            {
+                "name": "디너",
+                "price": "100000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012862988573,
+        "longitude": 127.110456388288,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8A%A4%EC%8B%9C%EC%BD%94%ED%98%B8%EC%8B%9C%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 67,
+        "name": "이황식당",
+        "thumbnail": "./pictures/p67.jpg",
+        "menu": [
+            {
+                "name": "츠케멘",
+                "price": "10000"
+            },
+            {
+                "name": "신라멘",
+                "price": "10000"
+            },
+            {
+                "name": "돈코츠라멘",
+                "price": "10000"
+            },
+            {
+                "name": "바질라멘",
+                "price": "11000"
+            },
+            {
+                "name": "차슈",
+                "price": "3000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "라멘",
+            "타코야끼"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40142076893176,
+        "longitude": 127.11022279725627,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9D%B4%ED%99%A9%EC%8B%9D%EB%8B%B9%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 68,
+        "name": "고다이 주방 점심저녁정식",
+        "thumbnail": "./pictures/p68.jpg",
+        "menu": [
+            {
+                "name": "새우후라이+차슈라멘 정식",
+                "price": "12900"
+            },
+            {
+                "name": "김치우동나베",
+                "price": "10000"
+            },
+            {
+                "name": "삿포로 삼겹살 부타동",
+                "price": "12000"
+            },
+            {
+                "name": "가슴속까지 시원한 급냉 냉 메밀소바",
+                "price": "9500"
+            },
+            {
+                "name": "쿄토 온(溫)소바",
+                "price": "9500"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "라멘",
+            "소바",
+            "초밥",
+            "카츠",
+            "텐동",
+            "규동",
+            "오코노미야끼",
+            "타코야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B3%A0%EB%8B%A4%EC%9D%B4%20%EC%A3%BC%EB%B0%A9%20%EC%A0%90%EC%8B%AC%EC%A0%80%EB%85%81%EC%A0%95%EC%8B%9D%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 69,
+        "name": "코이라멘 분당판교점",
+        "thumbnail": "./pictures/p69.jpg",
+        "menu": [
+            {
+                "name": "중화소바",
+                "price": "11000"
+            },
+            {
+                "name": "오리지날라멘",
+                "price": "10500"
+            },
+            {
+                "name": "매운라멘",
+                "price": "10500"
+            },
+            {
+                "name": "차슈덮밥",
+                "price": "10000"
+            },
+            {
+                "name": "마제소바",
+                "price": "11000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "라멘",
+            "소바"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40109688621334,
+        "longitude": 127.1106684389254,
+        "kakao_link": "https://map.kakao.com/?q=%EC%BD%94%EC%9D%B4%EB%9D%BC%EB%A9%98%20%EB%B6%84%EB%8B%B9%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 70,
         "name": "고쿠텐 판교점",
-        "thumbnail": "pictures/p46.jpg",
+        "thumbnail": "./pictures/p70.jpg",
         "menu": [
             {
                 "name": "고쿠텐동",
@@ -2205,74 +2495,1099 @@
                 "price": "3000"
             }
         ],
-        "keywords": [
+        "ctg1": [
             "일식"
-        ]
+        ],
+        "ctg2": [
+            "라멘",
+            "소바",
+            "초밥",
+            "카츠",
+            "텐동",
+            "규동",
+            "오코노미야끼",
+            "타코야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012699485866,
+        "longitude": 127.108653825425,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B3%A0%EC%BF%A0%ED%85%90%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 92,
-        "name": "단",
-        "thumbnail": "pictures/p47.jpg",
+        "id": 71,
+        "name": "후쿠오카모츠나베 판교점",
+        "thumbnail": null,
+        "menu": [],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "라멘",
+            "소바",
+            "초밥",
+            "카츠",
+            "텐동",
+            "규동",
+            "오코노미야끼",
+            "타코야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%ED%9B%84%EC%BF%A0%EC%98%A4%EC%B9%B4%EB%AA%A8%EC%B8%A0%EB%82%98%EB%B2%A0%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 72,
+        "name": "르메콩",
+        "thumbnail": "./pictures/p72.jpg",
         "menu": [
             {
-                "name": "가이센동",
-                "price": "17000"
+                "name": "소고기 쌀국수",
+                "price": "10900"
             },
             {
-                "name": "사케동",
+                "name": "분짜",
+                "price": "13900"
+            },
+            {
+                "name": "나시고렝",
+                "price": "11900"
+            },
+            {
+                "name": "팟타이",
+                "price": "11900"
+            },
+            {
+                "name": "꿔이",
+                "price": "1000"
+            }
+        ],
+        "ctg1": [
+            "아시아 음식"
+        ],
+        "ctg2": [
+            "베트남 음식"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020508894395,
+        "longitude": 127.106945007987,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A5%B4%EB%A9%94%EC%BD%A9%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 73,
+        "name": "조이포",
+        "thumbnail": "./pictures/p73.jpg",
+        "menu": [
+            {
+                "name": "분짜",
                 "price": "13000"
             },
             {
-                "name": "혼마구로동",
-                "price": "38000"
+                "name": "똠양갈비쌀국수",
+                "price": "17000"
             },
             {
-                "name": "규동",
-                "price": "9000"
+                "name": "삼겹살팟타이",
+                "price": "12000"
             },
             {
-                "name": "도리데리야끼동",
-                "price": "9000"
+                "name": "소고기쌀국수",
+                "price": "10000"
+            },
+            {
+                "name": "매운쌀국수",
+                "price": "11000"
             }
         ],
-        "keywords": [
-            "일식"
-        ]
+        "ctg1": [
+            "아시아 음식"
+        ],
+        "ctg2": [
+            "베트남 음식"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40046431022458,
+        "longitude": 127.10681400191869,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A1%B0%EC%9D%B4%ED%8F%AC%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 74,
+        "name": "홍호아 판교점",
+        "thumbnail": "./pictures/p74.jpg",
+        "menu": [
+            {
+                "name": "양지 쌀국수",
+                "price": "9900"
+            },
+            {
+                "name": "매운양지 쌀국수",
+                "price": "10900"
+            },
+            {
+                "name": "껌승1인세트",
+                "price": "14500"
+            },
+            {
+                "name": "직화바비큐반미세트",
+                "price": "12000"
+            },
+            {
+                "name": "반미세트",
+                "price": "11500"
+            }
+        ],
+        "ctg1": [
+            "아시아 음식"
+        ],
+        "ctg2": [
+            "베트남 음식"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.401222688951265,
+        "longitude": 127.10909535634981,
+        "kakao_link": "https://map.kakao.com/?q=%ED%99%8D%ED%98%B8%EC%95%84%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 75,
+        "name": "마마스포",
+        "thumbnail": "./pictures/p75.jpg",
+        "menu": [
+            {
+                "name": "뿌님팟퐁커리",
+                "price": "20000"
+            },
+            {
+                "name": "팟타이 꿍",
+                "price": "12500"
+            },
+            {
+                "name": "똠양쌀국수",
+                "price": "12500"
+            },
+            {
+                "name": "칠리크랩",
+                "price": "20000"
+            },
+            {
+                "name": "치킨매실탕수육",
+                "price": "17000"
+            }
+        ],
+        "ctg1": [
+            "아시아 음식"
+        ],
+        "ctg2": [
+            "태국 음식"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40133478046625,
+        "longitude": 127.10869909548097,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A7%88%EB%A7%88%EC%8A%A4%ED%8F%AC%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 76,
+        "name": "진부엉이꼬마김밥",
+        "thumbnail": "./pictures/p76.jpg",
+        "menu": [
+            {
+                "name": "찐꼬마김밥 6줄",
+                "price": "4500"
+            },
+            {
+                "name": "매콤어묵꼬마김밥 6줄",
+                "price": "5000"
+            },
+            {
+                "name": "스페셜 1 6줄",
+                "price": "6500"
+            },
+            {
+                "name": "스페셜 2 6줄",
+                "price": "9700"
+            }
+        ],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "김밥"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.16671634551926,
+        "longitude": 127.10635692513648,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A7%84%EB%B6%80%EC%97%89%EC%9D%B4%EA%BC%AC%EB%A7%88%EA%B9%80%EB%B0%A5%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 77,
+        "name": "청년다방 판교테크노밸리점",
+        "thumbnail": "./pictures/p77.jpg",
+        "menu": [
+            {
+                "name": "틈새매운어묵떡볶이",
+                "price": "16500"
+            },
+            {
+                "name": "불향차돌떡볶이",
+                "price": "17500"
+            },
+            {
+                "name": "통큰오짱떡볶이",
+                "price": "19000"
+            },
+            {
+                "name": "마라로제떡볶이",
+                "price": "19000"
+            },
+            {
+                "name": "떡튀순떡볶이",
+                "price": "17500"
+            }
+        ],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "떡볶이",
+            "핫도그"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40020826336125,
+        "longitude": 127.10698756524752,
+        "kakao_link": "https://map.kakao.com/?q=%EC%B2%AD%EB%85%84%EB%8B%A4%EB%B0%A9%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
+    },
+    {
+        "id": 78,
+        "name": "기름짜는김밥집",
+        "thumbnail": "./pictures/p78.jpg",
+        "menu": [
+            {
+                "name": "오뎅",
+                "price": "3500"
+            },
+            {
+                "name": "김치볶음밥",
+                "price": "5500"
+            },
+            {
+                "name": "참치덮밥",
+                "price": "6000"
+            },
+            {
+                "name": "고구마돈까스",
+                "price": "7500"
+            },
+            {
+                "name": "들기름김밥",
+                "price": "3000"
+            }
+        ],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "김밥"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.40145513428307,
+        "longitude": 127.1091148933445,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B8%B0%EB%A6%84%EC%A7%9C%EB%8A%94%EA%B9%80%EB%B0%A5%EC%A7%91%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 79,
+        "name": "헬키푸키 판교점",
+        "thumbnail": "./pictures/p79.jpg",
+        "menu": [
+            {
+                "name": "키토김밥",
+                "price": "6800"
+            },
+            {
+                "name": "크래미 키토김밥",
+                "price": "7800"
+            },
+            {
+                "name": "치즈 키토김밥",
+                "price": "7800"
+            },
+            {
+                "name": "참치 키토김밥",
+                "price": "7800"
+            },
+            {
+                "name": "베이컨 키토김밥",
+                "price": "7800"
+            }
+        ],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "김밥",
+            "떡볶이",
+            "핫도그"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.4013347804748,
+        "longitude": 127.108699095482,
+        "kakao_link": "https://map.kakao.com/?q=%ED%97%AC%ED%82%A4%ED%91%B8%ED%82%A4%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 80,
+        "name": "상아김밥 판교점",
+        "thumbnail": "./pictures/p80.jpg",
+        "menu": [
+            {
+                "name": "상아김밥",
+                "price": "4500"
+            },
+            {
+                "name": "참치와사비키토",
+                "price": "7500"
+            },
+            {
+                "name": "상아떡볶이",
+                "price": "6500"
+            },
+            {
+                "name": "특제참치주먹밥",
+                "price": "7000"
+            },
+            {
+                "name": "야채김밥",
+                "price": "4500"
+            }
+        ],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "김밥",
+            "떡볶이"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.4021115556431,
+        "longitude": 127.110540047469,
+        "kakao_link": "https://map.kakao.com/?q=%EC%83%81%EC%95%84%EA%B9%80%EB%B0%A5%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 81,
+        "name": "디엣테이블",
+        "thumbnail": "./pictures/p81.jpg",
+        "menu": [
+            {
+                "name": "hot 숯불시카고 소스",
+                "price": "500"
+            },
+            {
+                "name": "땅콩소스",
+                "price": "500"
+            },
+            {
+                "name": "타르타르 소스",
+                "price": "500"
+            },
+            {
+                "name": "청양마요 소스",
+                "price": "500"
+            },
+            {
+                "name": "펩시제로 500ml",
+                "price": "2000"
+            }
+        ],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "김밥",
+            "떡볶이",
+            "핫도그"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EB%94%94%EC%97%A3%ED%85%8C%EC%9D%B4%EB%B8%94%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 82,
+        "name": "소풍",
+        "thumbnail": "./pictures/p82.jpg",
+        "menu": [
+            {
+                "name": "김밥",
+                "price": "3000"
+            },
+            {
+                "name": "떡볶이",
+                "price": "3500"
+            },
+            {
+                "name": "순대",
+                "price": "3500"
+            },
+            {
+                "name": "튀김범벅",
+                "price": "3500"
+            },
+            {
+                "name": "어묵1인분(3개)",
+                "price": "2000"
+            }
+        ],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "김밥",
+            "떡볶이",
+            "핫도그"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.5571282222386,
+        "longitude": 127.328285474623,
+        "kakao_link": "https://map.kakao.com/?q=%EC%86%8C%ED%92%8D%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 83,
+        "name": "애비로드샌드위치 판교점",
+        "thumbnail": "./pictures/p83.jpg",
+        "menu": [
+            {
+                "name": "야채듬뿍김밥",
+                "price": "5500"
+            },
+            {
+                "name": "햄치즈에그샌드위치",
+                "price": "7600"
+            },
+            {
+                "name": "HOT 아메리카노",
+                "price": "3300"
+            },
+            {
+                "name": "ICE 아메리카노",
+                "price": "3800"
+            },
+            {
+                "name": "애비로드 세트 A",
+                "price": "14500"
+            }
+        ],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "김밥",
+            "떡볶이",
+            "핫도그"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%95%A0%EB%B9%84%EB%A1%9C%EB%93%9C%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 84,
+        "name": "빨간 짱돌 떡볶이",
+        "thumbnail": null,
+        "menu": [],
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "떡볶이"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B9%A8%EA%B0%84%20%EC%A7%B1%EB%8F%8C%20%EB%96%A1%EB%B3%B6%EC%9D%B4%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 85,
+        "name": "후루룩손칼국수",
+        "thumbnail": "./pictures/p85.jpg",
+        "menu": [
+            {
+                "name": "국산콩국수",
+                "price": "9500"
+            },
+            {
+                "name": "한그릇바지락칼국수",
+                "price": "10000"
+            },
+            {
+                "name": "한그릇바지락수제비",
+                "price": "10000"
+            },
+            {
+                "name": "얼큰 만두전골",
+                "price": "11000"
+            },
+            {
+                "name": "바지락칼국수",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4018849193316,
+        "longitude": 127.1061474019,
+        "kakao_link": "https://map.kakao.com/?q=%ED%9B%84%EB%A3%A8%EB%A3%A9%EC%86%90%EC%B9%BC%EA%B5%AD%EC%88%98%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 86,
+        "name": "오봉집 판교유스페이스점",
+        "thumbnail": "./pictures/p86.jpg",
+        "menu": [
+            {
+                "name": "부추전",
+                "price": "12000"
+            },
+            {
+                "name": "김치전",
+                "price": "12000"
+            },
+            {
+                "name": "오봉스페셜",
+                "price": "56000"
+            },
+            {
+                "name": "매생이연포보쌈",
+                "price": "56000"
+            },
+            {
+                "name": "가브리수육전골",
+                "price": "34000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.402069157743,
+        "longitude": 127.10667058432,
+        "kakao_link": "https://map.kakao.com/?q=%EC%98%A4%EB%B4%89%EC%A7%91%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
+    },
+    {
+        "id": 87,
+        "name": "달빛어시장",
+        "thumbnail": "./pictures/p87.jpg",
+        "menu": [
+            {
+                "name": "광어회",
+                "price": "31000"
+            },
+            {
+                "name": "육회탕탕이",
+                "price": "29000"
+            },
+            {
+                "name": "도다리 세꼬시",
+                "price": "29000"
+            },
+            {
+                "name": "안면도참소라",
+                "price": "30000"
+            },
+            {
+                "name": "제주 뿔소라",
+                "price": "30000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4009403786405,
+        "longitude": 127.106448750271,
+        "kakao_link": "https://map.kakao.com/?q=%EB%8B%AC%EB%B9%9B%EC%96%B4%EC%8B%9C%EC%9E%A5%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 88,
+        "name": "제비면가 판교본점",
+        "thumbnail": "./pictures/p88.jpg",
+        "menu": [
+            {
+                "name": "수제비",
+                "price": "7000"
+            },
+            {
+                "name": "칼국수",
+                "price": "7000"
+            },
+            {
+                "name": "매생이굴국밥",
+                "price": "8000"
+            },
+            {
+                "name": "통영굴 수제비",
+                "price": "8000"
+            },
+            {
+                "name": "통영굴 칼국수",
+                "price": "8000"
+            }
+        ],
+        "ctg1": [
+            "한식",
+            "분식"
+        ],
+        "ctg2": [
+            "칼국수",
+            "국밥",
+            "비빔밥",
+            "김밥"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.402106205472606,
+        "longitude": 127.1104801801983,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A0%9C%EB%B9%84%EB%A9%B4%EA%B0%80%20%ED%8C%90%EA%B5%90%EB%B3%B8%EC%A0%90"
+    },
+    {
+        "id": 89,
+        "name": "청춘면가 판교점",
+        "thumbnail": "./pictures/p89.jpg",
+        "menu": [
+            {
+                "name": "맵소",
+                "price": "13000"
+            },
+            {
+                "name": "맵닭",
+                "price": "13000"
+            },
+            {
+                "name": "맛잇소",
+                "price": "12000"
+            },
+            {
+                "name": "맛잇닭",
+                "price": "12000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "칼국수"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%B2%AD%EC%B6%98%EB%A9%B4%EA%B0%80%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 90,
+        "name": "고향옥얼큰순대국 삼평점",
+        "thumbnail": "./pictures/p90.jpg",
+        "menu": [
+            {
+                "name": "얼큰순대국",
+                "price": "12000"
+            },
+            {
+                "name": "순순대국",
+                "price": "11000"
+            },
+            {
+                "name": "뼈해장국",
+                "price": "11000"
+            },
+            {
+                "name": "얼큰내장국밥",
+                "price": "12000"
+            },
+            {
+                "name": "얼큰수육국밥",
+                "price": "12000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥",
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4120735668557,
+        "longitude": 127.126391289591,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B3%A0%ED%96%A5%EC%98%A5%EC%96%BC%ED%81%B0%EC%88%9C%EB%8C%80%EA%B5%AD%20%EC%82%BC%ED%8F%89%EC%A0%90%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 91,
+        "name": "안동국시소호정 T-VALLEY점",
+        "thumbnail": "./pictures/p91.jpg",
+        "menu": [
+            {
+                "name": "국시",
+                "price": "15000"
+            },
+            {
+                "name": "국밥",
+                "price": "15000"
+            },
+            {
+                "name": "수육 (대)",
+                "price": "58000"
+            },
+            {
+                "name": "전 (대)",
+                "price": "39000"
+            },
+            {
+                "name": "메밀묵 (대)",
+                "price": "29000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%95%88%EB%8F%99%EA%B5%AD%EC%8B%9C%EC%86%8C%ED%98%B8%EC%A0%95%20T-VALLEY%EC%A0%90%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 92,
+        "name": "조재벌식당",
+        "thumbnail": "./pictures/p92.jpg",
+        "menu": [
+            {
+                "name": "부대찌개",
+                "price": "11000"
+            },
+            {
+                "name": "한우국밥",
+                "price": "11000"
+            },
+            {
+                "name": "김치찌개",
+                "price": "10000"
+            },
+            {
+                "name": "두루치기",
+                "price": "11000"
+            },
+            {
+                "name": "삼겹살",
+                "price": "17000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥",
+            "찌개",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4036948848399,
+        "longitude": 127.109316923664,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A1%B0%EC%9E%AC%EB%B2%8C%EC%8B%9D%EB%8B%B9%20%ED%8C%90%EA%B5%90"
     },
     {
         "id": 93,
-        "name": "큐슈울트라아멘 판교점",
-        "thumbnail": "pictures/p48.jpg",
+        "name": "기달임 돼지곰탕 본점",
+        "thumbnail": "./pictures/p93.jpg",
         "menu": [
             {
-                "name": "울트라아멘",
-                "price": "13500"
+                "name": "돼지곰탕(특)",
+                "price": "14000"
             },
             {
-                "name": "울트라아동",
-                "price": "13500"
-            },
-            {
-                "name": "돈코츠 시오라아멘(소금)",
+                "name": "돼지곰탕(보통)",
                 "price": "10000"
             },
             {
-                "name": "돈코츠 소유라아멘(간장)",
-                "price": "10000"
+                "name": "유자수육",
+                "price": "6000"
             },
             {
-                "name": "돈코츠 미소라아멘(된장)",
-                "price": "10000"
+                "name": "잔술",
+                "price": ""
             }
         ],
-        "keywords": [
-            "일식"
-        ]
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B8%B0%EB%8B%AC%EC%9E%84%20%EB%8F%BC%EC%A7%80%EA%B3%B0%ED%83%95%20%EB%B3%B8%EC%A0%90%20%ED%8C%90%EA%B5%90"
     },
     {
         "id": 94,
+        "name": "나진국밥 판교점",
+        "thumbnail": "./pictures/p94.jpg",
+        "menu": [
+            {
+                "name": "술상한상A",
+                "price": "56000"
+            },
+            {
+                "name": "술상한상B",
+                "price": "51000"
+            },
+            {
+                "name": "갓수육(소)",
+                "price": "33000"
+            },
+            {
+                "name": "갓수육(대)",
+                "price": "43000"
+            },
+            {
+                "name": "수육(소)",
+                "price": "28000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4004661132843,
+        "longitude": 127.10681287508,
+        "kakao_link": "https://map.kakao.com/?q=%EB%82%98%EC%A7%84%EA%B5%AD%EB%B0%A5%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 95,
+        "name": "춘업순댓국 본점",
+        "thumbnail": "./pictures/p95.jpg",
+        "menu": [
+            {
+                "name": "술국",
+                "price": "22000"
+            },
+            {
+                "name": "순대곱창전골-중",
+                "price": "30000"
+            },
+            {
+                "name": "모듬순대",
+                "price": "35000"
+            },
+            {
+                "name": "보통순댓국",
+                "price": "11000"
+            },
+            {
+                "name": "얼큰순댓국",
+                "price": "12000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012843732024,
+        "longitude": 127.108644810967,
+        "kakao_link": "https://map.kakao.com/?q=%EC%B6%98%EC%97%85%EC%88%9C%EB%8C%93%EA%B5%AD%20%EB%B3%B8%EC%A0%90%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 96,
+        "name": "한촌설렁탕 판교테크노밸리점",
+        "thumbnail": "./pictures/p96.jpg",
+        "menu": [
+            {
+                "name": "떡국설렁탕",
+                "price": "11000"
+            },
+            {
+                "name": "수만두설렁탕",
+                "price": "12000"
+            },
+            {
+                "name": "[신메뉴] 왕(王) 갈비탕",
+                "price": "18000"
+            },
+            {
+                "name": "설렁탕",
+                "price": "11000"
+            },
+            {
+                "name": "양곰탕",
+                "price": "15000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4013329825886,
+        "longitude": 127.10869457524,
+        "kakao_link": "https://map.kakao.com/?q=%ED%95%9C%EC%B4%8C%EC%84%A4%EB%A0%81%ED%83%95%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
+    },
+    {
+        "id": 97,
+        "name": "제주은희네해장국 판교점",
+        "thumbnail": "./pictures/p97.jpg",
+        "menu": [
+            {
+                "name": "해장국",
+                "price": "12000"
+            },
+            {
+                "name": "내장탕",
+                "price": "13000"
+            },
+            {
+                "name": "돔베고기 (소, 중, 대)",
+                "price": ""
+            },
+            {
+                "name": "양무침",
+                "price": "16000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4013058283763,
+        "longitude": 127.108828935912,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A0%9C%EC%A3%BC%EC%9D%80%ED%9D%AC%EB%84%A4%ED%95%B4%EC%9E%A5%EA%B5%AD%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 98,
+        "name": "재크와 콩나물",
+        "thumbnail": "./pictures/p98.jpg",
+        "menu": [
+            {
+                "name": "콩나물국밥",
+                "price": "7000"
+            },
+            {
+                "name": "데친통오징어",
+                "price": "10000"
+            },
+            {
+                "name": "왕계란말이",
+                "price": "9000"
+            },
+            {
+                "name": "황태계란탕",
+                "price": "15000"
+            },
+            {
+                "name": "불오징어볶음",
+                "price": "22000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012699485866,
+        "longitude": 127.108653825425,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9E%AC%ED%81%AC%EC%99%80%20%EC%BD%A9%EB%82%98%EB%AC%BC%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 99,
+        "name": "평안",
+        "thumbnail": "./pictures/p99.jpg",
+        "menu": [
+            {
+                "name": "물냉면",
+                "price": "12000"
+            },
+            {
+                "name": "빨간맛곰탕",
+                "price": "12000"
+            },
+            {
+                "name": "미나리곰탕",
+                "price": "12000"
+            },
+            {
+                "name": "만두1pc",
+                "price": "2000"
+            },
+            {
+                "name": "만둣국",
+                "price": "12000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.389788563618275,
+        "longitude": 126.95863599096045,
+        "kakao_link": "https://map.kakao.com/?q=%ED%8F%89%EC%95%88%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 100,
         "name": "탄탄면공방 판교테크노밸리점",
-        "thumbnail": "pictures/p49.jpg",
+        "thumbnail": "./pictures/p100.jpg",
         "menu": [
             {
                 "name": "2인 탄탄세트",
@@ -2295,12 +3610,1939 @@
                 "price": "9800"
             }
         ],
-        "keywords": [
+        "ctg1": [
+            "한식",
+            "아시아 음식"
+        ],
+        "ctg2": [
+            "국밥",
             "퓨전 음식"
-        ]
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40192589600522,
+        "longitude": 127.11059285749805,
+        "kakao_link": "https://map.kakao.com/?q=%ED%83%84%ED%83%84%EB%A9%B4%EA%B3%B5%EB%B0%A9%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
     },
     {
-        "id": 95,
+        "id": 101,
+        "name": "서울전통육개장 판교하이펙스점",
+        "thumbnail": "./pictures/p101.jpg",
+        "menu": [
+            {
+                "name": "한판보쌈",
+                "price": "14000"
+            },
+            {
+                "name": "만두반접시",
+                "price": "4000"
+            },
+            {
+                "name": "메밀전병",
+                "price": "8000"
+            },
+            {
+                "name": "감자전",
+                "price": "7000"
+            },
+            {
+                "name": "보양갈비탕",
+                "price": "14000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥",
+            "비빔밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%84%9C%EC%9A%B8%EC%A0%84%ED%86%B5%EC%9C%A1%EA%B0%9C%EC%9E%A5%20%ED%8C%90%EA%B5%90%ED%95%98%EC%9D%B4%ED%8E%99%EC%8A%A4%EC%A0%90"
+    },
+    {
+        "id": 102,
+        "name": "평가옥 판교점",
+        "thumbnail": "./pictures/p102.jpg",
+        "menu": [],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "국밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40023830004121,
+        "longitude": 127.1066521776744,
+        "kakao_link": "https://map.kakao.com/?q=%ED%8F%89%EA%B0%80%EC%98%A5%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 103,
+        "name": "즐삼 생고기",
+        "thumbnail": "./pictures/p103.jpg",
+        "menu": [
+            {
+                "name": "통돼지김치찌개",
+                "price": "9000"
+            },
+            {
+                "name": "무한 돼지",
+                "price": "17900"
+            },
+            {
+                "name": "무한 소",
+                "price": "25900"
+            },
+            {
+                "name": "무한소곱창",
+                "price": "27900"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "비빔밥",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020759679173,
+        "longitude": 127.106111529864,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A6%90%EC%82%BC%20%EC%83%9D%EA%B3%A0%EA%B8%B0%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 104,
+        "name": "소메랑",
+        "thumbnail": "./pictures/p104.jpg",
+        "menu": [
+            {
+                "name": "곱창모듬 200g (1인분)",
+                "price": "15900"
+            },
+            {
+                "name": "C세트 곱창+대창+막창+특양",
+                "price": "66000"
+            },
+            {
+                "name": "B 세트 곱창+대창+막창",
+                "price": "46000"
+            },
+            {
+                "name": "A세트 곱창+막창",
+                "price": "37000"
+            },
+            {
+                "name": "특양구이 200g (1인분)",
+                "price": "21900"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "비빔밥",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.3706820782346,
+        "longitude": 126.942856960242,
+        "kakao_link": "https://map.kakao.com/?q=%EC%86%8C%EB%A9%94%EB%9E%91%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 105,
+        "name": "이야기둘",
+        "thumbnail": "./pictures/p105.jpg",
+        "menu": [
+            {
+                "name": "꽃등심구이(100g) - 당일주문가능",
+                "price": "39000"
+            },
+            {
+                "name": "이야기 한상 세트 - 예약주문만 가능",
+                "price": "94000"
+            },
+            {
+                "name": "한우 등골 사시미 한판",
+                "price": "25000"
+            },
+            {
+                "name": "점심특선 야끼니쿠 반상(1인 정식)",
+                "price": "15000"
+            },
+            {
+                "name": "점심특선 샤브샤브 반상(1인 정식)",
+                "price": "19000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "비빔밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4037347007924,
+        "longitude": 127.109131752148,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9D%B4%EC%95%BC%EA%B8%B0%EB%91%98%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 106,
+        "name": "마포갈비집 판교점",
+        "thumbnail": "./pictures/p106.jpg",
+        "menu": [
+            {
+                "name": "마포돼지갈비",
+                "price": "17000"
+            },
+            {
+                "name": "숙성生삼겹살",
+                "price": "17000"
+            },
+            {
+                "name": "숙성生목살",
+                "price": "17000"
+            },
+            {
+                "name": "숙성갈매기살",
+                "price": "18000"
+            },
+            {
+                "name": "1++한우 차돌박이",
+                "price": "27000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "찌개"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4004661132843,
+        "longitude": 127.10681287508,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A7%88%ED%8F%AC%EA%B0%88%EB%B9%84%EC%A7%91%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 107,
+        "name": "오투닭갈비&부대찌개 판교테크노벨리점",
+        "thumbnail": "./pictures/p107.jpg",
+        "menu": [
+            {
+                "name": "오투닭갈비",
+                "price": "14000"
+            },
+            {
+                "name": "치즈듬뿍닭갈비",
+                "price": "18000"
+            },
+            {
+                "name": "낙지닭갈비",
+                "price": "18000"
+            },
+            {
+                "name": "부대찌개",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "찌개"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40203174815171,
+        "longitude": 127.10718780646545,
+        "kakao_link": "https://map.kakao.com/?q=%EC%98%A4%ED%88%AC%EB%8B%AD%EA%B0%88%EB%B9%84%26%EB%B6%80%EB%8C%80%EC%B0%8C%EA%B0%9C%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B2%A8%EB%A6%AC%EC%A0%90"
+    },
+    {
+        "id": 108,
+        "name": "부대집 판교본점",
+        "thumbnail": "./pictures/p108.jpg",
+        "menu": [
+            {
+                "name": "부대집 부대전골",
+                "price": "9000"
+            },
+            {
+                "name": "우삼겹 부대전골",
+                "price": "11000"
+            },
+            {
+                "name": "부대집 부대찌개",
+                "price": "8000"
+            },
+            {
+                "name": "우삼겹 부대볶음",
+                "price": "12000"
+            },
+            {
+                "name": "햄/소세지 사리",
+                "price": "5000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "찌개"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020682557045,
+        "longitude": 127.106671712464,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B6%80%EB%8C%80%EC%A7%91%20%ED%8C%90%EA%B5%90%EB%B3%B8%EC%A0%90"
+    },
+    {
+        "id": 109,
+        "name": "369부대찌개앤생삼겹살",
+        "thumbnail": null,
+        "menu": [],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "찌개"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=369%EB%B6%80%EB%8C%80%EC%B0%8C%EA%B0%9C%EC%95%A4%EC%83%9D%EC%82%BC%EA%B2%B9%EC%82%B4%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 110,
+        "name": "이태리부대찌개 판교점",
+        "thumbnail": "./pictures/p110.jpg",
+        "menu": [
+            {
+                "name": "부대찌개",
+                "price": "8000"
+            },
+            {
+                "name": "부대전골",
+                "price": "9000"
+            },
+            {
+                "name": "부대볶음",
+                "price": "10000"
+            },
+            {
+                "name": "우삼겹부대복음",
+                "price": "12000"
+            },
+            {
+                "name": "돈가스",
+                "price": "7000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "찌개"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.4012862988573,
+        "longitude": 127.110456388288,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9D%B4%ED%83%9C%EB%A6%AC%EB%B6%80%EB%8C%80%EC%B0%8C%EA%B0%9C%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 111,
+        "name": "삼군김치찌개",
+        "thumbnail": "./pictures/p111.jpg",
+        "menu": [
+            {
+                "name": "김치찌개 낮&밤",
+                "price": "9000"
+            },
+            {
+                "name": "목살김치찜 (2인이상) 낮&밤",
+                "price": "12000"
+            },
+            {
+                "name": "직화제육 낮&밤",
+                "price": "10000"
+            },
+            {
+                "name": "숯붗고기 낮&밤",
+                "price": "10000"
+            },
+            {
+                "name": "치즈계란말이 낮&밤",
+                "price": "8000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "찌개",
+            "고기"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.4011335466894,
+        "longitude": 127.11000440078,
+        "kakao_link": "https://map.kakao.com/?q=%EC%82%BC%EA%B5%B0%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 112,
+        "name": "김치도가 판교점",
+        "thumbnail": "./pictures/p112.jpg",
+        "menu": [
+            {
+                "name": "고기듬뿍김치찌개&가마솥밥",
+                "price": "10000"
+            },
+            {
+                "name": "꽁치김치찌개&가마솥밥",
+                "price": "10000"
+            },
+            {
+                "name": "햄듬뿍김치찌개&가마솥밥",
+                "price": "10000"
+            },
+            {
+                "name": "계란말이",
+                "price": "8000"
+            },
+            {
+                "name": "묵은지오겹살150g",
+                "price": "14000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "찌개"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.402102613002576,
+        "longitude": 127.11046775127326,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B9%80%EC%B9%98%EB%8F%84%EA%B0%80%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 113,
+        "name": "라무진 판교점",
+        "thumbnail": "./pictures/p113.jpg",
+        "menu": [
+            {
+                "name": "징기스칸 양갈비",
+                "price": "32000"
+            },
+            {
+                "name": "징기스칸 프렌치렉",
+                "price": "34000"
+            },
+            {
+                "name": "마늘밥",
+                "price": "3000"
+            },
+            {
+                "name": "오뎅탕",
+                "price": "17000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4011738227889,
+        "longitude": 127.107357125233,
+        "kakao_link": "https://map.kakao.com/?q=%EB%9D%BC%EB%AC%B4%EC%A7%84%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 114,
+        "name": "행복한집숯불갈비",
+        "thumbnail": "./pictures/p114.jpg",
+        "menu": [
+            {
+                "name": "한우 생 갈비살(400g)",
+                "price": "60000"
+            },
+            {
+                "name": "한돈 수제 돼지갈비 (250g)",
+                "price": "14000"
+            },
+            {
+                "name": "목살갈비 양념구이 (250g)",
+                "price": "15000"
+            },
+            {
+                "name": "삼겹살 (200g)",
+                "price": "13000"
+            },
+            {
+                "name": "왕 갈비탕",
+                "price": "9000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020192290495,
+        "longitude": 127.107082752426,
+        "kakao_link": "https://map.kakao.com/?q=%ED%96%89%EB%B3%B5%ED%95%9C%EC%A7%91%EC%88%AF%EB%B6%88%EA%B0%88%EB%B9%84%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 115,
+        "name": "문막집",
+        "thumbnail": "./pictures/p115.jpg",
+        "menu": [
+            {
+                "name": "문어보쌈(중) 2~3인",
+                "price": "54800"
+            },
+            {
+                "name": "문어보쌈(대) 3~4인분",
+                "price": "89800"
+            },
+            {
+                "name": "비빔 막국수",
+                "price": "9800"
+            },
+            {
+                "name": "들기름 막국수",
+                "price": "9800"
+            },
+            {
+                "name": "물 막국수",
+                "price": "9800"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "고기"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.400253411373896,
+        "longitude": 127.10688033689672,
+        "kakao_link": "https://map.kakao.com/?q=%EB%AC%B8%EB%A7%89%EC%A7%91%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 116,
+        "name": "조마루감자탕 판교점",
+        "thumbnail": "./pictures/p116.jpg",
+        "menu": [
+            {
+                "name": "뼈다귀 감자탕 (소)",
+                "price": "32000"
+            },
+            {
+                "name": "뼈다귀 감자탕 (중)",
+                "price": "40000"
+            },
+            {
+                "name": "뼈다귀 감자탕 (대)",
+                "price": "48000"
+            },
+            {
+                "name": "뼈다귀해장국",
+                "price": "10000"
+            },
+            {
+                "name": "우거지만두해장국",
+                "price": "9000"
+            }
+        ],
+        "ctg1": [
+            "한식"
+        ],
+        "ctg2": [
+            "감자탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012843690513,
+        "longitude": 127.108649328603,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A1%B0%EB%A7%88%EB%A3%A8%EA%B0%90%EC%9E%90%ED%83%95%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 117,
+        "name": "찬",
+        "thumbnail": "./pictures/p117.jpg",
+        "menu": [
+            {
+                "name": "짜장면",
+                "price": "8000"
+            },
+            {
+                "name": "간짜장",
+                "price": "9000"
+            },
+            {
+                "name": "마파두부면",
+                "price": "11000"
+            },
+            {
+                "name": "차돌 마라탕면",
+                "price": "14000"
+            },
+            {
+                "name": "삼선간짬뽕",
+                "price": "13000"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "중식"
+        ],
+        "ctg2": [
+            "짜장면",
+            "치킨"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4872835420581,
+        "longitude": 126.927969606001,
+        "kakao_link": "https://map.kakao.com/?q=%EC%B0%AC%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 118,
+        "name": "신라마라탕 판교점",
+        "thumbnail": "./pictures/p118.jpg",
+        "menu": [
+            {
+                "name": "마라샹궈",
+                "price": "15000"
+            },
+            {
+                "name": "마라탕",
+                "price": "9000"
+            },
+            {
+                "name": "마라반",
+                "price": "11000"
+            },
+            {
+                "name": "꿔바로우",
+                "price": "12000"
+            },
+            {
+                "name": "양저우볶음밥",
+                "price": "9000"
+            }
+        ],
+        "ctg1": [
+            "중식"
+        ],
+        "ctg2": [
+            "짜장면",
+            "마라탕"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012834701073,
+        "longitude": 127.108647068484,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8B%A0%EB%9D%BC%EB%A7%88%EB%9D%BC%ED%83%95%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 119,
+        "name": "울프스덴",
+        "thumbnail": "./pictures/p119.jpg",
+        "menu": [
+            {
+                "name": "스테이크",
+                "price": "51000"
+            },
+            {
+                "name": "뇨끼",
+                "price": "22000"
+            },
+            {
+                "name": "파스타",
+                "price": "16000"
+            },
+            {
+                "name": "와인페어링",
+                "price": "22000"
+            },
+            {
+                "name": "리조또",
+                "price": "20000"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "양식"
+        ],
+        "ctg2": [
+            "파스타",
+            "샐러드",
+            "스테이크",
+            "피자"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40014307775695,
+        "longitude": 127.10733193757463,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9A%B8%ED%94%84%EC%8A%A4%EB%8D%B4%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 120,
+        "name": "비눔 판교점",
+        "thumbnail": "./pictures/p120.jpg",
+        "menu": [
+            {
+                "name": "모듬플래터",
+                "price": "35000"
+            },
+            {
+                "name": "치즈 플래터",
+                "price": "24000"
+            },
+            {
+                "name": "Lunch 회오리오므라이스",
+                "price": "12000"
+            },
+            {
+                "name": "Lunch 명란 로제 파스타",
+                "price": "16000"
+            },
+            {
+                "name": "글라스와인",
+                "price": "6900"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "양식"
+        ],
+        "ctg2": [
+            "파스타",
+            "피자"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40046611328434,
+        "longitude": 127.10681287507951,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B9%84%EB%88%94%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 121,
+        "name": "데이빗앤룰스 판교점",
+        "thumbnail": "./pictures/p121.jpg",
+        "menu": [
+            {
+                "name": "Porterhouse (100g)",
+                "price": "44000"
+            },
+            {
+                "name": "(평일) Lunch Course",
+                "price": "60000"
+            },
+            {
+                "name": "New York Strip(100g)",
+                "price": "43000"
+            },
+            {
+                "name": "Filet Mignon (100g)",
+                "price": "47000"
+            },
+            {
+                "name": "Caesar Salad",
+                "price": "22000"
+            }
+        ],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "파스타",
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4036842999938,
+        "longitude": 127.109070688938,
+        "kakao_link": "https://map.kakao.com/?q=%EB%8D%B0%EC%9D%B4%EB%B9%97%EC%95%A4%EB%A3%B0%EC%8A%A4%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 122,
+        "name": "챠오바라이트 판교점",
+        "thumbnail": "./pictures/p122.jpg",
+        "menu": [
+            {
+                "name": "오리지널 시카고피자",
+                "price": "31000"
+            },
+            {
+                "name": "깔조네 피자",
+                "price": "25000"
+            },
+            {
+                "name": "슈퍼 슈프림 시카고피자",
+                "price": "32000"
+            },
+            {
+                "name": "게살 날치알 크림 파스타",
+                "price": "16000"
+            },
+            {
+                "name": "누룽지 해물 파스타",
+                "price": "19500"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "양식"
+        ],
+        "ctg2": [
+            "파스타",
+            "피자"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40055349179442,
+        "longitude": 127.1068355870884,
+        "kakao_link": "https://map.kakao.com/?q=%EC%B1%A0%EC%98%A4%EB%B0%94%EB%9D%BC%EC%9D%B4%ED%8A%B8%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 123,
+        "name": "호미스피자 판교점",
+        "thumbnail": "./pictures/p123.jpg",
+        "menu": [
+            {
+                "name": "호미스 치즈 피자",
+                "price": "17900"
+            },
+            {
+                "name": "익스트림 페퍼로니 피자",
+                "price": "19900"
+            },
+            {
+                "name": "블랙맘바 포테이토 피자",
+                "price": "20900"
+            },
+            {
+                "name": "클래식 콤비네이션 피자",
+                "price": "19900"
+            },
+            {
+                "name": "베이컨 체다 딥 피자",
+                "price": "20900"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "양식"
+        ],
+        "ctg2": [
+            "파스타",
+            "피자"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40114651413625,
+        "longitude": 127.11059171213141,
+        "kakao_link": "https://map.kakao.com/?q=%ED%98%B8%EB%AF%B8%EC%8A%A4%ED%94%BC%EC%9E%90%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 124,
+        "name": "단",
+        "thumbnail": "./pictures/p124.jpg",
+        "menu": [
+            {
+                "name": "가이센동",
+                "price": "17000"
+            },
+            {
+                "name": "사케동",
+                "price": "13000"
+            },
+            {
+                "name": "혼마구로동",
+                "price": "38000"
+            },
+            {
+                "name": "규동",
+                "price": "9000"
+            },
+            {
+                "name": "도리데리야끼동",
+                "price": "9000"
+            }
+        ],
+        "ctg1": [
+            "일식",
+            "양식"
+        ],
+        "ctg2": [
+            "파스타",
+            "라멘",
+            "규동",
+            "오코노미야끼",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 35.847272101967334,
+        "longitude": 128.62314590269156,
+        "kakao_link": "https://map.kakao.com/?q=%EB%8B%A8%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 125,
+        "name": "샐러디 판교테크노밸리점",
+        "thumbnail": "./pictures/p125.jpg",
+        "menu": [
+            {
+                "name": "탄단지 샐러디",
+                "price": "8600"
+            },
+            {
+                "name": "로스트닭다리살 샐러디",
+                "price": "9900"
+            },
+            {
+                "name": "우삼겹메밀면 누들볼",
+                "price": "9300"
+            },
+            {
+                "name": "칠리베이컨 포케볼",
+                "price": "8600"
+            },
+            {
+                "name": "에그베이컨 샌드",
+                "price": "7400"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드",
+            "샌드위치"
+        ],
+        "diet": true,
+        "cheap": true,
+        "latitude": 37.40207596791732,
+        "longitude": 127.10611152986374,
+        "kakao_link": "https://map.kakao.com/?q=%EC%83%90%EB%9F%AC%EB%94%94%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
+    },
+    {
+        "id": 126,
+        "name": "슬로우캘리 판교점",
+        "thumbnail": "./pictures/p126.jpg",
+        "menu": [
+            {
+                "name": "스파이시 참치 포케",
+                "price": "11500"
+            },
+            {
+                "name": "클래식 연어 포케",
+                "price": "12500"
+            },
+            {
+                "name": "블랙페퍼 치킨 보울",
+                "price": "11500"
+            },
+            {
+                "name": "부채살 스테이크 보울",
+                "price": "13500"
+            },
+            {
+                "name": "닭가슴살 에그 포케",
+                "price": "11500"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드",
+            "스테이크",
+            "샌드위치"
+        ],
+        "diet": true,
+        "cheap": false,
+        "latitude": 37.4020952990786,
+        "longitude": 127.108636946335,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8A%AC%EB%A1%9C%EC%9A%B0%EC%BA%98%EB%A6%AC%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 127,
+        "name": "프레시크레딧 판교에이치스퀘어점",
+        "thumbnail": "./pictures/p127.jpg",
+        "menu": [
+            {
+                "name": "햄에그 샌드위치",
+                "price": "7500"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드",
+            "샌드위치"
+        ],
+        "diet": true,
+        "cheap": true,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%ED%94%84%EB%A0%88%EC%8B%9C%ED%81%AC%EB%A0%88%EB%94%A7%20%ED%8C%90%EA%B5%90%EC%97%90%EC%9D%B4%EC%B9%98%EC%8A%A4%ED%80%98%EC%96%B4%EC%A0%90"
+    },
+    {
+        "id": 128,
+        "name": "올레샐러드",
+        "thumbnail": "./pictures/p128.jpg",
+        "menu": [
+            {
+                "name": "부채살스테이크 샐러드",
+                "price": "14900"
+            },
+            {
+                "name": "연어 포케",
+                "price": "13400"
+            },
+            {
+                "name": "알리오올리오 파스타",
+                "price": "9000"
+            },
+            {
+                "name": "아보카도 샐러드",
+                "price": "9500"
+            },
+            {
+                "name": "에그마요 샐러드",
+                "price": "9500"
+            }
+        ],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 35.326493334175304,
+        "longitude": 129.2774030491277,
+        "kakao_link": "https://map.kakao.com/?q=%EC%98%AC%EB%A0%88%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 129,
+        "name": "하이라이트키친 판교점",
+        "thumbnail": "./pictures/p129.jpg",
+        "menu": [
+            {
+                "name": "헬짱비빔밥",
+                "price": "10000"
+            },
+            {
+                "name": "포케",
+                "price": "12000"
+            },
+            {
+                "name": "또띠아샐러드",
+                "price": "11800"
+            }
+        ],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드"
+        ],
+        "diet": true,
+        "cheap": false,
+        "latitude": 37.4042343479464,
+        "longitude": 127.108608409755,
+        "kakao_link": "https://map.kakao.com/?q=%ED%95%98%EC%9D%B4%EB%9D%BC%EC%9D%B4%ED%8A%B8%ED%82%A4%EC%B9%9C%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 130,
+        "name": "올라포케 판교점",
+        "thumbnail": "./pictures/p130.jpg",
+        "menu": [
+            {
+                "name": "1인포케 +스프세트",
+                "price": "12500"
+            },
+            {
+                "name": "1인 혼밥 든든세트",
+                "price": "14500"
+            },
+            {
+                "name": "데리야끼 풀드포크 랩",
+                "price": "8500"
+            },
+            {
+                "name": "스리라차닭가슴살 랩",
+                "price": "7500"
+            },
+            {
+                "name": "비건토마토 스프",
+                "price": "3500"
+            }
+        ],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4002822419656,
+        "longitude": 127.106882636633,
+        "kakao_link": "https://map.kakao.com/?q=%EC%98%AC%EB%9D%BC%ED%8F%AC%EC%BC%80%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 131,
+        "name": "픽유어온샐러드",
+        "thumbnail": "./pictures/p131.jpg",
+        "menu": [
+            {
+                "name": "페퍼카우(우삼겹) 샐러드",
+                "price": "10000"
+            },
+            {
+                "name": "방탄커피",
+                "price": "5000"
+            },
+            {
+                "name": "그릴드치킨 샐러드",
+                "price": "10000"
+            },
+            {
+                "name": "치킨시저 샐러드",
+                "price": "10000"
+            },
+            {
+                "name": "아보카도 샐러드",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드",
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드",
+            "샌드위치"
+        ],
+        "diet": true,
+        "cheap": true,
+        "latitude": 37.4018699323966,
+        "longitude": 127.1107000700879,
+        "kakao_link": "https://map.kakao.com/?q=%ED%94%BD%EC%9C%A0%EC%96%B4%EC%98%A8%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 132,
+        "name": "샐러드박스 판교H스퀘어점",
+        "thumbnail": "./pictures/p132.jpg",
+        "menu": [
+            {
+                "name": "오븐닭다리살샐러드",
+                "price": "10000"
+            },
+            {
+                "name": "매콤오븐닭다리살샐러드",
+                "price": "10000"
+            },
+            {
+                "name": "부채살스테이크샐러드",
+                "price": "12000"
+            },
+            {
+                "name": "비건스테이크샐러드",
+                "price": "9000"
+            },
+            {
+                "name": "양념소불고기샐러드",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드"
+        ],
+        "diet": true,
+        "cheap": false,
+        "latitude": 37.4012699485866,
+        "longitude": 127.108653825425,
+        "kakao_link": "https://map.kakao.com/?q=%EC%83%90%EB%9F%AC%EB%93%9C%EB%B0%95%EC%8A%A4%20%ED%8C%90%EA%B5%90H%EC%8A%A4%ED%80%98%EC%96%B4%EC%A0%90"
+    },
+    {
+        "id": 133,
+        "name": "프레퍼스 다이어트 푸드 판교점",
+        "thumbnail": "./pictures/p133.jpg",
+        "menu": [
+            {
+                "name": "치킨 플레이트",
+                "price": "7900"
+            }
+        ],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드"
+        ],
+        "diet": true,
+        "cheap": true,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%ED%94%84%EB%A0%88%ED%8D%BC%EC%8A%A4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%20%ED%91%B8%EB%93%9C%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 134,
+        "name": "까사논나",
+        "thumbnail": "./pictures/p134.jpg",
+        "menu": [
+            {
+                "name": "문어파스타",
+                "price": "20000"
+            },
+            {
+                "name": "부라타치즈 토마토파스타",
+                "price": "19000"
+            },
+            {
+                "name": "한우 라자냐",
+                "price": "20000"
+            },
+            {
+                "name": "트러플 후렌치후라이",
+                "price": "7000"
+            },
+            {
+                "name": "카모마일차",
+                "price": "4000"
+            }
+        ],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "스테이크"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B9%8C%EC%82%AC%EB%85%BC%EB%82%98%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 135,
+        "name": "클준빛날영",
+        "thumbnail": "./pictures/p135.jpg",
+        "menu": [
+            {
+                "name": "파이탄라멘",
+                "price": "8500"
+            },
+            {
+                "name": "매운라멘",
+                "price": "10500"
+            },
+            {
+                "name": "쇼유라멘",
+                "price": "9000"
+            },
+            {
+                "name": "차슈덮밥",
+                "price": "8500"
+            },
+            {
+                "name": "스몰라멘",
+                "price": "6000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "라멘"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.4020972163823,
+        "longitude": 127.11045757854674,
+        "kakao_link": "https://map.kakao.com/?q=%ED%81%B4%EC%A4%80%EB%B9%9B%EB%82%A0%EC%98%81%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 136,
+        "name": "큐슈울트라아멘 판교점",
+        "thumbnail": "./pictures/p136.jpg",
+        "menu": [
+            {
+                "name": "울트라아멘",
+                "price": "13500"
+            },
+            {
+                "name": "울트라아동",
+                "price": "13500"
+            },
+            {
+                "name": "돈코츠 시오라아멘(소금)",
+                "price": "10000"
+            },
+            {
+                "name": "돈코츠 소유라아멘(간장)",
+                "price": "10000"
+            },
+            {
+                "name": "돈코츠 미소라아멘(된장)",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "라멘",
+            "소바",
+            "규동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4013347804663,
+        "longitude": 127.108699095481,
+        "kakao_link": "https://map.kakao.com/?q=%ED%81%90%EC%8A%88%EC%9A%B8%ED%8A%B8%EB%9D%BC%EC%95%84%EB%A9%98%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 137,
+        "name": "스시가오",
+        "thumbnail": "./pictures/p137.jpg",
+        "menu": [
+            {
+                "name": "모둠사시미 중",
+                "price": "50000"
+            },
+            {
+                "name": "토마토해물탕",
+                "price": "30000"
+            },
+            {
+                "name": "대패숙주볶음",
+                "price": "20000"
+            },
+            {
+                "name": "패스츄리 소세지",
+                "price": "18000"
+            },
+            {
+                "name": "항정살구이",
+                "price": "20000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "라멘",
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40049146826347,
+        "longitude": 127.10667286563205,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8A%A4%EC%8B%9C%EA%B0%80%EC%98%A4%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 138,
+        "name": "소바니우동",
+        "thumbnail": "./pictures/p138.jpg",
+        "menu": [
+            {
+                "name": "덴푸라 냉우동 (붓카케우동)",
+                "price": "12000"
+            },
+            {
+                "name": "덴푸라 우동",
+                "price": "9500"
+            },
+            {
+                "name": "니꾸우동",
+                "price": "12000"
+            },
+            {
+                "name": "카레우동",
+                "price": "9000"
+            },
+            {
+                "name": "규카레우동",
+                "price": "12000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "소바",
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.400388671483036,
+        "longitude": 127.10676194229586,
+        "kakao_link": "https://map.kakao.com/?q=%EC%86%8C%EB%B0%94%EB%8B%88%EC%9A%B0%EB%8F%99%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 139,
+        "name": "효카츠",
+        "thumbnail": "./pictures/p139.jpg",
+        "menu": [
+            {
+                "name": "효카츠",
+                "price": "12000"
+            },
+            {
+                "name": "콤보카츠(히레+치즈)",
+                "price": "12000"
+            },
+            {
+                "name": "히레카츠",
+                "price": "12000"
+            },
+            {
+                "name": "치즈카츠",
+                "price": "12000"
+            },
+            {
+                "name": "로스카츠",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "소바"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.49731270784857,
+        "longitude": 126.75746896251457,
+        "kakao_link": "https://map.kakao.com/?q=%ED%9A%A8%EC%B9%B4%EC%B8%A0%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 140,
+        "name": "백소정 판교점",
+        "thumbnail": "./pictures/p140.jpg",
+        "menu": [
+            {
+                "name": "[NEW] 마라마제소바+돈카츠",
+                "price": "15900"
+            },
+            {
+                "name": "[NEW] 사바온소바",
+                "price": "12500"
+            },
+            {
+                "name": "[NEW] 우나기온소바",
+                "price": "15900"
+            },
+            {
+                "name": "마제소바+돈카츠",
+                "price": "14900"
+            },
+            {
+                "name": "모짜렐라치즈카츠(4pcs)",
+                "price": "12900"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "소바",
+            "타코야끼"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020711015894,
+        "longitude": 127.110441728302,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B0%B1%EC%86%8C%EC%A0%95%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 141,
+        "name": "팔각도 판교유스페이스점",
+        "thumbnail": "./pictures/p141.jpg",
+        "menu": [
+            {
+                "name": "숯불 닭갈비",
+                "price": "12900"
+            },
+            {
+                "name": "오독 오독 닭 연골",
+                "price": "12000"
+            },
+            {
+                "name": "쫄깃 쫄깃 닭 목살",
+                "price": "13000"
+            },
+            {
+                "name": "매콤 꼬들 닭 안창살",
+                "price": "14000"
+            },
+            {
+                "name": "매콤 튤립 닭발",
+                "price": "15000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "소바"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4004661132843,
+        "longitude": 127.10681287508,
+        "kakao_link": "https://map.kakao.com/?q=%ED%8C%94%EA%B0%81%EB%8F%84%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
+    },
+    {
+        "id": 142,
+        "name": "이든활어",
+        "thumbnail": "./pictures/p142.jpg",
+        "menu": [
+            {
+                "name": "활어3종",
+                "price": "39000"
+            },
+            {
+                "name": "이든스시",
+                "price": "11500"
+            },
+            {
+                "name": "스시정식",
+                "price": "13500"
+            },
+            {
+                "name": "대광어",
+                "price": "34000"
+            },
+            {
+                "name": "참가자미세꼬시",
+                "price": "49000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020741679053,
+        "longitude": 127.106109268481,
+        "kakao_link": "https://map.kakao.com/?q=%EC%9D%B4%EB%93%A0%ED%99%9C%EC%96%B4%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 143,
+        "name": "스시쿤",
+        "thumbnail": "./pictures/p143.jpg",
+        "menu": [
+            {
+                "name": "디너 테이블오마카세",
+                "price": "100000"
+            },
+            {
+                "name": "런치 카운터오마카세",
+                "price": "70000"
+            },
+            {
+                "name": "디너카운터오마카세",
+                "price": "120000"
+            },
+            {
+                "name": "런치 테이블오마카세",
+                "price": "60000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40019450762178,
+        "longitude": 127.10725295332934,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8A%A4%EC%8B%9C%EC%BF%A4%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 144,
+        "name": "스시히로",
+        "thumbnail": "./pictures/p144.jpg",
+        "menu": [
+            {
+                "name": "디너 오마카세",
+                "price": "130000"
+            },
+            {
+                "name": "런치 오마카세",
+                "price": "65000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40046611328434,
+        "longitude": 127.10681287507951,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8A%A4%EC%8B%9C%ED%9E%88%EB%A1%9C%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 145,
+        "name": "오이소",
+        "thumbnail": "./pictures/p145.jpg",
+        "menu": [
+            {
+                "name": "카이센동",
+                "price": "18000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "초밥"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 36.0182174720246,
+        "longitude": 129.368809563562,
+        "kakao_link": "https://map.kakao.com/?q=%EC%98%A4%EC%9D%B4%EC%86%8C%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 146,
+        "name": "키친쥰",
+        "thumbnail": "./pictures/p146.jpg",
+        "menu": [
+            {
+                "name": "간사이덴뿌라우동",
+                "price": "10000"
+            },
+            {
+                "name": "돈카츠카레우동",
+                "price": "10000"
+            },
+            {
+                "name": "애비카레우동",
+                "price": "10000"
+            },
+            {
+                "name": "에비카레",
+                "price": "10000"
+            },
+            {
+                "name": "가라아게 카레",
+                "price": "10000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "규동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4012862988573,
+        "longitude": 127.110456388288,
+        "kakao_link": "https://map.kakao.com/?q=%ED%82%A4%EC%B9%9C%EC%A5%B0%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 147,
+        "name": "토호",
+        "thumbnail": "./pictures/p147.jpg",
+        "menu": [
+            {
+                "name": "호르몬동",
+                "price": "13500"
+            },
+            {
+                "name": "스테이크덮밥",
+                "price": ""
+            },
+            {
+                "name": "연어덮밥",
+                "price": "13500"
+            },
+            {
+                "name": "김치규동",
+                "price": "12500"
+            },
+            {
+                "name": "규동",
+                "price": "11000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "규동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.711639625557744,
+        "longitude": 126.86801290713859,
+        "kakao_link": "https://map.kakao.com/?q=%ED%86%A0%ED%98%B8%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 148,
+        "name": "깡우동 판교유스페이스점",
+        "thumbnail": "./pictures/p148.jpg",
+        "menu": [
+            {
+                "name": "고기만두",
+                "price": "7000"
+            },
+            {
+                "name": "수제탕수육",
+                "price": "15000"
+            },
+            {
+                "name": "어묵우동",
+                "price": "9500"
+            },
+            {
+                "name": "우동",
+                "price": "8500"
+            },
+            {
+                "name": "어묵탕",
+                "price": "21000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020326082002,
+        "longitude": 127.107232984561,
+        "kakao_link": "https://map.kakao.com/?q=%EA%B9%A1%EC%9A%B0%EB%8F%99%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
+    },
+    {
+        "id": 149,
+        "name": "문어집",
+        "thumbnail": "./pictures/p149.jpg",
+        "menu": [
+            {
+                "name": "겨울한정 대방어 상차림",
+                "price": ""
+            },
+            {
+                "name": "대방어 2인 상차림",
+                "price": "65000"
+            },
+            {
+                "name": "대방어 3~4인 상차림",
+                "price": "109000"
+            },
+            {
+                "name": "돌문어 + 대방어 2~3인 상차림",
+                "price": "89000"
+            },
+            {
+                "name": "돌문어 + 대방어 5~6인 상차림",
+                "price": "149000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 38.203964564703355,
+        "longitude": 128.58897054888396,
+        "kakao_link": "https://map.kakao.com/?q=%EB%AC%B8%EC%96%B4%EC%A7%91%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 150,
+        "name": "종로계림닭도리탕원조 판교점",
+        "thumbnail": "./pictures/p150.jpg",
+        "menu": [
+            {
+                "name": "닭도리탕 2인",
+                "price": "27000"
+            },
+            {
+                "name": "닭도리탕 3인",
+                "price": "39000"
+            },
+            {
+                "name": "닭도리탕 4인",
+                "price": "51000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "우동"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.400224657323676,
+        "longitude": 127.10679333267265,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A2%85%EB%A1%9C%EA%B3%84%EB%A6%BC%EB%8B%AD%EB%8F%84%EB%A6%AC%ED%83%95%EC%9B%90%EC%A1%B0%20%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 151,
+        "name": "카레뜰에",
+        "thumbnail": "./pictures/p151.jpg",
+        "menu": [
+            {
+                "name": "돈코츠라멘",
+                "price": "9000"
+            },
+            {
+                "name": "돈까스",
+                "price": "8000"
+            },
+            {
+                "name": "치킨까스",
+                "price": "8000"
+            },
+            {
+                "name": "고로케",
+                "price": "8000"
+            },
+            {
+                "name": "뜰에(기본)",
+                "price": "7000"
+            }
+        ],
+        "ctg1": [
+            "일식"
+        ],
+        "ctg2": [
+            "우동"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.57847682090898,
+        "longitude": 126.8623388555541,
+        "kakao_link": "https://map.kakao.com/?q=%EC%B9%B4%EB%A0%88%EB%9C%B0%EC%97%90%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 152,
+        "name": "슈퍼타이 판교테크노벨리점",
+        "thumbnail": "./pictures/p152.jpg",
+        "menu": [
+            {
+                "name": "텃만꿍",
+                "price": "11000"
+            },
+            {
+                "name": "쏨땀",
+                "price": "11000"
+            },
+            {
+                "name": "카오팟뿌",
+                "price": "12000"
+            },
+            {
+                "name": "팟타이",
+                "price": "13000"
+            },
+            {
+                "name": "똠얌꿍",
+                "price": "12000"
+            }
+        ],
+        "ctg1": [
+            "아시아 음식"
+        ],
+        "ctg2": [
+            "태국 음식"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40412180870685,
+        "longitude": 127.1085122438054,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8A%88%ED%8D%BC%ED%83%80%EC%9D%B4%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B2%A8%EB%A6%AC%EC%A0%90"
+    },
+    {
+        "id": 153,
+        "name": "타이팔칠",
+        "thumbnail": "./pictures/p153.jpg",
+        "menu": [
+            {
+                "name": "팟타이",
+                "price": "13000"
+            },
+            {
+                "name": "소고기쌀국수",
+                "price": "14000"
+            },
+            {
+                "name": "똠얌쌀국수",
+                "price": "12000"
+            },
+            {
+                "name": "뿌팟풍커리",
+                "price": "19000"
+            },
+            {
+                "name": "나시고랭",
+                "price": "13000"
+            }
+        ],
+        "ctg1": [
+            "아시아 음식"
+        ],
+        "ctg2": [
+            "태국 음식"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40080711393466,
+        "longitude": 127.10734982568015,
+        "kakao_link": "https://map.kakao.com/?q=%ED%83%80%EC%9D%B4%ED%8C%94%EC%B9%A0%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 154,
         "name": "파스타 라이더스 판교점",
         "thumbnail": null,
         "menu": [
@@ -2325,112 +5567,454 @@
                 "price": "9900"
             }
         ],
-        "keywords": [
+        "ctg1": [
+            "아시아 음식"
+        ],
+        "ctg2": [
             "퓨전 음식"
-        ]
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%ED%8C%8C%EC%8A%A4%ED%83%80%20%EB%9D%BC%EC%9D%B4%EB%8D%94%EC%8A%A4%20%ED%8C%90%EA%B5%90%EC%A0%90"
     },
     {
-        "id": 96,
-        "name": "르메콩",
-        "thumbnail": "pictures/p51.jpg",
+        "id": 155,
+        "name": "BBQ치킨 판교테크노밸리점",
+        "thumbnail": "./pictures/p155.jpg",
         "menu": [
             {
-                "name": "소고기 쌀국수",
-                "price": "10900"
+                "name": "맵소디",
+                "price": "24500"
             },
             {
-                "name": "분짜",
-                "price": "13900"
+                "name": "한입등갈비튀김",
+                "price": "25000"
             },
             {
-                "name": "나시고렝",
-                "price": "11900"
+                "name": "핫베이크 닭다리",
+                "price": "26000"
             },
             {
-                "name": "팟타이",
-                "price": "11900"
+                "name": "핫베이크 윙",
+                "price": "24000"
             },
             {
-                "name": "꿔이",
-                "price": "1000"
+                "name": "땡초숯불양념치킨",
+                "price": "25000"
             }
         ],
-        "keywords": [
-            "베트남"
-        ]
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "햄버거",
+            "치킨"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.401181976204164,
+        "longitude": 127.10927600276959,
+        "kakao_link": "https://map.kakao.com/?q=BBQ%EC%B9%98%ED%82%A8%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
     },
     {
-        "id": 97,
-        "name": "조이포",
-        "thumbnail": "pictures/p52.jpg",
+        "id": 156,
+        "name": "바스버거 판교테크노밸리점",
+        "thumbnail": "./pictures/p156.jpg",
         "menu": [
             {
-                "name": "분짜",
-                "price": "13000"
+                "name": "[치즈버거]담백하고 고소한 패티",
+                "price": "6700"
             },
             {
-                "name": "똠양갈비쌀국수",
-                "price": "17000"
+                "name": "[바스버거]담백/고소에 신선한 맛",
+                "price": "7800"
             },
             {
-                "name": "삼겹살팟타이",
-                "price": "12000"
+                "name": "[핫치킨 디럭스]100% 닭다리살",
+                "price": "8500"
             },
             {
-                "name": "소고기쌀국수",
+                "name": "[하와이안 버거]구운 파인애플의 불향",
+                "price": "9800"
+            },
+            {
+                "name": "[와사비마요 쉬림프버거]통새우 한가득",
+                "price": "10900"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "햄버거"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.40044557838737,
+        "longitude": 127.1066039073093,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B0%94%EC%8A%A4%EB%B2%84%EA%B1%B0%20%ED%8C%90%EA%B5%90%ED%85%8C%ED%81%AC%EB%85%B8%EB%B0%B8%EB%A6%AC%EC%A0%90"
+    },
+    {
+        "id": 157,
+        "name": "버거킹 판교유스페이스점",
+        "thumbnail": "./pictures/p157.jpg",
+        "menu": [
+            {
+                "name": "통새우와퍼주니어세트",
+                "price": "7400"
+            },
+            {
+                "name": "통새우와퍼세트",
                 "price": "10000"
             },
             {
-                "name": "매운쌀국수",
-                "price": "11000"
+                "name": "와퍼세트",
+                "price": "9200"
+            },
+            {
+                "name": "콰트로치즈와퍼세트",
+                "price": "10000"
+            },
+            {
+                "name": "치즈와퍼세트",
+                "price": "9800"
             }
         ],
-        "keywords": [
-            "베트남"
-        ]
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "햄버거"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.40051318032284,
+        "longitude": 127.10657576809477,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B2%84%EA%B1%B0%ED%82%B9%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
     },
     {
-        "id": 98,
-        "name": "홍호아 판교점",
-        "thumbnail": "pictures/p53.jpg",
+        "id": 158,
+        "name": "멜버",
+        "thumbnail": "./pictures/p158.jpg",
         "menu": [
             {
-                "name": "양지 쌀국수",
+                "name": "불닭마요 샌드위치",
+                "price": "7500"
+            },
+            {
+                "name": "에그마요 샌드위치",
+                "price": "6500"
+            },
+            {
+                "name": "크랜베리 샌드위치",
+                "price": "7500"
+            },
+            {
+                "name": "감자샐러드 샌드위치",
+                "price": "7500"
+            },
+            {
+                "name": "단호박 샌드위치",
+                "price": "7500"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "샌드위치"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.4021026130026,
+        "longitude": 127.110467751273,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A9%9C%EB%B2%84%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 159,
+        "name": "스타벅스 판교HIPEX점",
+        "thumbnail": "./pictures/p159.jpg",
+        "menu": [
+            {
+                "name": "카페 아메리카노",
+                "price": "4500"
+            },
+            {
+                "name": "카페 라떼",
+                "price": "5000"
+            },
+            {
+                "name": "스타벅스 돌체 라떼",
+                "price": "5900"
+            },
+            {
+                "name": "카라멜 마키아또",
+                "price": "5900"
+            },
+            {
+                "name": "카푸치노",
+                "price": "5000"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "샌드위치"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.4011815312991,
+        "longitude": 127.110722775033,
+        "kakao_link": "https://map.kakao.com/?q=%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%ED%8C%90%EA%B5%90HIPEX%EC%A0%90"
+    },
+    {
+        "id": 160,
+        "name": "로뚜뚜",
+        "thumbnail": "./pictures/p160.jpg",
+        "menu": [],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "샌드위치"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.40133478046625,
+        "longitude": 127.10869909548097,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A1%9C%EB%9A%9C%EB%9A%9C%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 161,
+        "name": "마리앤마사판교점",
+        "thumbnail": "./pictures/p161.jpg",
+        "menu": [
+            {
+                "name": "아메리카노",
+                "price": "3000"
+            },
+            {
+                "name": "아이스 아메리카노",
+                "price": "3500"
+            },
+            {
+                "name": "잉글리쉬머핀",
+                "price": "4500"
+            },
+            {
+                "name": "브리오쉬에그",
+                "price": "4800"
+            },
+            {
+                "name": "길거리 토스트",
+                "price": "4900"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "샌드위치"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": 37.40387318006282,
+        "longitude": 127.10943238652085,
+        "kakao_link": "https://map.kakao.com/?q=%EB%A7%88%EB%A6%AC%EC%95%A4%EB%A7%88%EC%82%AC%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 162,
+        "name": "옵션스페셜티커피 판교유스페이스점",
+        "thumbnail": "./pictures/p162.jpg",
+        "menu": [
+            {
+                "name": "[패스오더전용] 100원 아메리카노",
+                "price": "100"
+            },
+            {
+                "name": "아메리카노",
+                "price": "2500"
+            },
+            {
+                "name": "카페라떼",
+                "price": "3500"
+            },
+            {
+                "name": "바닐라빈라떼",
+                "price": "4000"
+            },
+            {
+                "name": "교토말차카페라떼",
+                "price": "4500"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "샌드위치"
+        ],
+        "diet": false,
+        "cheap": true,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%98%B5%EC%85%98%EC%8A%A4%ED%8E%98%EC%85%9C%ED%8B%B0%EC%BB%A4%ED%94%BC%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
+    },
+    {
+        "id": 163,
+        "name": "별별치킨",
+        "thumbnail": "./pictures/p163.jpg",
+        "menu": [
+            {
+                "name": "후라이드 치킨",
+                "price": "18000"
+            }
+        ],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "치킨"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.3036579015425,
+        "longitude": 126.901584166558,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B3%84%EB%B3%84%EC%B9%98%ED%82%A8%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 164,
+        "name": "빵빵치킨",
+        "thumbnail": null,
+        "menu": [],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "치킨"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.7756341420201,
+        "longitude": 128.938467457333,
+        "kakao_link": "https://map.kakao.com/?q=%EB%B9%B5%EB%B9%B5%EC%B9%98%ED%82%A8%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 165,
+        "name": "디닭",
+        "thumbnail": null,
+        "menu": [],
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "치킨"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EB%94%94%EB%8B%AD%20%ED%8C%90%EA%B5%90"
+    },
+    {
+        "id": 166,
+        "name": "더 탭하우스",
+        "thumbnail": "./pictures/p166.jpg",
+        "menu": [
+            {
+                "name": "피쉬 & 칩스",
+                "price": "17000"
+            },
+            {
+                "name": "스톤 IPA",
                 "price": "9900"
             },
             {
-                "name": "매운양지 쌀국수",
-                "price": "10900"
+                "name": "고르곤졸라 피자",
+                "price": "15000"
             },
             {
-                "name": "껌승1인세트",
-                "price": "14500"
+                "name": "페페로니 피자",
+                "price": "14000"
             },
             {
-                "name": "직화바비큐반미세트",
-                "price": "12000"
-            },
-            {
-                "name": "반미세트",
-                "price": "11500"
+                "name": "콰트로 치즈피자",
+                "price": "14000"
             }
         ],
-        "keywords": [
-            "베트남"
-        ]
+        "ctg1": [
+            "패스트푸드"
+        ],
+        "ctg2": [
+            "피자"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": 37.4020664581538,
+        "longitude": 127.108645940077,
+        "kakao_link": "https://map.kakao.com/?q=%EB%8D%94%20%ED%83%AD%ED%95%98%EC%9A%B0%EC%8A%A4%20%ED%8C%90%EA%B5%90"
     },
     {
-        "id": 99,
-        "name": "포베이 동판교밸리점",
-        "thumbnail": "pictures/p54.jpg",
+        "id": 167,
+        "name": "짝태앤노가리 성남판교점",
+        "thumbnail": "./pictures/p167.jpg",
         "menu": [
             {
-                "name": "양지 쌀국수",
-                "price": "8000"
+                "name": "짝태",
+                "price": "15000"
             }
         ],
-        "keywords": [
-            "베트남"
-        ]
+        "ctg1": [
+            "분식"
+        ],
+        "ctg2": [
+            "떡볶이"
+        ],
+        "diet": false,
+        "cheap": false,
+        "latitude": null,
+        "longitude": null,
+        "kakao_link": "https://map.kakao.com/?q=%EC%A7%9D%ED%83%9C%EC%95%A4%EB%85%B8%EA%B0%80%EB%A6%AC%20%EC%84%B1%EB%82%A8%ED%8C%90%EA%B5%90%EC%A0%90"
+    },
+    {
+        "id": 168,
+        "name": "투고샐러드 판교유스페이스점",
+        "thumbnail": "./pictures/p168.jpg",
+        "menu": [
+            {
+                "name": "치폴레 포크 그랩샐러드",
+                "price": "6500"
+            },
+            {
+                "name": "바질 치킨 그랩샐러드",
+                "price": "6500"
+            },
+            {
+                "name": "갈릭 치킨 그랩샐러드",
+                "price": "6500"
+            },
+            {
+                "name": "목살스테이크샐러드",
+                "price": "8900"
+            },
+            {
+                "name": "닭가슴살스테이크샐러드",
+                "price": "8900"
+            }
+        ],
+        "ctg1": [
+            "양식"
+        ],
+        "ctg2": [
+            "샐러드"
+        ],
+        "diet": true,
+        "cheap": true,
+        "latitude": 37.40110879850906,
+        "longitude": 127.10752305543464,
+        "kakao_link": "https://map.kakao.com/?q=%ED%88%AC%EA%B3%A0%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%8C%90%EA%B5%90%EC%9C%A0%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%A0%90"
     }
 ]
