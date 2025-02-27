@@ -15,7 +15,7 @@ RUN python -m pip install --upgrade pip
 
 # 작업 디렉토리 생성 및 파일 복사
 WORKDIR /app/babpat
-COPY chatpat.py restaurants_def.csv requirements.txt .env /app/babpat/
+COPY chatbot.py restaurants_def.csv requirements.txt .env /app/babpat/
 
 # requirements.txt 패키지 설치
 RUN pip install --no-cache-dir -r requirements.txt
