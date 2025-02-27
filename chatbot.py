@@ -16,15 +16,7 @@ import faiss
 
 openai_api_key=os.getenv("OPENAI_API_KEY")
 
-def get_db_connection():
-    return pymysql.connect(
-    host='babpat-db.c5a0q02qmhx6.ap-northeast-2.rds.amazonaws.com',
-    user='babpat',
-    password='babpat1!',
-    database='babpat',
-    charset='utf8mb4',
-    autocommit=False
-)
+
 
 def get_openai_embedding(text):
     response = openai.embeddings.create(
@@ -39,8 +31,6 @@ def search(user_query: str): # state: MessagesState
     index_file = "faiss_index.bin"
     index = faiss.read_index(index_file)
 
-    print("!!!!using faiss!!!!")
-
     query = get_openai_embedding(user_query)
     distances, indices = index.search(np.array([query]), 5) # XXX: 추천 식당 개수 최대 5개로 하드코딩
 
@@ -51,7 +41,6 @@ def search(user_query: str): # state: MessagesState
 
         # 유사도 임계값을 넘는 경우만 저장
         if similarity >= 0.7: # XXX: 유사도 0.7로 하드코딩
-            print("similarity: ", similarity)
             matched_ids.append(idx)
 
     conn = get_db_connection()
@@ -62,7 +51,6 @@ def search(user_query: str): # state: MessagesState
 
     cursor.execute(sql, tuple(matched_ids))
     matched_restaurant = cursor.fetchall()
-    print(matched_restaurant)
 
     cursor.close()
     conn.close()
@@ -102,8 +90,6 @@ class ChatBot:
         index_file = "faiss_index.bin"
         index = faiss.read_index(index_file)
 
-        print("!!!!using faiss!!!!")
-
         query = get_openai_embedding(user_query)
         distances, indices = index.search(np.array([query]), 5) # XXX: 추천 식당 개수 최대 5개로 하드코딩
 
@@ -114,7 +100,6 @@ class ChatBot:
 
             # 유사도 임계값을 넘는 경우만 저장
             if similarity >= 0.7: # XXX: 유사도 0.7로 하드코딩
-                print("similarity: ", similarity)
                 matched_ids.append(idx)
 
         return matched_ids   
@@ -126,10 +111,6 @@ class ChatBot:
         output = self.app.invoke({"messages": [user_message]}, config)
     
         return output["messages"][-1]
-        # return {"data": {
-        #     "chat": output["messages"][-1],
-        #     "placeList": top_restaurant
-        # }}
     
     def remake_message(self, state: MessagesState):
         formatted_messages = []
@@ -156,10 +137,8 @@ class ChatBot:
         모델이 유저에게 적절한 식당을 추천할 수 있게 한다.
         """
         user_query = state["messages"][-2]
-        print("check user: ", user_query)
         recommend = search.invoke({"user_query": user_query.content})
 
-        print("check recommend: ", recommend)
         formatted_messages = self.remake_message(state)
         formatted_messages.append({"role": "assistant", "content": recommend})
         response = self.model_with_tools.invoke(formatted_messages)
