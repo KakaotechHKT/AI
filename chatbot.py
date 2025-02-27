@@ -14,8 +14,18 @@ import pandas as pd
 import openai
 import faiss
 
+load_dotenv(dotenv_path=".env")
 openai_api_key=os.getenv("OPENAI_API_KEY")
 
+def get_db_connection():
+    return pymysql.connect(
+    host= os.getenv("DB_HOST"),
+    user= os.getenv("DB_USER"),
+    password= os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME"),
+    charset='utf8mb4',
+    autocommit=False
+)
 
 
 def get_openai_embedding(text):
