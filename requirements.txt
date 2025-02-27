@@ -163,3 +163,4 @@ numpy
 python-dotenv
 pymysql
 faiss-cpu
+mysql-connector-python
