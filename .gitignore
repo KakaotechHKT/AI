@@ -1,1 +1,6 @@
 .env
+pictures
+langchain.jpg
+store_data.json
+cache
+chatbot.prev.py
