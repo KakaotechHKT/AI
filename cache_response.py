@@ -49,18 +49,15 @@ def cache_keywords():
                     response TEXT)
     """)
     conn.commit()
-
-        # {"한식": ["칼국수", "국밥", "비빔밥", "찌개", "고기", "감자탕"]},
-        # {"구내식당": ["한식뷔페"]},
-        # {"중식": ["짜장면", "마라탕", "동파육"]},
-        # {"양식": ["파스타", "샐러드", "스테이크", "피자"]},
-        # {"일식": ["라멘", "소바", "초밥/사시미", "카츠", "텐동", "규동", "오코노미야끼", "타코야끼", "우동"]},
-        # {"아시아식": ["베트남 음식", "태국 음식", "인도 음식", "퓨전 음식"]},
-        # {"패스트푸드": ["햄버거", "샌드위치", "치킨"]},
-        # {"분식": ["김밥", "떡볶이", "핫도그"]}
-
+    # {"한식": ["칼국수", "국밥", "비빔밥", "찌개", "고기", "감자탕"]},
     ctgs = [
-        {"일식": ["라멘", "소바"]}
+        {"구내식당": ["한식뷔페"]},
+        {"중식": ["짜장면", "마라탕", "동파육"]},
+        {"양식": ["파스타", "샐러드", "스테이크", "피자"]},
+        {"일식": ["라멘", "소바", "초밥/사시미", "카츠", "텐동", "규동", "오코노미야끼", "타코야끼", "우동"]},
+        {"아시아식": ["베트남 음식", "태국 음식", "인도 음식", "퓨전 음식"]},
+        {"패스트푸드": ["햄버거", "샌드위치", "치킨"]},
+        {"분식": ["김밥", "떡볶이", "핫도그"]}
     ]
     for ctg in ctgs:
         ctg1 = list(ctg.keys())[0]
@@ -71,8 +68,8 @@ def cache_keywords():
             result = []
             listArray(keywords, i+1, result)
             for ctg2_comb in result:
-                ctg2 = ','.join(k for k in ctg2_comb)
-                text = ctg1 + ',' + ctg2
+                ctg2 = ', '.join(k for k in ctg2_comb)
+                text = ctg1 + ', ' + ctg2
                 # 유사도 검색
                 matched_ids = search_vec(text)
                 # 식당 데이터 조회 후, 프롬프트 구성
@@ -91,6 +88,6 @@ def cache_keywords():
                 cursor.execute("INSERT INTO keyword_cache (text, response) VALUES (?, ?)", (text, response.content))
                 conn.commit()
                 print(f"새로운 키워드 캐싱: {text}")
-        cursor.close()
-        conn.close()
-        print("키워드 캐싱 완료")
+    cursor.close()
+    conn.close()
+    print("키워드 캐싱 완료")

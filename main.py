@@ -1,14 +1,12 @@
 import mysql.connector
-import json
+import json, os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, Optional, List, Union
 from chatbot import ChatBot
-from vector_db import make_vecDB
 from dotenv import load_dotenv
 from vector_db import search_vec
-from cache_response import cache_keywords
 
 load_dotenv(dotenv_path=".env")
 app = FastAPI()
@@ -25,10 +23,10 @@ app.add_middleware(
 
 # DB 연결 설정 - 로컬
 db_config = {
-    "host": "babpat-db.c5a0q02qmhx6.ap-northeast-2.rds.amazonaws.com",
-    "user": "babpat",
-    "password": "babpat1!",
-    "database": "babpat"
+    "host": os.getenv("DB_HOST"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "database": os.getenv("DB_NAME")
 }
 
 # DB 연결 함수
@@ -68,18 +66,6 @@ class ChatData(BaseModel):
 @app.get("/ping")
 async def ping_test():
     return {"ping_test": "success"}
-
-# 캐시 생성
-@app.post("/make_cache")
-async def make_cache():
-    cache_keywords()
-    return {"make_cache": "success"}
-
-# 벡터DB 생성
-@app.post("/make_vec_db")
-async def make_vec_db():
-    make_vecDB()
-    return {"make_vec_db": "success"}
 
 # /chat - 새로운 채팅방 생성
 @app.post("/chat", response_model=RestaurantResponse, status_code=200)
@@ -172,7 +158,7 @@ async def save_chat(chat_data: ChatData):
 
         isKeyword = True if ctg1 else False
 
-        query = ctg1 + "," + ctg2 if ctg1 else chat_text
+        query = ctg1 + ", " + ctg2 if ctg1 else chat_text
         ai_response = model.ask(query, chat_id, isKeyword)
         ai_chat = ai_response["messages"]
         is_recommend = ai_response["isRecommend"]

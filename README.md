@@ -1,15 +1,15 @@
-lcc.py : LangChainCustom (커스텀 체인)
+### 파일 설명
+- cache: 키워드 검색 결과를 캐싱
+- cache_response.py: 캐시 생성, 캐싱된 응답 이용
+- chatbot.py: 랭체인과 관련된 함수 및 클래스
+- embedding.py: openai text-embedding-3-small 임베딩 방식 이용
+- faiss_index.bin: 유사도 검색을 위한 벡터DB
+- main.py: ai 서버
+- recommendation.py: 유사도 검색 통해 llm에 제공될 프롬프트 완성
+- restaurant_db.py: 식당 DB 연결 및 조회
+- restaurants_def.csv: 벡터DB에 적재할 식당 데이터
+- vector_db.py: 벡터DB 생성 및 유사도 검색
 
-### 초기 실행 방법
-1. 벡터DB로 Chroma를 사용하므로 관련 패키지를 설치해주세요.
-2. python3 lcc.py --build
-   빌드하면 json 파일 내용이 벡터DB에 적재됩니다.
-3. python3 lcc.py
-   test_query에 있는 쿼리를 이용해서 랭체인 진행됩니다.
-
-### 협업 시
-- 개발 시작 전 GitHub 최신 코드로 업데이트하여 충돌을 방지해주세요.
-- 챗봇 성능이 향상된 코드를 push한 경우, AI 팀원들에게 DM을 보내 최신 버전으로 업데이트하도록 안내해주세요.
-  - git pull origin main
-  - git push origin main
-  - 각자 브랜치 파서 진행하고 merge 하도록 할게요.
+### 주의사항
+- .env 파일은 푸시하지 않았습니다.
+- 필요하신 팀원분들은 인공 노아에게 요청해주세요.
