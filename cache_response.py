@@ -39,7 +39,9 @@ def get_cached_response(query):
 
 # 캐시 생성하는 함수
 def cache_keywords():
-    conn = sqlite3.connect("cache/keyword_cache.db")
+    cache_path = "cache/keyword_cache.db"
+    os.makedirs(os.path.dirname(cache_path), exist_ok=True)
+    conn = sqlite3.connect(cache_path)
     cursor = conn.cursor()
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS keyword_cache (

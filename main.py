@@ -8,6 +8,7 @@ from chatbot import ChatBot
 from vector_db import make_vecDB
 from dotenv import load_dotenv
 from vector_db import search_vec
+from cache_response import cache_keywords
 
 load_dotenv(dotenv_path=".env")
 app = FastAPI()
@@ -63,15 +64,22 @@ class ChatData(BaseModel):
     category: Optional[Category] = None
     chat: Optional[str] = None
 
+# ping 테스트
+@app.get("/ping")
+async def ping_test():
+    return {"ping_test": "success"}
+
 # 캐시 생성
 @app.post("/make_cache")
 async def make_cache():
-    model.cache_keywords()
+    cache_keywords()
+    return {"make_cache": "success"}
 
 # 벡터DB 생성
 @app.post("/make_vec_db")
 async def make_vec_db():
     make_vecDB()
+    return {"make_vec_db": "success"}
 
 # /chat - 새로운 채팅방 생성
 @app.post("/chat", response_model=RestaurantResponse, status_code=200)
