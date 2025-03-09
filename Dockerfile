@@ -15,10 +15,13 @@ RUN python -m pip install --upgrade pip
 
 # 작업 디렉토리 생성 및 파일 복사
 WORKDIR /app/babpat
-COPY chatbot.py restaurants_def.csv requirements.txt .env main.py faiss_index.bin /app/babpat/
+COPY vec_db /app/babpat/vec_db
+COPY src /app/babpat/src
+COPY cache /app/babpat/cache
+COPY .env requirements.txt /app/babpat/
 
 # requirements.txt 패키지 설치
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 기본 명령어 설정 (bash 실행)
-CMD ["bash"]
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]

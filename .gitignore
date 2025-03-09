@@ -1,1 +1,10 @@
 .env
+pictures
+__pycache__
+*/__pycache__
+langchain.jpg
+store_data.json
+chatbot_prev.py
+make_DBs.py
+chatbot_prev
+keyword_test.py
