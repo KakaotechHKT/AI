@@ -3,7 +3,7 @@ name: Deploy Docker Container
 on:
   push:
     branches:
-      - main  # main 브랜치로 푸시될 때마다 배포
+      - main
 
 jobs:
   deploy:
