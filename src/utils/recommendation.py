@@ -1,5 +1,5 @@
 # 식당 id, 유저 쿼리가 제공되면 식당 DB 조회하여 추천 프롬프트 작성
-from restaurant_db import fetchall
+from utils.restaurant_db import fetchall
 import json
 
 def makeRecommendPrompt(matched_ids, user_query):

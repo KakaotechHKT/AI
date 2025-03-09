@@ -1,14 +1,18 @@
 import mysql.connector
-import json, os
+import json, os, sys
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, Optional, List, Union
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from chatbot import ChatBot
 from dotenv import load_dotenv
-from vector_db import search_vec
+from utils.vector_db import search_vec
 
-load_dotenv(dotenv_path=".env")
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+env_path = os.path.join(base_dir, ".env")
+load_dotenv(dotenv_path=env_path)
 app = FastAPI()
 model = ChatBot()
 

@@ -9,19 +9,23 @@ import os
 from langgraph.checkpoint.memory import MemorySaver
 import numpy as np
 import faiss
-from embedding import get_openai_embedding
-from recommendation import makeRecommendPrompt
-from cache_response import get_cached_response
+from utils.embedding import get_openai_embedding
+from utils.recommendation import makeRecommendPrompt
+from utils.cache_response import get_cached_response
 
-load_dotenv(dotenv_path=".env")
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+env_path = os.path.join(base_dir, ".env")
+index_path = os.path.join(base_dir, "vec_db", "faiss_index.bin")
+cache_path = os.path.join(base_dir, "cache", "keyword_cache.db")
+load_dotenv(dotenv_path=env_path)
 openai_api_key=os.getenv("OPENAI_API_KEY")
 
-cache_db_path = "cache/llm_cache.db"
+cache_db_path = cache_path
 
 @tool
 def search(user_query: str):
     """유저의 쿼리와 유사한 식당을 벡터DB에서 찾는다."""
-    index_file = "faiss_index.bin"
+    index_file = index_path
     index = faiss.read_index(index_file)
 
     query = get_openai_embedding(user_query)
@@ -40,7 +44,7 @@ def search(user_query: str):
 
 class ChatBot:
     def __init__(self):
-        load_dotenv(dotenv_path=".env")
+        load_dotenv(dotenv_path=env_path)
         self.memory = MemorySaver()
         self.workflow = StateGraph(MessagesState)
         self.embedding = OpenAIEmbeddings(model="text-embedding-3-small", openai_api_key=openai_api_key)

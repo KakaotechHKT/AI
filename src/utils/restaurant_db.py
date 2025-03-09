@@ -3,7 +3,10 @@ import pymysql
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=".env")
+base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+env_path = os.path.join(base_dir, ".env")
+
+load_dotenv(dotenv_path=env_path)
 
 # 식당 DB와 연결
 def get_db_connection():

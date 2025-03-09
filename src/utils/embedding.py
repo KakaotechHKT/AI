@@ -3,7 +3,9 @@ import numpy as np
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=".env")
+base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+env_path = os.path.join(base_dir, ".env")
+load_dotenv(dotenv_path=env_path)
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def get_openai_embedding(text):

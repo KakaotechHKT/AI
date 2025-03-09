@@ -1,12 +1,15 @@
 # 키워드 검색의 응답을 캐싱
 import sqlite3
-from recommendation import makeRecommendPrompt
-from vector_db import search_vec
+from utils.recommendation import makeRecommendPrompt
+from utils.vector_db import search_vec
 from langchain_openai import ChatOpenAI
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=".env")
+base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+env_path = os.path.join(base_dir, ".env")
+cache_path = os.path.join(base_dir, "cache", "keyword_cache.db")
+load_dotenv(dotenv_path=env_path)
 
 model = ChatOpenAI(
     model_name="gpt-4",
@@ -28,7 +31,7 @@ def listArray(keywords, n, result, start=0, current=[]):
 
 # 키워드로 캐싱된 응답 불러오는 함수
 def get_cached_response(query):
-    conn = sqlite3.connect("cache/keyword_cache.db")
+    conn = sqlite3.connect(cache_path)
     cursor = conn.cursor()
     sql = "SELECT response from keyword_cache WHERE text = ?"
     cursor.execute(sql, (query,))
@@ -39,7 +42,7 @@ def get_cached_response(query):
 
 # 캐시 생성하는 함수
 def cache_keywords():
-    cache_path = "cache/keyword_cache.db"
+    cache_path = cache_path
     os.makedirs(os.path.dirname(cache_path), exist_ok=True)
     conn = sqlite3.connect(cache_path)
     cursor = conn.cursor()

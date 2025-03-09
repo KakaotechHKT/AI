@@ -1,12 +1,16 @@
 # 벡터 DB 생성
-from embedding import get_openai_embedding
-import faiss
+from utils.embedding import get_openai_embedding
+import faiss, os
 import numpy as np
 import pandas as pd
 
+base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+csv_path = os.path.join(base_dir, "vec_db", "restaurants_def.csv") # NOTE: vector DB에 저장할 파일명 하드코딩
+index_path = os.path.join(base_dir, "vec_db", "faiss_index.bin")
+
 def make_vecDB():
-    df = pd.read_csv("restaurants_def.csv") # NOTE: vector DB에 저장할 파일명 하드코딩
-    index_file = "faiss_index.bin"
+    df = pd.read_csv(csv_path)
+    index_file = index_path
 
     # description 컬럼에서 텍스트 데이터 추출
     text_column = "description"
@@ -23,7 +27,7 @@ def make_vecDB():
     print("vector DB 저장 완료")
 
 def search_vec(user_query):
-    index_file = "faiss_index.bin"
+    index_file = index_path
     index = faiss.read_index(index_file)
 
     query = get_openai_embedding(user_query)
