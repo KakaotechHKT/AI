@@ -32,17 +32,32 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
           chmod 600 key.pem
 
-      - name: SSH to server and run Docker container
+      - name: SSH to server and deploy Docker container
         run: |
-          ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} "
-            echo \"${{ secrets.DOCKER_PASSWORD }}\" | docker login --username \"${{ secrets.DOCKER_USERNAME }}\" --password-stdin &&
-            docker pull yunabyte/babpat-ai &&
-            docker rm -f babpat-ai || true &&
-            docker run -d -p 8000:8000 --name babpat-ai \
-              -e DB_HOST=${DB_HOST} \
-              -e DB_NAME=${DB_NAME} \
-              -e DB_USER=${DB_USER} \
-              -e DB_PASSWORD=${DB_PASSWORD} \
-              -e OPENAI_API_KEY=${OPENAI_API_KEY} \
+          ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} << 'EOF'
+            echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+            
+            # 기존 컨테이너 중지 및 삭제
+            docker stop babpat-ai || true
+            docker rm -f babpat-ai || true
+            
+            # 불필요한 이미지와 캐시 삭제 (공간 부족 예방)
+            docker system prune -af
+            
+            # 최신 Docker 이미지 가져오기
+            docker pull yunabyte/babpat-ai
+            
+            # 새로운 컨테이너 실행
+            docker run -d --name babpat-ai \
+              --restart unless-stopped \
+              -p 8000:8000 \
+              -e DB_HOST="${{ secrets.DB_HOST }}" \
+              -e DB_NAME="${{ secrets.DB_NAME }}" \
+              -e DB_USER="${{ secrets.DB_USER }}" \
+              -e DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \
+              -e OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}" \
               yunabyte/babpat-ai
-          "
+            
+            # 실행된 컨테이너 로그 출력
+            docker logs -f --tail=50 babpat-ai
+          EOF
