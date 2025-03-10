@@ -57,7 +57,3 @@ jobs:
               -e DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \
               -e OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}" \
               yunabyte/babpat-ai
-            
-            # 실행된 컨테이너 로그 출력
-            docker logs -f --tail=50 babpat-ai
-          EOF
