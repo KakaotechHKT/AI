@@ -35,7 +35,7 @@ jobs:
       - name: SSH to server and run Docker container
         run: |
           ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} "
-            docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} &&
+            echo \"${{ secrets.DOCKER_PASSWORD }}\" | docker login --username \"${{ secrets.DOCKER_USERNAME }}\" --password-stdin &&
             docker pull yunabyte/babpat-ai &&
             docker rm -f babpat-ai || true &&
             docker run -d -p 8000:8000 --name babpat-ai \
