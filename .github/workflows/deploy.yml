@@ -27,7 +27,7 @@ jobs:
           docker build -t yunabyte/babpat-ai .
           docker push yunabyte/babpat-ai
 
-       - name: Prepare SSH key
+      - name: Prepare SSH key
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
           chmod 600 key.pem
