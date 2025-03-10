@@ -35,7 +35,14 @@ jobs:
       - name: SSH to server and run Docker container
         run: |
           ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} "
+            docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} &&
             docker pull yunabyte/babpat-ai &&
             docker rm -f babpat-ai || true &&
-            docker run -d -p 8000:8000 --name babpat-ai yunabyte/babpat-ai
+            docker run -d -p 8000:8000 --name babpat-ai \
+              -e DB_HOST=${DB_HOST} \
+              -e DB_NAME=${DB_NAME} \
+              -e DB_USER=${DB_USER} \
+              -e DB_PASSWORD=${DB_PASSWORD} \
+              -e OPENAI_API_KEY=${OPENAI_API_KEY} \
+              yunabyte/babpat-ai
           "
