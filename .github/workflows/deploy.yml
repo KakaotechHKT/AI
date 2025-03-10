@@ -24,12 +24,13 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t your_docker_image_name .
-          docker push your_docker_image_name
+          docker build -t yunabyte/babpat-ai .
+          docker push yunabyte/babpat-ai
 
       - name: SSH to server and run Docker container
         run: |
-          ssh -i ${{ secrets.SSH_PRIVATE_KEY }} -o StrictHostKeyChecking=no username@${{ secrets.SERVER_IP }} "
-            docker pull your_docker_image_name &&
-            docker run -d -p 5000:5000 --name your_container_name your_docker_image_name
+          ssh -i ${{ secrets.SSH_PRIVATE_KEY }} -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} "
+            docker pull yunabyte/babpat-ai &&
+            docker rm -f babpat-ai || true &&
+            docker run -d -p 8000:8000 --name babpat-ai yunabyte/babpat-ai
           "

@@ -18,7 +18,7 @@ WORKDIR /app/babpat
 COPY vec_db /app/babpat/vec_db
 COPY src /app/babpat/src
 COPY cache /app/babpat/cache
-COPY .env requirements.txt /app/babpat/
+COPY requirements.txt /app/babpat/
 
 # requirements.txt 패키지 설치
 RUN pip install --no-cache-dir -r requirements.txt
