@@ -23,7 +23,6 @@ def get_db_connection():
 def fetchall(query, param):
     conn = get_db_connection()
     cursor = conn.cursor()
-
     cursor.execute(query, param)
     matched_restaurant = cursor.fetchall()
 

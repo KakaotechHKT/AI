@@ -163,10 +163,10 @@ async def save_chat(chat_data: ChatData):
         isKeyword = True if ctg1 else False
 
         query = ctg1 + ", " + ctg2 if ctg1 else chat_text
-        ai_response = model.ask(query, chat_id, isKeyword)
+        print(f"쿼리: {query}")
+        ai_response = model.ask(query, str(chat_id), isKeyword)
         ai_chat = ai_response["messages"]
-        is_recommend = ai_response["isRecommend"]
-
+        search_query = ai_response["search_query"] if ai_response["search_query"]!="" else ""
         ##################################################
         # 채팅 데이터 저장
         cursor.execute(
@@ -179,10 +179,11 @@ async def save_chat(chat_data: ChatData):
         ##### AI 모델 응답 - 추천 식당 리스트
         ##################################################
         place_list=[]
-        if is_recommend:
+
+        if search_query!="":
             # 식당 정보 가져오기
             restaurant_ids = []
-            ids = search_vec(query)
+            ids = search_vec(search_query)
             # for id in ids: restaurant_ids.append("id")  # ID 예시
             restaurant_ids = [str(id) for id in ids]
             format_strings = ",".join(["%s"] * len(restaurant_ids))
@@ -207,6 +208,7 @@ async def save_chat(chat_data: ChatData):
 
             cursor.close()
             conn.close()
+
         response = RestaurantResponse(
             httpStatusCode=200,
             message="채팅 값 전달드립니다.",

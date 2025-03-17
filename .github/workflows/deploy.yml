@@ -46,6 +46,7 @@ jobs:
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} << EOF
             echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
@@ -69,5 +70,6 @@ jobs:
               -e DB_USER="$DB_USER" \
               -e DB_PASSWORD="$DB_PASSWORD" \
               -e OPENAI_API_KEY="$OPENAI_API_KEY" \
+              -e GEMINI_API_KEY="$GEMINI_API_KEY" \
               $IMAGE_NAME
           EOF
