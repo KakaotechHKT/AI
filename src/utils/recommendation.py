@@ -5,7 +5,7 @@ import json
 def makeRecommendPrompt(matched_ids, user_query):
 
     format_strings = ','.join(['%s'] * len(matched_ids))
-    sql = f"SELECT name, menus, category1, category2 FROM restaurant WHERE restaurant_id IN ({format_strings})"
+    sql = f"SELECT name, menus, category1, category2 FROM restaurant WHERE id IN ({format_strings})"
     matched_restaurant = fetchall(sql, tuple(matched_ids))
 
     recommendation_prompt = f"유저가 {user_query}를 입력했으며, 이에 대한 식당을 추천해야 합니다.\n"
