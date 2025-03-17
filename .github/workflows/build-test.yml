@@ -23,21 +23,21 @@ jobs:
       - name: Build Docker Image
         run: |
           echo "🚀 Docker 이미지 빌드 시작: $IMAGE_NAME"
-
-          docker build -t "$IMAGE_NAME" \
-            --build-arg DB_HOST="${{ secrets.DB_HOST }}" \
-            --build-arg DB_NAME="${{ secrets.DB_NAME }}" \
-            --build-arg DB_USER="${{ secrets.DB_USER }}" \
-            --build-arg DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \
-            --build-arg OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}" \
-            --build-arg GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
-            .
+          # 여기서는 secrets를 --build-arg로 넘기지 않고, 단순히 이미지 빌드만 진행
+          docker build -t "$IMAGE_NAME" .
 
       - name: Run Container for Testing
         run: |
           echo "🛠️ Docker 컨테이너 실행 및 테스트"
 
-          docker run -d --name ai-test-container -p 8000:8000 "$IMAGE_NAME"
+          docker run -d --name ai-test-container -p 8000:8000 \
+            -e DB_HOST="${{ secrets.DB_HOST }}" \
+            -e DB_NAME="${{ secrets.DB_NAME }}" \
+            -e DB_USER="${{ secrets.DB_USER }}" \
+            -e DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \
+            -e OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}" \
+            -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
+            "$IMAGE_NAME"
 
           # 컨테이너가 정상적으로 실행되는지 확인
           sleep 10
@@ -49,6 +49,6 @@ jobs:
       - name: Cleanup
         run: |
           echo "🧹 Docker 컨테이너 및 이미지 정리"
-          docker stop ai-test-container
-          docker rm ai-test-container
-          docker rmi "$IMAGE_NAME"
+          docker stop ai-test-container || true
+          docker rm ai-test-container || true
+          docker rmi "$IMAGE_NAME" || true

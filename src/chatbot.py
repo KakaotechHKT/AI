@@ -135,26 +135,20 @@ class ChatBot:
         # 캐시된 응답 확인 (키워드 기반)
         if isKeyword:
             cached_response = get_cached_response(query)
-            print(f"캐시된 응답: {cached_response}")
             response_text = cached_response[0]
             
             history = get_session_history(session_id)
             history.add_messages([AIMessage(content=response_text)])
-            # if cached_response:
-                # response_text = np.random.choice(cached_response)  # 랜덤 응답 선택
+
             return {"messages": response_text, "search_query": query}
 
         # LangChain 에이전트 호출
         output = self.agent_with_chat_history.invoke({"input": query}, config)
-        print("debug1")
-        print(f"output: {output}")
-        print(f"output output: {output["output"]}")
 
         search_query = ""
         # 툴 호출 여부 확인
         if output["intermediate_steps"] != []:
             tool_agent_action, _ = output["intermediate_steps"][0]
             search_query = tool_agent_action.tool_input["user_query"]
-            print(search_query)
 
         return {"messages": output["output"], "search_query": search_query}
