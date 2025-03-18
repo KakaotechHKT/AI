@@ -38,6 +38,7 @@ def listArray(keywords, n, result, start=0, current=[]):
 # 키워드로 캐싱된 응답 불러오는 함수
 def get_cached_response(ctg1, ctg2):
     ctg2_bit = generate_bitmask(ctg1, ctg2)
+    
     conn = sqlite3.connect(cache_path)
     cursor = conn.cursor()
     sql = "SELECT response FROM keyword_cache WHERE category=? AND bitmask=?"
