@@ -163,7 +163,7 @@ async def save_chat(chat_data: ChatData):
         isKeyword = True if ctg1 else False
 
         query = ctg1 + ", " + ctg2 if ctg1 else chat_text
-        print(f"쿼리: {query}")
+        
         ai_response = model.ask(query, str(chat_id), isKeyword)
         ai_chat = ai_response["messages"]
         search_query = ai_response["search_query"] if ai_response["search_query"]!="" else ""
