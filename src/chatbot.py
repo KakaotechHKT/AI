@@ -134,7 +134,11 @@ class ChatBot:
 
         # 캐시된 응답 확인 (키워드 기반)
         if isKeyword:
-            cached_response = get_cached_response(query)
+            ctg = [item.strip() for item in query.split(',')]
+            ctg1 = ctg[0]
+            ctg2 = ctg[1:]
+            
+            cached_response = get_cached_response(ctg1, ctg2)
             response_text = cached_response[0]
             
             history = get_session_history(session_id)
