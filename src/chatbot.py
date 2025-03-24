@@ -38,7 +38,7 @@ def search(user_query: str):
         idx = indices[0][i]
         similarity = 1 / (1 + distances[0][i])
         if similarity >= 0.3:
-            matched_ids.append(idx + 1)
+            matched_ids.append(idx)
 
     recommend_text = makeRecommendPrompt(matched_ids, user_query)
     return recommend_text  # LangChain이 이 값을 자동으로 응답에 반영
