@@ -149,8 +149,10 @@ jobs:
             echo "⚠️ No instances to delete"
           else
             echo "🔥 Deleting instances: $INSTANCES"
-            gcloud compute instance-groups managed delete-instances babpat-ai \
+            if ! gcloud compute instance-groups managed delete-instances babpat-ai \
               --region=asia-northeast3 \
               --instances=$INSTANCES \
-              --quiet
+              --quiet; then
+              echo "⚠️ Some instances might already be deleting or failed. Continuing anyway."
+            fi
           fi
