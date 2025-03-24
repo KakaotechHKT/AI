@@ -3,7 +3,7 @@ name: Build GCE Image for AI Auto-Scale
 on:
   push:
     branches:
-      - hotfix/auto-scale-ai
+      - hotfix/auto-scale
 
 jobs:
   build-gce-image:
