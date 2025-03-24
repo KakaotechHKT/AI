@@ -10,15 +10,15 @@ csv_path = os.path.join(base_dir, "vec_db", "restaurants_def.csv") # NOTE: vecto
 index_path = os.path.join(base_dir, "vec_db", "faiss_index.bin")
 faiss_pool = Queue()
 
-VEC_DB_NUM = 5
+VEC_POOL_SIZE = 5
 
-for _ in range(VEC_DB_NUM):
+for _ in range(VEC_POOL_SIZE):
     faiss_pool.put(faiss.read_index(index_path))
 
 def refresh_vecDB():
     global faiss_pool
     new_pool = Queue()
-    for _ in range(VEC_DB_NUM):
+    for _ in range(VEC_POOL_SIZE):
         new_pool.put(faiss.read_index(index_path))
     faiss_pool = new_pool
 
