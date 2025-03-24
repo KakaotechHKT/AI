@@ -1,0 +1,158 @@
+name: Build GCE Image for AI Auto-Scale
+
+on:
+  push:
+    branches:
+      - hotfix/auto-scale
+
+jobs:
+  build-gce-image:
+    name: Build GCE Image for AI
+    runs-on: ubuntu-latest
+    environment: prod
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Set image name for GCE
+        run: |
+          IMAGE_NAME="${{ secrets.DOCKER_USERNAME }}/babpat-ai:latest"
+          echo "IMAGE_NAME=${IMAGE_NAME}" >> $GITHUB_ENV
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t "$IMAGE_NAME" .
+          docker push "$IMAGE_NAME"
+
+      - name: Authenticate to GCP
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}'
+
+      - name: Set up gcloud CLI
+        uses: google-github-actions/setup-gcloud@v1
+
+      - name: Create GCE Image from Docker Container
+        run: |
+          export IMAGE_NAME="${IMAGE_NAME}"
+          export INSTANCE_NAME="babpat-ai-image"
+          export PROJECT_ID="${{ secrets.GCP_PROJECT }}"
+          export ZONE="asia-northeast3-a"
+          export FAMILY="babpat-ai-family"
+          export CONTAINER_NAME="babpat-ai"
+          export MACHINE_TYPE="e2-medium"
+          export DISK_SIZE="10GB"
+
+          echo "🔹 1. 기존 인스턴스 삭제 (있다면)"
+          gcloud compute instances delete "$INSTANCE_NAME" \
+            --zone="$ZONE" \
+            --quiet \
+            --project="$PROJECT_ID" || true
+
+          echo "🔹 2. 인스턴스 생성 (startup-script 없이)"
+          gcloud compute instances create "$INSTANCE_NAME" \
+            --zone="$ZONE" \
+            --machine-type="$MACHINE_TYPE" \
+            --image-family=ubuntu-2204-lts \
+            --image-project=ubuntu-os-cloud \
+            --boot-disk-size="$DISK_SIZE" \
+            --project="$PROJECT_ID" \
+            --format="get(networkInterfaces[0].accessConfigs[0].natIP)" \
+            --quiet > external_ip.txt
+
+          export EXTERNAL_IP=$(cat external_ip.txt | tr -d '\n')
+          echo "✅ 인스턴스 External IP: $EXTERNAL_IP"
+
+          echo "⏳ 인스턴스 준비 대기 (30초)"
+          sleep 30
+
+          echo "🔹 3. .env 생성"
+          touch .env
+          echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
+          echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
+          echo "DB_USER=${{ secrets.DB_USER }}" >> .env
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
+          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" >> .env
+
+          echo "🔹 4. SSH Key 저장"
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
+          chmod 600 key.pem
+
+          echo "🔹 5. 인스턴스로 .env 전송"
+          scp -o StrictHostKeyChecking=no -i key.pem .env ubuntu@$EXTERNAL_IP:/tmp/.env
+
+          echo "🔹 6. 인스턴스에서 docker pull & save"
+          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@$EXTERNAL_IP <<EOF
+            set -e
+            sudo apt update && sudo apt install -y docker.io
+
+            echo "📦 Docker 로그인"
+            echo "${{ secrets.DOCKER_PASSWORD }}" | sudo docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+            echo "📦 Docker 이미지 Pull"
+            sudo docker pull "$IMAGE_NAME"
+
+            echo "📦 .env 디렉토리 생성 및 이동"
+            sudo mkdir -p /opt/app
+            sudo mv /tmp/.env /opt/app/.env
+
+            echo "📦 Docker 이미지 Save"
+            sudo docker save "$IMAGE_NAME" | sudo tee /opt/app/app.tar > /dev/null
+
+            echo "✅ 인스턴스에 .env + app.tar 저장 완료"
+          EOF
+
+          echo "🔹 7. 인스턴스 종료"
+          gcloud compute instances stop "$INSTANCE_NAME" \
+            --zone="$ZONE" \
+            --project="$PROJECT_ID" \
+            --quiet
+
+          echo "🔹 8. 기존 이미지 삭제 (있다면)"
+          gcloud compute images delete "$INSTANCE_NAME-img" --quiet --project="$PROJECT_ID" || true
+
+          echo "🔹 9. 디스크로부터 이미지 생성"
+          gcloud compute images create "$INSTANCE_NAME-img" \
+            --source-disk="$INSTANCE_NAME" \
+            --source-disk-zone="$ZONE" \
+            --family="$FAMILY" \
+            --project="$PROJECT_ID" \
+            --quiet
+
+          echo "🔹 10. 인스턴스 삭제"
+          gcloud compute instances delete "$INSTANCE_NAME" \
+            --zone="$ZONE" \
+            --quiet \
+            --project="$PROJECT_ID"
+
+          echo "✅ GCE 이미지 생성 완료: $INSTANCE_NAME-img (family: $FAMILY)"
+
+
+      - name: Destroy All MIG Instances (babpat-ai)
+        run: |
+          INSTANCES=$(gcloud compute instance-groups managed list-instances babpat-ai \
+            --region=asia-northeast3 \
+            --format="value(instance.basename())" | paste -sd "," -)
+
+          if [ -z "$INSTANCES" ]; then
+            echo "⚠️ No instances to delete"
+          else
+            echo "🔥 Deleting instances: $INSTANCES"
+            if ! gcloud compute instance-groups managed delete-instances babpat-ai \
+              --region=asia-northeast3 \
+              --instances=$INSTANCES \
+              --quiet; then
+              echo "⚠️ Some instances might already be deleting or failed. Continuing anyway."
+            fi
+          fi
