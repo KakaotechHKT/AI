@@ -40,6 +40,6 @@ def search_vec(user_query):
 
         # 유사도 임계값을 넘는 경우만 저장
         if similarity >= 0.3: # XXX: 유사도 0.7로 하드코딩
-            matched_ids.append(idx+1)
+            matched_ids.append(idx)
     
     return matched_ids   
