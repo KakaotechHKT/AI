@@ -3,10 +3,24 @@ from utils.embedding import get_openai_embedding
 import faiss, os
 import numpy as np
 import pandas as pd
+from queue import Queue
 
 base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 csv_path = os.path.join(base_dir, "vec_db", "restaurants_def.csv") # NOTE: vector DB에 저장할 파일명 하드코딩
 index_path = os.path.join(base_dir, "vec_db", "faiss_index.bin")
+faiss_pool = Queue()
+
+VEC_DB_NUM = 5
+
+for _ in range(VEC_DB_NUM):
+    faiss_pool.put(faiss.read_index(index_path))
+
+def refresh_vecDB():
+    global faiss_pool
+    new_pool = Queue()
+    for _ in range(VEC_DB_NUM):
+        new_pool.put(faiss.read_index(index_path))
+    faiss_pool = new_pool
 
 def make_vecDB():
     df = pd.read_csv(csv_path)
@@ -27,11 +41,12 @@ def make_vecDB():
     print("vector DB 저장 완료")
 
 def search_vec(user_query):
-    index_file = index_path
-    index = faiss.read_index(index_file)
-
     query = get_openai_embedding(user_query)
-    distances, indices = index.search(np.array([query]), 5) # XXX: 추천 식당 개수 최대 5개로 하드코딩
+    index = faiss_pool.get()
+    try:
+        distances, indices = index.search(np.array([query]), 5) # XXX: 추천 식당 개수 최대 5개로 하드코딩
+    finally:
+        faiss_pool.put(index)
 
     matched_ids = []
     for i in range(5):  # XXX: 추천 식당 개수 최대 5개로 하드코딩

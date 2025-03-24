@@ -14,6 +14,7 @@ from utils.cache_response import get_cached_response
 from langchain_core.chat_history import BaseChatMessageHistory
 from pydantic import BaseModel, Field
 from langchain_core.runnables import ConfigurableFieldSpec
+from queue import Queue
 
 # 환경 변수 로드
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,6 +23,18 @@ index_path = os.path.join(base_dir, "vec_db", "faiss_index.bin")
 cache_path = os.path.join(base_dir, "cache", "keyword_cache.db")
 load_dotenv(dotenv_path=env_path)
 gemini_api_key = os.getenv("GEMINI_API_KEY")
+faiss_pool = Queue()
+
+VEC_DB_NUM = 5
+for _ in range(VEC_DB_NUM):
+    faiss_pool.put(faiss.read_index(index_path))
+
+def refresh_vecDB():
+    global faiss_pool
+    new_pool = Queue()
+    for _ in range(VEC_DB_NUM):
+        new_pool.put(faiss.read_index(index_path))
+    faiss_pool = new_pool
 
 @tool
 def search(user_query: str):
@@ -29,9 +42,12 @@ def search(user_query: str):
     유저가 식당 추천을 원하는 경우, 가지고 있는 벡터 데이터베이스에서 식당을 찾아서 반환합니다.
     모델은 search 함수에서 반환된 식당들은 유저에게 추천해야 합니다.
     """
-    index = faiss.read_index(index_path)
     query = get_openai_embedding(user_query)
-    distances, indices = index.search(np.array([query]), 5)
+    index = faiss_pool.get()
+    try:
+        distances, indices = index.search(np.array([query]), 5)
+    finally:
+        faiss_pool.put(index)
 
     matched_ids = []
     for i in range(5):
@@ -41,7 +57,7 @@ def search(user_query: str):
             matched_ids.append(idx)
 
     recommend_text = makeRecommendPrompt(matched_ids, user_query)
-    return recommend_text  # LangChain이 이 값을 자동으로 응답에 반영
+    return recommend_text  # LangChain이 이 값을 자동으로 응답에 반
 
 # 세션별 대화 기록을 관리하는 인메모리 저장소
 store = {}
