@@ -1,10 +1,9 @@
-import mysql.connector
 import json, os, sys
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, Optional, List, Union
-from queue import Queue
+from mysql.connector.pooling import MySQLConnectionPool
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from chatbot import ChatBot
@@ -26,7 +25,7 @@ app.add_middleware(
     allow_headers=["*"],  # 모든 헤더 허용
 )
 
-# DB 연결 설정 - 로컬
+# DB 연결 설정
 db_config = {
     "host": os.getenv("DB_HOST"),
     "user": os.getenv("DB_USER"),
@@ -34,29 +33,12 @@ db_config = {
     "database": os.getenv("DB_NAME")
 }
 
-# DB 연결 함수
-def get_db_connection():
-    return mysql.connector.connect(**db_config)
-
-GCP_POOL_SIZE = 5 # 식당 디비 커넥션 풀 사이즈
-gcp_pool = Queue()
-for _ in range(GCP_POOL_SIZE):
-    gcp_pool.put(get_db_connection())
-
-def refresh_restaurant():
-    global gcp_pool
-    # 기존 연결 정리
-    while not gcp_pool.empty():
-        conn = gcp_pool.get()
-        try:
-            conn.close()
-        except Exception as e:
-            print(f"커넥션 닫기 실패: {e}")
-
-    new_pool = Queue()
-    for _ in range(GCP_POOL_SIZE):
-        new_pool.put(get_db_connection())
-    gcp_pool = new_pool
+pool = MySQLConnectionPool(
+    pool_name="gcp_pool_main",
+    pool_size=5,
+    pool_reset_session=True,  # 세션 초기화 여부
+    **db_config
+)
 
 # 식당 개별 정보 모델
 class Restaurant(BaseModel):
@@ -96,7 +78,8 @@ async def ping_test():
 @app.post("/chat", response_model=RestaurantResponse, status_code=200)
 async def create_chat():
     try:
-        conn = gcp_pool.get()
+        # conn = get_valid_connection()
+        conn = pool.get_connection()
         try: 
             cursor = conn.cursor(dictionary=True)
 
@@ -144,7 +127,7 @@ async def create_chat():
 
             cursor.close()
         finally:
-            gcp_pool.put(conn)
+            conn.close()
 
         response = RestaurantResponse(
             httpStatusCode=200,
@@ -188,7 +171,8 @@ async def save_chat(chat_data: ChatData):
         ai_chat = ai_response["messages"]
         search_query = ai_response["search_query"] if ai_response["search_query"]!="" else ""
 
-        conn = gcp_pool.get()
+        # conn = get_valid_connection()
+        conn = pool.get_connection()
         try:
             cursor = conn.cursor(dictionary=True)
             try:
@@ -233,7 +217,7 @@ async def save_chat(chat_data: ChatData):
             finally:
                 cursor.close()
         finally:
-            gcp_pool.put(conn)
+            conn.close()
 
         response = RestaurantResponse(
             httpStatusCode=200,
