@@ -23,18 +23,6 @@ category_map = {
     "양식": ["파스타", "스테이크", "화덕 피자", "수제 버거", "리조또", "샐러드"],
 }
 
-CACHE_POOL_SIZE = 5
-cache_pool = Queue()
-for _ in range(CACHE_POOL_SIZE):
-    cache_pool.put(sqlite3.connect(cache_path, check_same_thread=False))
-
-def refresh_cache():
-    global cache_pool
-    new_pool = Queue()
-    for _ in range(CACHE_POOL_SIZE):
-        new_pool.put(sqlite3.connect(cache_path))
-    cache_pool = new_pool
-
 # 캐싱을 위한 모든 키워드 조합 생성 함수
 def listArray(keywords, n, result, start=0, current=[]):
     if len(current) == n:
@@ -51,15 +39,14 @@ def listArray(keywords, n, result, start=0, current=[]):
 def get_cached_response(ctg1, ctg2):
     ctg2_bit = generate_bitmask(ctg1, ctg2)
 
-    conn = cache_pool.get()
-    try:
-        cursor = conn.cursor()
-        sql = "SELECT response FROM keyword_cache WHERE category=? AND bitmask=?"
-        cursor.execute(sql, (ctg1, ctg2_bit))
-        cached_response = cursor.fetchone()
-        cursor.close()
-    finally:
-        cache_pool.put(conn)
+    conn = sqlite3.connect(cache_path, check_same_thread=False)
+    cursor = conn.cursor()
+    sql = "SELECT response FROM keyword_cache WHERE category=? AND bitmask=?"
+    cursor.execute(sql, (ctg1, ctg2_bit))
+    cached_response = cursor.fetchone()
+    cursor.close()
+    conn.close()
+
     return cached_response
 
 

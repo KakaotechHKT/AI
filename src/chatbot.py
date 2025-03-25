@@ -44,6 +44,7 @@ def search(user_query: str):
     """
     query = get_openai_embedding(user_query)
     index = faiss_pool.get()
+    
     try:
         distances, indices = index.search(np.array([query]), 5)
     finally:
