@@ -4,7 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.tools import tool
-import faiss, os, time
+import faiss, os, time, logging
 import numpy as np
 from dotenv import load_dotenv
 from langchain.agents import create_tool_calling_agent, AgentExecutor
@@ -25,6 +25,8 @@ load_dotenv(dotenv_path=env_path)
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 faiss_pool = Queue()
 
+logger = logging.getLogger(__name__)
+
 VEC_POOL_SIZE = 5
 for _ in range(VEC_POOL_SIZE):
     faiss_pool.put(faiss.read_index(index_path))
@@ -43,10 +45,17 @@ def search(user_query: str):
     모델은 search 함수에서 반환된 식당들은 유저에게 추천해야 합니다.
     """
     query = get_openai_embedding(user_query)
-    index = faiss_pool.get()
+    try:
+        index = faiss_pool.get()
+    except Exception as e:
+        logger.exception("벡터DB 커넥션 얻지 못함")
+        raise
     
     try:
         distances, indices = index.search(np.array([query]), 5)
+    except Exception as e:
+        logger.exception(f"벡터DB 검색 실패 - user query: {user_query}")
+        raise
     finally:
         faiss_pool.put(index)
 
@@ -56,6 +65,9 @@ def search(user_query: str):
         similarity = 1 / (1 + distances[0][i])
         if similarity >= 0.3:
             matched_ids.append(idx)
+
+    if not matched_ids:
+        logger.info(f"벡터DB 추천 결과 없음 - user query: {user_query}")
 
     recommend_text = makeRecommendPrompt(matched_ids, user_query)
     return recommend_text  # LangChain이 이 값을 자동으로 응답에 반

@@ -1,6 +1,6 @@
 # 벡터 DB 생성
 from utils.embedding import get_openai_embedding
-import faiss, os
+import faiss, os, logging
 import numpy as np
 import pandas as pd
 from queue import Queue
@@ -11,6 +11,7 @@ index_path = os.path.join(base_dir, "vec_db", "faiss_index.bin")
 faiss_pool = Queue()
 
 VEC_POOL_SIZE = 5
+logger = logging.getLogger(__name__)
 
 for _ in range(VEC_POOL_SIZE):
     faiss_pool.put(faiss.read_index(index_path))
@@ -42,9 +43,17 @@ def make_vecDB():
 
 def search_vec(user_query):
     query = get_openai_embedding(user_query)
-    index = faiss_pool.get()
+    try:
+        index = faiss_pool.get()
+    except Exception as e:
+        logger.exception("벡터DB 커넥션 얻지 못함")
+        raise
+
     try:
         distances, indices = index.search(np.array([query]), 5) # XXX: 추천 식당 개수 최대 5개로 하드코딩
+    except Exception as e:
+        logger.exception(f"벡터DB 검색 실패 - user query: {user_query}")
+        raise
     finally:
         faiss_pool.put(index)
 
@@ -56,5 +65,8 @@ def search_vec(user_query):
         # 유사도 임계값을 넘는 경우만 저장
         if similarity >= 0.3: # XXX: 유사도 0.7로 하드코딩
             matched_ids.append(idx)
-    
+            
+    if not matched_ids:
+        logger.info(f"벡터DB 추천 결과 없음 - user query: {user_query}")
+
     return matched_ids   

@@ -1,4 +1,4 @@
-import json, os, sys
+import json, os, sys, logging
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -17,6 +17,14 @@ env_path = os.path.join(base_dir, ".env")
 load_dotenv(dotenv_path=env_path)
 app = FastAPI()
 model = ChatBot()
+
+# 로깅 기본 설정
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 # CORS 설정
 app.add_middleware(
@@ -96,12 +104,18 @@ async def ping_test():
 @app.post("/chat", response_model=RestaurantResponse, status_code=200)
 async def create_chat(db: Session = Depends(get_db)):
     try:
-        # 새로운 채팅방 추가
-        result = db.execute(text("INSERT INTO chat () VALUES ()"))
-        db.commit()
+        logger.info("채팅방 INSERT 쿼리 실행 전")
+        try:
+            # 새로운 채팅방 추가
+            result = db.execute(text("INSERT INTO chat () VALUES ()"))
+            db.commit()
 
-        # 생성된 chatID 가져오기
-        chat_id = result.lastrowid
+            # 생성된 chatID 가져오기
+            chat_id = result.lastrowid
+            logger.info(f"채팅방 생성 성공 - chatID: {chat_id}")
+        except Exception as e:
+            logger.exception("채팅방 생성 쿼리 실패")
+            raise
 
         # 식당 정보 가져오기
         restaurant_ids = []
@@ -150,7 +164,7 @@ async def create_chat(db: Session = Depends(get_db)):
         return response
 
     except Exception as e:
-        print(f"오류 발생: {e}")
+        logger.exception("오류 발생")
         raise HTTPException(
             status_code=500,
             detail=RestaurantResponse(
@@ -181,14 +195,19 @@ async def save_chat(chat_data: ChatData, db: Session = Depends(get_db)):
         ai_chat = ai_response["messages"]
         search_query = ai_response["search_query"] if ai_response["search_query"]!="" else ""
 
-        
-        ##################################################
-        # 채팅 데이터 저장
-        db.execute(
-            text("INSERT INTO chat_chatting (chatID, ctg1, ctg2, chat) VALUES (:chatID, :ctg1, :ctg2, :chat)"),
-            {"chatID": chat_id, "ctg1": ctg1, "ctg2": ctg2, "chat": ai_chat}
-        )
-        db.commit()
+        logger.info("채팅 데이터 INSERT 쿼리 실행 전")
+        try:
+            ##################################################
+            # 채팅 데이터 저장
+            db.execute(
+                text("INSERT INTO chat_chatting (chatID, ctg1, ctg2, chat) VALUES (:chatID, :ctg1, :ctg2, :chat)"),
+                {"chatID": chat_id, "ctg1": ctg1, "ctg2": ctg2, "chat": ai_chat}
+            )
+            db.commit()
+            logger.info("채팅 데이터 INSERT 쿼리 성공")
+        except Exception as e:
+            logger.exception("채팅 데이터 INSERT 쿼리 실패")
+            raise
                 
         ##################################################
         ##### AI 모델 응답 - 추천 식당 리스트
@@ -208,8 +227,14 @@ async def save_chat(chat_data: ChatData, db: Session = Depends(get_db)):
                 bindparam("ids", expanding=True)
             )
 
-            result = db.execute(query, {"ids": restaurant_ids})
-            restaurants = result.mappings().all()
+            logger.info("식당 데이터 SELECT 쿼리 실행 전")
+            try:
+                result = db.execute(query, {"ids": restaurant_ids})
+                restaurants = result.mappings().all()
+                logger.info("식당 데이터 SELECT 쿼리 성공")
+            except Exception as e:
+                logger.exception("식당 데이터 SELECT 쿼리 실행 실패")
+                raise
 
             # 식당 정보 나열
             place_list = [
@@ -238,7 +263,7 @@ async def save_chat(chat_data: ChatData, db: Session = Depends(get_db)):
         return response
 
     except Exception as e:
-        print(f"오류 발생: {e}")
+        logger.exception(f"오류 발생: {e}")
         raise HTTPException(
             status_code=500,
             detail=RestaurantResponse(
