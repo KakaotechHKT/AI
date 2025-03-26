@@ -3,11 +3,7 @@ from utils.restaurant_db import fetchall
 import json
 
 def makeRecommendPrompt(matched_ids, user_query):
-
-    format_strings = ','.join(['%s'] * len(matched_ids))
-    sql = f"SELECT name, menus, category1, category2 FROM restaurant WHERE id IN ({format_strings})"
-    matched_restaurant = fetchall(sql, tuple(matched_ids))
-
+    matched_restaurant = fetchall(tuple(matched_ids))
 
     recommendation_prompt = f"유저가 {user_query}를 입력했으며, 이에 대한 식당을 추천해야 합니다.\n"
     recommendation_prompt += "벡터 DB에서 주변에 추천 가능한 식당 정보를 찾아보니 다음과 같습니다. *** 이외의 식당은 절대 추천하지 마세요. ***\n"

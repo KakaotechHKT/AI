@@ -49,7 +49,6 @@ def get_cached_response(ctg1, ctg2):
 
     return cached_response
 
-
 def generate_bitmask(category: str, subcategories: List[str]) -> str:
     """소분류 리스트를 10자리 이진 비트마스크로 변환"""
     subcategory_list = category_map[category]
