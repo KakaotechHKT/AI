@@ -1,5 +1,5 @@
 # 키워드 검색의 응답을 캐싱
-import sqlite3
+import sqlite3, logging
 from utils.recommendation import makeRecommendPrompt
 from utils.vector_db import search_vec
 import os
@@ -11,6 +11,8 @@ base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 env_path = os.path.join(base_dir, ".env")
 cache_path = os.path.join(base_dir, "cache", "keyword_cache.db")
 load_dotenv(dotenv_path=env_path)
+
+logger = logging.getLogger(__name__)
 
 category_map = {
     "한식": ["매콤", "구수한", "뜨끈한", "칼칼한", "밥", "면", "국물", "고기"],
@@ -50,14 +52,24 @@ def listArray(keywords, n, result, start=0, current=[]):
 # 키워드로 캐싱된 응답 불러오는 함수
 def get_cached_response(ctg1, ctg2):
     ctg2_bit = generate_bitmask(ctg1, ctg2)
-
-    conn = cache_pool.get()
+    logger.info("캐싱된 응답 SELECT 쿼리 실행 전")
+    try:
+        conn = cache_pool.get()
+    except Exception as e:
+        logger.exception("Sqlite3 연결 얻기 실패")
+        raise
     try:
         cursor = conn.cursor()
         sql = "SELECT response FROM keyword_cache WHERE category=? AND bitmask=?"
         cursor.execute(sql, (ctg1, ctg2_bit))
         cached_response = cursor.fetchone()
+        if not cached_response:
+            logger.info(f"캐싱된 응답 없음: {ctg1} - {ctg2}")
         cursor.close()
+        logger.info("캐싱된 응답 SELECT 쿼리 성공")
+    except Exception as e:
+        logger.exception(f"캐싱된 응답 SELECT 쿼리 실패: {ctg1} - {ctg2}")
+        raise
     finally:
         cache_pool.put(conn)
     return cached_response
