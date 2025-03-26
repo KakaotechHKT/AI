@@ -1,6 +1,6 @@
 # 식당 DB 연결 및 조회
 # from mysql.connector.pooling import MySQLConnectionPool
-import os
+import os, logging
 from dotenv import load_dotenv
 import numpy as np
 from sqlalchemy import create_engine, text, bindparam
@@ -10,6 +10,8 @@ base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 env_path = os.path.join(base_dir, ".env")
 
 load_dotenv(dotenv_path=env_path)
+
+logger = logging.getLogger(__name__)
 
 # DB 연결 설정 
 db_config = {
@@ -28,13 +30,6 @@ engine = create_engine(
 
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 
-def get_db_session():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
 # 식당 id를 가지고 식당 조희
 def fetchall(param):
     db = SessionLocal()
@@ -42,9 +37,11 @@ def fetchall(param):
         bindparam("ids", expanding=True)
     )
     param = {"ids": [int(p) if isinstance(p, np.integer) else p for p in param]}
-
+    logger.info("식당 데이터 SELECT 쿼리 전")
     try:
         result = db.execute(sql, param)
         return result.fetchall()
+    except Exception as e:
+        logger.exception("식당 데이터 SELECT 쿼리 실패")
     finally:
         db.close()
