@@ -1,9 +1,11 @@
 import json, os, sys
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, Optional, List, Union
-from mysql.connector.pooling import MySQLConnectionPool
+# from mysql.connector.pooling import MySQLConnectionPool
+from sqlalchemy import create_engine, text, bindparam
+from sqlalchemy.orm import sessionmaker, Session
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from chatbot import ChatBot
@@ -33,12 +35,28 @@ db_config = {
     "database": os.getenv("DB_NAME")
 }
 
-pool = MySQLConnectionPool(
-    pool_name="gcp_pool_main",
+# pool = MySQLConnectionPool(
+#     pool_name="gcp_pool_main",
+#     pool_size=5,
+#     pool_reset_session=True,  # 세션 초기화 여부
+#     **db_config
+# )
+
+# SQLAlchemy 설정 (15분 = 900초)
+engine = create_engine(
+    f"mysql+mysqlconnector://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}/{os.getenv('DB_NAME')}",
     pool_size=5,
-    pool_reset_session=True,  # 세션 초기화 여부
-    **db_config
+    pool_recycle=900,
+    pool_reset_on_return='commit'
 )
+SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 # 식당 개별 정보 모델
 class Restaurant(BaseModel):
@@ -76,58 +94,50 @@ async def ping_test():
 
 # /chat - 새로운 채팅방 생성
 @app.post("/chat", response_model=RestaurantResponse, status_code=200)
-async def create_chat():
+async def create_chat(db: Session = Depends(get_db)):
     try:
-        # conn = get_valid_connection()
-        conn = pool.get_connection()
-        try: 
-            cursor = conn.cursor(dictionary=True)
+        # 새로운 채팅방 추가
+        result = db.execute(text("INSERT INTO chat () VALUES ()"))
+        db.commit()
 
-            # 새로운 채팅방 추가
-            cursor.execute("INSERT INTO chat () VALUES ()")
-            conn.commit()
+        # 생성된 chatID 가져오기
+        chat_id = result.lastrowid
 
-            # 생성된 chatID 가져오기
-            chat_id = cursor.lastrowid
+        # 식당 정보 가져오기
+        restaurant_ids = []
 
-            # 식당 정보 가져오기
-            restaurant_ids = []
+        ##################################################
+        ##### 광고 식당 ID #####
+        suggest_restaurant_ids = []  # ID 입력
+        ##################################################
 
-            ##################################################
-            ##### 광고 식당 ID #####
-            suggest_restaurant_ids = []  # ID 입력
-            ##################################################
+        for id in suggest_restaurant_ids:
+            restaurant_ids.append(id)
 
-            for id in suggest_restaurant_ids:
-                restaurant_ids.append(id)
+        place_list = []
 
-            place_list = []
+        # restaurant_ids가 비어 있지 않을 때만 쿼리 실행
+        if restaurant_ids:
+            format_strings = ",".join(["%s"] * len(restaurant_ids))
+            query = f"SELECT * FROM restaurant WHERE id IN ({format_strings})", restaurant_ids
+            result = db.execute(text(query), suggest_restaurant_ids)
+            restaurants = result.fetchall()
 
-            # restaurant_ids가 비어 있지 않을 때만 쿼리 실행
-            if restaurant_ids:
-                format_strings = ",".join(["%s"] * len(restaurant_ids))
-                cursor.execute(f"SELECT * FROM restaurant WHERE id IN ({format_strings})", restaurant_ids)
-                restaurants = cursor.fetchall()
-
-                # 식당 정보 나열
-                place_list = [
-                    Restaurant(
-                        id=restaurant["id"],
-                        name=restaurant["name"],
-                        mainCategory=restaurant["category1"],
-                        subCategory=restaurant["category2"],
-                        latitude=float(restaurant["latitude"]) if restaurant["latitude"] is not None else None,
-                        longitude=float(restaurant["longitude"]) if restaurant["longitude"] is not None else None,
-                        url=restaurant["kakao_link"],
-                        thumbnail=restaurant["thumbnail"] if restaurant["thumbnail"] is not None else None,
-                        menu=[{**item, "price": int(item["price"])} for item in json.loads(restaurant["menus"]) if
-                            restaurant["menus"]]
-                    ) for restaurant in restaurants
-                ]
-
-            cursor.close()
-        finally:
-            conn.close()
+            # 식당 정보 나열
+            place_list = [
+                Restaurant(
+                    id=restaurant["id"],
+                    name=restaurant["name"],
+                    mainCategory=restaurant["category1"],
+                    subCategory=restaurant["category2"],
+                    latitude=float(restaurant["latitude"]) if restaurant["latitude"] is not None else None,
+                    longitude=float(restaurant["longitude"]) if restaurant["longitude"] is not None else None,
+                    url=restaurant["kakao_link"],
+                    thumbnail=restaurant["thumbnail"] if restaurant["thumbnail"] is not None else None,
+                    menu=[{**item, "price": int(item["price"])} for item in json.loads(restaurant["menus"]) if
+                        restaurant["menus"]]
+                ) for restaurant in restaurants
+            ]
 
         response = RestaurantResponse(
             httpStatusCode=200,
@@ -153,7 +163,7 @@ async def create_chat():
 
 # /chat/chatting - 유저 데이터 저장 후 추천 식당 정보 반환
 @app.post("/chat/chatting", response_model=RestaurantResponse, status_code=200)
-async def save_chat(chat_data: ChatData):
+async def save_chat(chat_data: ChatData, db: Session = Depends(get_db)):
     try:
         chat_id = chat_data.chatID
         ctg1 = chat_data.category.main if chat_data.category and chat_data.category.main else None
@@ -171,53 +181,51 @@ async def save_chat(chat_data: ChatData):
         ai_chat = ai_response["messages"]
         search_query = ai_response["search_query"] if ai_response["search_query"]!="" else ""
 
-        # conn = get_valid_connection()
-        conn = pool.get_connection()
-        try:
-            cursor = conn.cursor(dictionary=True)
-            try:
-                ##################################################
-                # 채팅 데이터 저장
-                cursor.execute(
-                    "INSERT INTO chat_chatting (chatID, ctg1, ctg2, chat) VALUES (%s, %s, %s, %s)",
-                    (chat_id, ctg1, ctg2, ai_chat)
-                )
-                conn.commit()
+        
+        ##################################################
+        # 채팅 데이터 저장
+        db.execute(
+            text("INSERT INTO chat_chatting (chatID, ctg1, ctg2, chat) VALUES (:chatID, :ctg1, :ctg2, :chat)"),
+            {"chatID": chat_id, "ctg1": ctg1, "ctg2": ctg2, "chat": ai_chat}
+        )
+        db.commit()
                 
-                ##################################################
-                ##### AI 모델 응답 - 추천 식당 리스트
-                ##################################################
-                place_list=[]
+        ##################################################
+        ##### AI 모델 응답 - 추천 식당 리스트
+        ##################################################
+        place_list=[]
 
-                if search_query!="":
-                    # 식당 정보 가져오기
-                    restaurant_ids = []
-                    ids = search_vec(search_query)
-                    # for id in ids: restaurant_ids.append("id")  # ID 예시
-                    restaurant_ids = [str(id) for id in ids]
-                    format_strings = ",".join(["%s"] * len(restaurant_ids))
-                    cursor.execute(f"SELECT * FROM restaurant WHERE id IN ({format_strings})", restaurant_ids)
-                    restaurants = cursor.fetchall()
+        if search_query!="":
+            # 식당 정보 가져오기
+            restaurant_ids = []
+            ids = search_vec(search_query)
+            if ids:
+                restaurant_ids = [int(i) for i in ids]
 
-                    # 식당 정보 나열
-                    place_list = [
-                        Restaurant(
-                            id=restaurant["id"],
-                            name=restaurant["name"],
-                            mainCategory=restaurant["category1"],
-                            subCategory=restaurant["category2"],
-                            latitude=float(restaurant["latitude"]) if restaurant["latitude"] is not None else None,
-                            longitude=float(restaurant["longitude"]) if restaurant["longitude"] is not None else None,
-                            url=restaurant["kakao_link"],
-                            thumbnail=restaurant["thumbnail"] if restaurant["thumbnail"] is not None else None,
-                            menu=[{**item, "price": int(item["price"]) if item["price"] and item["price"] != "" else 0} for item in json.loads(restaurant["menus"]) if
-                                restaurant["menus"]]
-                        ) for restaurant in restaurants
-                    ]
-            finally:
-                cursor.close()
-        finally:
-            conn.close()
+            # for id in ids: restaurant_ids.append("id")  # ID 예시
+
+            query = text("SELECT * FROM restaurant WHERE id IN :ids").bindparams(
+                bindparam("ids", expanding=True)
+            )
+
+            result = db.execute(query, {"ids": restaurant_ids})
+            restaurants = result.mappings().all()
+
+            # 식당 정보 나열
+            place_list = [
+                Restaurant(
+                    id=restaurant["id"],
+                    name=restaurant["name"],
+                    mainCategory=restaurant["category1"],
+                    subCategory=restaurant["category2"],
+                    latitude=float(restaurant["latitude"]) if restaurant["latitude"] is not None else None,
+                    longitude=float(restaurant["longitude"]) if restaurant["longitude"] is not None else None,
+                    url=restaurant["kakao_link"],
+                    thumbnail=restaurant["thumbnail"] if restaurant["thumbnail"] is not None else None,
+                    menu=[{**item, "price": int(item["price"]) if item["price"] and item["price"] != "" else 0} for item in json.loads(restaurant["menus"]) if
+                        restaurant["menus"]]
+                ) for restaurant in restaurants
+            ]
 
         response = RestaurantResponse(
             httpStatusCode=200,
