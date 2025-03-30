@@ -1,11 +1,12 @@
 import json, os, sys, logging
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, Optional, List, Union
 # from mysql.connector.pooling import MySQLConnectionPool
 from sqlalchemy import create_engine, text, bindparam
 from sqlalchemy.orm import sessionmaker, Session
+from elasticsearch import Elasticsearch
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from chatbot import ChatBot
@@ -17,6 +18,13 @@ env_path = os.path.join(base_dir, ".env")
 load_dotenv(dotenv_path=env_path)
 app = FastAPI()
 model = ChatBot()
+
+es = Elasticsearch(
+    hosts=["http://localhost:9200"],
+    max_retries=3,
+    retry_on_timeout=True,
+    timeout=10
+)
 
 # 로깅 기본 설정
 logging.basicConfig(
@@ -42,13 +50,6 @@ db_config = {
     "password": os.getenv("DB_PASSWORD"),
     "database": os.getenv("DB_NAME")
 }
-
-# pool = MySQLConnectionPool(
-#     pool_name="gcp_pool_main",
-#     pool_size=5,
-#     pool_reset_session=True,  # 세션 초기화 여부
-#     **db_config
-# )
 
 # SQLAlchemy 설정 (15분 = 900초)
 engine = create_engine(
@@ -272,3 +273,27 @@ async def save_chat(chat_data: ChatData, db: Session = Depends(get_db)):
                 data=None
             ).dict()
         )
+
+@app.get("/search")
+async def search_restaunrant(q: str = Query(..., min_length=1)):
+    response = es.search(index="restaurant", query={
+        "bool": {
+            "should": [
+                {
+                    "match": {
+                        "name.ngram": q 
+                    }
+                },
+                {
+                    "match": {
+                        "name.nori": {
+                            "query": q,
+                            "fuzziness": "AUTO"
+                        }
+                    }
+                }
+            ]
+        }
+    })
+    results = [hit["_source"]["name"] for hit in response["hits"]["hits"]]
+    return {"results": results}
