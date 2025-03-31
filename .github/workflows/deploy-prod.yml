@@ -3,7 +3,7 @@ name: Build GCE Image for AI Auto-Scale
 on:
   push:
     branches:
-      - main
+      - disabled-main #disabled
 
 jobs:
   build-gce-image:

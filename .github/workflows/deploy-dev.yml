@@ -3,6 +3,7 @@ name: Deploy Docker Container
 on:
   push:
     branches:
+      - main
       - dev
 
 jobs:
