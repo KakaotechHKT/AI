@@ -1,5 +1,5 @@
 import logging
-from typing import List
+from typing import List, Dict
 import numpy as np
 from sqlalchemy import create_engine, text, bindparam
 from sqlalchemy.orm import sessionmaker
@@ -57,5 +57,15 @@ def fetchall(param: List[int]) -> List[tuple[str, str, str, str]]:
     except Exception as e:
         logger.exception("식당 데이터 SELECT 쿼리 실패")
         raise
+    finally:
+        db.close()
+
+def fetchall_for_es() -> List[Dict]:
+    """전체 식당 데이터 조회"""
+    db = SessionLocal()
+    try:
+        result = db.execute(text("SELECT id, name FROM restaurant"))
+        rows = result.mappings().all()
+        return rows
     finally:
         db.close()

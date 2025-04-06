@@ -17,7 +17,6 @@ RUN python -m pip install --upgrade pip
 WORKDIR /app/babpat
 COPY app /app/babpat/app
 COPY db /app/babpat/db
-COPY .env /app/babpat/
 COPY requirements.txt /app/babpat/
 
 # requirements.txt 패키지 설치
