@@ -49,29 +49,25 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} << 'EOF'
-echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+          echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 
-cd ~/babpat-ai
+          cd ~/babpat-ai
 
-# .env 재생성
-echo 'DB_HOST="'$DB_HOST'"' > .env
-echo 'DB_NAME="'$DB_NAME'"' >> .env
-echo 'DB_USER="'$DB_USER'"' >> .env
-echo 'DB_PASSWORD="'$DB_PASSWORD'"' >> .env
-echo 'OPENAI_API_KEY="'$OPENAI_API_KEY'"' >> .env
-echo 'GEMINI_API_KEY="'$GEMINI_API_KEY'"' >> .env
+          # .env 재생성
+          echo 'DB_HOST="'$DB_HOST'"' > .env
+          echo 'DB_NAME="'$DB_NAME'"' >> .env
+          echo 'DB_USER="'$DB_USER'"' >> .env
+          echo 'DB_PASSWORD="'$DB_PASSWORD'"' >> .env
+          echo 'OPENAI_API_KEY="'$OPENAI_API_KEY'"' >> .env
+          echo 'GEMINI_API_KEY="'$GEMINI_API_KEY'"' >> .env
 
-# 기존 컨테이너 제거 (컨테이너 이름과 일치하는지 확인)
-docker stop babpat-ai || true
-docker rm -f babpat-ai || true
-docker rmi -f $IMAGE_NAME || true
+          docker stop babpat-ai || true
+          docker rm -f babpat-ai || true
+          docker rmi -f $IMAGE_NAME || true
 
-# 기존 docker-compose 서비스 정리
-docker-compose -f docker-compose.yml down || true
+          docker-compose -f docker-compose.yml down || true
+          docker-compose -f docker-compose.yml pull || true
+          docker-compose -f docker-compose.yml up -d --build
 
-# 이미지 새로 pull 및 컨테이너 실행
-docker-compose -f docker-compose.yml pull || true
-docker-compose -f docker-compose.yml up -d --build
-
-docker system prune -af
-EOF
+          docker system prune -af
+          EOF
