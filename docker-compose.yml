@@ -24,7 +24,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile    
-    container_name: babpat-server
+    container_name: babpat-ai
     ports:
       - "8000:8000"
     depends_on:
