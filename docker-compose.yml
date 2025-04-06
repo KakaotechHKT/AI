@@ -10,6 +10,7 @@ services:
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms256m -Xmx512m
     volumes:
       - esdata:/usr/share/elasticsearch/data
     healthcheck:
