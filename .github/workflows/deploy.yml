@@ -65,22 +65,18 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} << 'EOF'
-          set -e
-          
+          ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} << EOF
           echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 
           cd ~/babpat-ai
 
           # .env 재생성
-          cat <<EOT > .env
-          DB_HOST=${DB_HOST}
-          DB_NAME=${DB_NAME}
-          DB_USER=${DB_USER}
-          DB_PASSWORD=${DB_PASSWORD}
-          OPENAI_API_KEY=${OPENAI_API_KEY}
-          GEMINI_API_KEY=${GEMINI_API_KEY}
-          EOT
+          echo 'DB_HOST="'$DB_HOST'"' > .env
+          echo 'DB_NAME="'$DB_NAME'"' >> .env
+          echo 'DB_USER="'$DB_USER'"' >> .env
+          echo 'DB_PASSWORD="'$DB_PASSWORD'"' >> .env
+          echo 'OPENAI_API_KEY="'$OPENAI_API_KEY'"' >> .env
+          echo 'GEMINI_API_KEY="'$GEMINI_API_KEY'"' >> .env
 
           docker-compose pull || true
           docker-compose down || true
