@@ -20,7 +20,7 @@ services:
 
 
   babpat-ai:
-    image: yunabyte/babpat-app:latest
+    image: yunabyte/dev-babpat-ai:latest
     container_name: babpat-ai
     ports:
       - "8000:8000"

@@ -43,10 +43,6 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
           chmod 600 key.pem
 
-      - name: Copy full project to server
-        run: |
-          scp -i key.pem -o StrictHostKeyChecking=no -r . ubuntu@${{ secrets.SERVER_IP }}:~/babpat-ai/
-
       - name: SSH to server and deploy
         env:
           IMAGE_NAME: ${{ vars.IMAGE_NAME }}
