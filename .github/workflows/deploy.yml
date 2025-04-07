@@ -47,6 +47,10 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
           chmod 600 key.pem
 
+      - name: Copy docker-compose.yml to server
+        run: |
+          scp -i key.pem -o StrictHostKeyChecking=no docker-compose.yml ubuntu@${{ secrets.SERVER_IP }}:~/babpat-ai/
+
       - name: SSH to server and deploy
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
