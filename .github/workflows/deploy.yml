@@ -9,11 +9,9 @@ on:
       - test/cicd
 
 jobs:
-  deploy:
+  build-and-push:
     runs-on: ubuntu-latest
-
-    environment:
-      name: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
+    environment: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
 
     steps:
       - name: Check out repository
@@ -32,12 +30,18 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/babpat-app:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/babpat-app:latest
-      
+
       - name: Build and push elasticsearch image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/babpat-elasticsearch:latest ./elasticsearch
           docker push ${{ secrets.DOCKER_USERNAME }}/babpat-elasticsearch:latest
 
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
+
+    steps:
       - name: Prepare SSH key
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
@@ -45,7 +49,6 @@ jobs:
 
       - name: SSH to server and deploy
         env:
-          IMAGE_NAME: ${{ vars.IMAGE_NAME }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           DB_HOST: ${{ secrets.DB_HOST }}
@@ -68,9 +71,9 @@ jobs:
           echo 'OPENAI_API_KEY="'$OPENAI_API_KEY'"' >> .env
           echo 'GEMINI_API_KEY="'$GEMINI_API_KEY'"' >> .env
 
-          docker-compose -f docker-compose.yml pull || true
-          docker-compose -f docker-compose.yml down || true
-          docker-compose -f docker-compose.yml up -d
+          docker-compose pull || true
+          docker-compose down || true
+          docker-compose up -d
 
           docker system prune -af
           EOF
