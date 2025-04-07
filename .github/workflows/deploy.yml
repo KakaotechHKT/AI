@@ -42,6 +42,9 @@ jobs:
     environment: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
 
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
       - name: Prepare SSH key
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
