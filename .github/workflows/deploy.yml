@@ -6,6 +6,7 @@ on:
       - main
       - dev
       - refact
+      - test/cicd
 
 jobs:
   deploy:
