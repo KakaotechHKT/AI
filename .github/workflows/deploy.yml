@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - dev
+      - test/cicd
 
 jobs:
   build-and-push:
