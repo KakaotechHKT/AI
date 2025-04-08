@@ -84,7 +84,7 @@ jobs:
           echo 'DB_PASSWORD="'$DB_PASSWORD'"' >> .env
           echo 'OPENAI_API_KEY="'$OPENAI_API_KEY'"' >> .env
           echo 'GEMINI_API_KEY="'$GEMINI_API_KEY'"' >> .env
-          echo "AI_IMAGE=$DOCKER_USERNAME/${IMAGE_TAG}babpat-ai:latest" > .env
+          echo "AI_IMAGE=$DOCKER_USERNAME/${IMAGE_TAG}babpat-ai:latest" >> .env
           echo "ES_IMAGE=$DOCKER_USERNAME/${IMAGE_TAG}babpat-elasticsearch:latest" >> .env
 
           docker-compose pull || true
