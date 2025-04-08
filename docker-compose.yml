@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   elasticsearch:
-    image: yunabyte/babpat-elasticsearch:latest
+    image: ${ES_IMAGE}
     container_name: elasticsearch
     ports:
       - "9200:9200"
@@ -21,7 +21,7 @@ services:
 
 
   babpat-ai:
-    image: yunabyte/dev-babpat-ai:latest
+    image: ${AI_IMAGE}
     container_name: babpat-ai
     ports:
       - "8000:8000"

@@ -5,13 +5,15 @@ on:
     branches:
       - main
       - dev
-      - refact
-      - test/cicd
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
+
+    env:
+      IMAGE_TAG: ${{ github.ref == 'refs/heads/main' && '' || 'dev-' }}
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
 
     steps:
       - name: Check out repository
@@ -26,20 +28,23 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push babpat-app image
+      - name: Build and push babpat-ai image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/babpat-app:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/babpat-app:latest
+          docker build -t $DOCKER_USERNAME/${{ env.IMAGE_TAG }}babpat-ai:latest .
+          docker push $DOCKER_USERNAME/${{ env.IMAGE_TAG }}babpat-ai:latest
 
       - name: Build and push elasticsearch image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/babpat-elasticsearch:latest ./elasticsearch
-          docker push ${{ secrets.DOCKER_USERNAME }}/babpat-elasticsearch:latest
+          docker build -t $DOCKER_USERNAME/${{ env.IMAGE_TAG }}babpat-elasticsearch:latest ./elasticsearch
+          docker push $DOCKER_USERNAME/${{ env.IMAGE_TAG }}babpat-elasticsearch:latest
 
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
+
+    env:
+      IMAGE_TAG: ${{ github.ref == 'refs/heads/main' && '' || 'dev-' }}
 
     steps:
       - name: Check out repository
@@ -64,6 +69,7 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          IMAGE_TAG: ${{ github.ref == 'refs/heads/main' && '' || 'dev-' }}
         run: |
           ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} << EOF
           echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
@@ -77,6 +83,8 @@ jobs:
           echo 'DB_PASSWORD="'$DB_PASSWORD'"' >> .env
           echo 'OPENAI_API_KEY="'$OPENAI_API_KEY'"' >> .env
           echo 'GEMINI_API_KEY="'$GEMINI_API_KEY'"' >> .env
+          echo "AI_IMAGE=$DOCKER_USERNAME/${IMAGE_TAG}babpat-ai:latest" > .env
+          echo "ES_IMAGE=$DOCKER_USERNAME/${IMAGE_TAG}babpat-elasticsearch:latest" >> .env
 
           docker-compose pull || true
           docker-compose down || true
