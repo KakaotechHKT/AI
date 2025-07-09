@@ -24,6 +24,9 @@ faiss-cpu==1.10.0
 mysql-connector-python==9.2.0
 PyMySQL==1.1.1
 
+# 검색 엔진 관련
+elasticsearch==8.17.2
+
 # 데이터 처리
 numpy==1.26.4
 pandas==2.2.3

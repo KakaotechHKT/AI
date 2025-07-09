@@ -1,14 +1,15 @@
-name: Deploy Docker Container
+name: Deploy with Docker Compose
 
 on:
   push:
     branches:
       - main
       - dev
+      - refact
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Ubuntu 기반 환경에서 실행
+    runs-on: ubuntu-latest
 
     environment:
       name: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
@@ -26,17 +27,16 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push Docker image
-        run: |
-          docker build -t ${{ vars.IMAGE_NAME }} .
-          docker push ${{ vars.IMAGE_NAME }}
-
       - name: Prepare SSH key
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
           chmod 600 key.pem
 
-      - name: SSH to server and deploy Docker container
+      - name: Copy full project to server
+        run: |
+          scp -i key.pem -o StrictHostKeyChecking=no -r . ubuntu@${{ secrets.SERVER_IP }}:~/babpat-ai/
+
+      - name: SSH to server and deploy
         env:
           IMAGE_NAME: ${{ vars.IMAGE_NAME }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -48,28 +48,26 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} << EOF
-            echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
-            
-            # 기존 컨테이너 중지 및 삭제
-            docker stop babpat-ai || true
-            docker rm -f babpat-ai || true
-            
-            # 불필요한 이미지와 캐시 삭제 (공간 부족 예방)
-            docker system prune -af
-            
-            # 최신 Docker 이미지 가져오기
-            docker pull $IMAGE_NAME
-            
-            # 새로운 컨테이너 실행
-            docker run -d --name babpat-ai \
-              --restart unless-stopped \
-              -p 8000:8000 \
-              -e DB_HOST="$DB_HOST" \
-              -e DB_NAME="$DB_NAME" \
-              -e DB_USER="$DB_USER" \
-              -e DB_PASSWORD="$DB_PASSWORD" \
-              -e OPENAI_API_KEY="$OPENAI_API_KEY" \
-              -e GEMINI_API_KEY="$GEMINI_API_KEY" \
-              $IMAGE_NAME
+          ssh -i key.pem -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} << 'EOF'
+          echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+
+          cd ~/babpat-ai
+
+          # .env 재생성
+          echo 'DB_HOST="'$DB_HOST'"' > .env
+          echo 'DB_NAME="'$DB_NAME'"' >> .env
+          echo 'DB_USER="'$DB_USER'"' >> .env
+          echo 'DB_PASSWORD="'$DB_PASSWORD'"' >> .env
+          echo 'OPENAI_API_KEY="'$OPENAI_API_KEY'"' >> .env
+          echo 'GEMINI_API_KEY="'$GEMINI_API_KEY'"' >> .env
+
+          docker stop babpat-ai || true
+          docker rm -f babpat-ai || true
+          docker rmi -f $IMAGE_NAME || true
+
+          docker-compose -f docker-compose.yml down || true
+          docker-compose -f docker-compose.yml pull || true
+          docker-compose -f docker-compose.yml up -d --build
+
+          docker system prune -af
           EOF

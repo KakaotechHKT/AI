@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  elasticsearch:
+    build:
+      context: ./elasticsearch 
+    container_name: elasticsearch
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms256m -Xmx512m
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200 || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
+
+
+  babpat-app:
+    build:
+      context: .
+      dockerfile: Dockerfile    
+    container_name: babpat-ai
+    ports:
+      - "8000:8000"
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - ./db:/app/db
+
+volumes:
+  esdata:
